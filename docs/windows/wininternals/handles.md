@@ -17,17 +17,19 @@ Used for file operations, like reading or writing data to files.
 ```cpp
 #include <Windows.h>
 
-int main() {
+int
+main()
+{
   // Create a file handle
   HANDLE hFile =
-      CreateFile(L"example.txt", // File name
-                 GENERIC_READ,   // Desired access (read-only in this case)
-                 0,              // Share mode (0 for no sharing)
-                 nullptr,        // Security attributes (default)
-                 OPEN_EXISTING,  // Creation disposition (open existing file)
-                 FILE_ATTRIBUTE_NORMAL, // File attributes (normal)
-                 nullptr                // Template file (none in this case)
-      );
+    CreateFile("example.txt", // File name
+               GENERIC_READ,   // Desired access (read-only in this case)
+               0,              // Share mode (0 for no sharing)
+               nullptr,        // Security attributes (default)
+               OPEN_EXISTING,  // Creation disposition (open existing file)
+               FILE_ATTRIBUTE_NORMAL, // File attributes (normal)
+               nullptr                // Template file (none in this case)
+    );
 
   if (hFile != INVALID_HANDLE_VALUE) {
     // File operations here
@@ -48,13 +50,16 @@ Represent windows in graphical user interfaces.
 #include <Windows.h>
 
 // Window procedure for handling window messages
-LRESULT CALLBACK WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam,
-                            LPARAM lParam) {
+LRESULT CALLBACK
+WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+{
   // Window procedure logic
   return DefWindowProc(hWnd, uMsg, wParam, lParam);
 }
 
-int main() {
+int
+main()
+{
   // Get the instance handle of the current module
   HINSTANCE hInstance = GetModuleHandle(nullptr);
 
@@ -62,12 +67,12 @@ int main() {
   WNDCLASS wc = {};
   wc.lpfnWndProc = WindowProc;
   wc.hInstance = hInstance;
-  wc.lpszClassName = L"MyWindowClass";
+  wc.lpszClassName = "MyWindowClass";
   RegisterClass(&wc);
 
   // Create the window
-  HWND hWnd = CreateWindow(L"MyWindowClass",    // Window class name
-                           L"My Window",        // Window title
+  HWND hWnd = CreateWindow("MyWindowClass",     // Window class name
+                           "My Window",         // Window title
                            WS_OVERLAPPEDWINDOW, // Window style
                            CW_USEDEFAULT,       // X position
                            CW_USEDEFAULT,       // Y position
@@ -106,24 +111,26 @@ Used for managing processes and threads.
 ```cpp
 #include <Windows.h>
 
-int main() {
+int
+main()
+{
   // Process information structures
   STARTUPINFO si = {};
   PROCESS_INFORMATION pi = {};
 
   // Create a new process
   if (CreateProcess(
-          L"example.exe", // Application name
-          nullptr,        // Command line (none in this case)
-          nullptr,        // Process security attributes (default)
-          nullptr,        // Thread security attributes (default)
-          FALSE,          // Inherit handles from the calling process
-          0,              // Creation flags (0 for no special flags)
-          nullptr, // Environment block (use the calling process's environment)
-          nullptr, // Current directory (use the calling process's directory)
-          &si,     // STARTUPINFO structure
-          &pi      // PROCESS_INFORMATION structure
-          )) {
+        "example.exe", // Application name
+        nullptr,       // Command line (none in this case)
+        nullptr,       // Process security attributes (default)
+        nullptr,       // Thread security attributes (default)
+        FALSE,         // Inherit handles from the calling process
+        0,             // Creation flags (0 for no special flags)
+        nullptr, // Environment block (use the calling process's environment)
+        nullptr, // Current directory (use the calling process's directory)
+        &si,     // STARTUPINFO structure
+        &pi      // PROCESS_INFORMATION structure
+        )) {
     // Process operations here
 
     // Close process and thread handles when done
@@ -141,20 +148,24 @@ int main() {
 #include <Windows.h>
 
 // Function to be executed by the new thread
-DWORD WINAPI ThreadFunction(LPVOID lpParam) {
+DWORD WINAPI
+ThreadFunction(LPVOID lpParam)
+{
   // Thread operations here
   return 0;
 }
 
-int main() {
+int
+main()
+{
   // Create a thread handle
   HANDLE hThread = CreateThread(
-      nullptr,        // Thread security attributes (default)
-      0,              // Stack size (0 for default size)
-      ThreadFunction, // Thread function
-      nullptr,        // Thread function parameters (none in this case)
-      0,              // Creation flags (0 for no special flags)
-      nullptr         // Thread ID (receives the thread identifier if non-null)
+    nullptr,        // Thread security attributes (default)
+    0,              // Stack size (0 for default size)
+    ThreadFunction, // Thread function
+    nullptr,        // Thread function parameters (none in this case)
+    0,              // Creation flags (0 for no special flags)
+    nullptr         // Thread ID (receives the thread identifier if non-null)
   );
 
   if (hThread != nullptr) {
@@ -186,11 +197,21 @@ Handles can become invalid if the associated resource is released or closed. Thi
 ```cpp
 #include <Windows.h>
 
-int main() {
+int
+main()
+{
   // Example: Validating a window handle before usage
-  HWND hWnd = CreateWindow(L"MyWindowClass", L"My Window", WS_OVERLAPPEDWINDOW,
-                           CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, nullptr,
-                           nullptr, nullptr, nullptr);
+  HWND hWnd = CreateWindow("MyWindowClass",
+                           "My Window",
+                           WS_OVERLAPPEDWINDOW,
+                           CW_USEDEFAULT,
+                           CW_USEDEFAULT,
+                           800,
+                           600,
+                           nullptr,
+                           nullptr,
+                           nullptr,
+                           nullptr);
 
   if (hWnd != nullptr) {
     // Window operations here
@@ -213,18 +234,29 @@ Handle duplication is a mechanism to share access to the same resource among mul
 ```cpp
 #include <Windows.h>
 
-int main() {
+int
+main()
+{
   // Example: Duplicating a file handle
-  HANDLE hOriginalFile =
-      CreateFile(L"example.txt", GENERIC_READ, 0, nullptr, OPEN_EXISTING,
-                 FILE_ATTRIBUTE_NORMAL, nullptr);
+  HANDLE hOriginalFile = CreateFile("example.txt",
+                                    GENERIC_READ,
+                                    0,
+                                    nullptr,
+                                    OPEN_EXISTING,
+                                    FILE_ATTRIBUTE_NORMAL,
+                                    nullptr);
 
   if (hOriginalFile != INVALID_HANDLE_VALUE) {
     HANDLE hDuplicateFile;
 
     // Duplicating the file handle
-    if (DuplicateHandle(GetCurrentProcess(), hOriginalFile, GetCurrentProcess(),
-                        &hDuplicateFile, 0, FALSE, DUPLICATE_SAME_ACCESS)) {
+    if (DuplicateHandle(GetCurrentProcess(),
+                        hOriginalFile,
+                        GetCurrentProcess(),
+                        &hDuplicateFile,
+                        0,
+                        FALSE,
+                        DUPLICATE_SAME_ACCESS)) {
       // File operations using the duplicated handle here
 
       // Note: Always check for success when duplicating a handle
@@ -239,7 +271,6 @@ int main() {
 
   return 0;
 }
-
 ```
 
 ## Leaks
@@ -249,10 +280,17 @@ Failing to release handles properly can lead to handle leaks. This occurs when h
 ```cpp
 #include <Windows.h>
 
-int main() {
+int
+main()
+{
   // Opening a file without closing the handle
-  HANDLE hFile = CreateFile(L"example.txt", GENERIC_READ, 0, nullptr,
-                            OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
+  HANDLE hFile = CreateFile("example.txt",
+                            GENERIC_READ,
+                            0,
+                            nullptr,
+                            OPEN_EXISTING,
+                            FILE_ATTRIBUTE_NORMAL,
+                            nullptr);
 
   // File operations here without closing the handle
 
@@ -260,6 +298,7 @@ int main() {
 
   return 0;
 }
+
 ```
 
 ## Table

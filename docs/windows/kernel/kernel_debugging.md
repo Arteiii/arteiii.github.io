@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Kernel Debugging
@@ -89,6 +89,8 @@ example:
 bcdedit /dbgsettings net hostip:192.168.56.1 port:51234
 ```
 
+Restart !!!
+
 ### WinDBG (Net)
 
 In the NET settings, enter the port you defined (`51234`). Additionally, set the baud rate to `115200`. Click "OK" to confirm the configuration
@@ -98,7 +100,7 @@ In the NET settings, enter the port you defined (`51234`). Additionally, set the
 The encryption key is generated automatically when you run the bcdedit command. Alternatively, you have the option to manually define the key using the `key:<key>` parameter
 
 ```cmd
-bcdedit /dbgsettings net hostip:192.168.56.1 port:51234 key:1336
+bcdedit /dbgsettings net hostip:192.168.56.1 port:51234 key:1.3.3.6
 ```
 
 [Read More](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/bcdedit--dbgsettings)
@@ -142,4 +144,20 @@ Additionally, note that the virtual machine will remain in a "frozen" state unti
 - Switch Thread: `~<thread number>s`
 - View All Threads: `~`
 
-## Logging
+### Symbols
+
+`SRV*c:\Symbols*http://msdl.microsoft.com/downloads/symbols`
+set the symbols path to this value either by using the registry key or the options in windbg (File > Settings > Debugging Settings > Sybmols Path)
+
+## Debugging ur Kernel Driver
+
+To set a breakpoint at the driver entry, use the `bu` (unresolved breakpoint) command  
+This is particularly useful when setting a breakpoint on code that has not yet been loaded,  
+such as our `driverentry` function
+
+In this example, use`bu driver_test!driverentry`  
+Replace 'driver_test' with your driver name
+
+Load the driver by using `sc start <drivername>`
+
+![driver test start](img/vmware_s0oCRFiPsY.png)
