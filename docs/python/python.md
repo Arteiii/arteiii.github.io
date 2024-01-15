@@ -1,17 +1,15 @@
 ---
 id: python-intro
-title: Python
-sidebar_label: Python
+title: Intro
+sidebar_label: Intro
 sidebar_position: 4
 ---
 
-<br />
 
 ## Content:
 
 [Getting Started With Python](basics/Basics.mdx)
 
-<br />
 
 ## Credits
 

@@ -46,8 +46,8 @@ module.exports = {
   url: "https://arteiii.github.io/",
   baseUrl: "/",
   onBrokenLinks: "warn",
-  favicon: "img/logo.png",
-  organizationName: "digipie",
+  favicon: "img/favicon.ico",
+  organizationName: "arteii",
   projectName: "arteii-web",
 
   themeConfig: {
@@ -95,7 +95,7 @@ module.exports = {
       title: "Arteii",
       logo: {
         alt: "Arteii",
-        src: "img/logo.png",
+        src: "img/logo.svg",
         target: "_self",
       },
       items: [
@@ -128,7 +128,7 @@ module.exports = {
         {
           title: "Discover",
           items: [
-            // internetProfiles.blog,
+            internetProfiles.blog,
             internetProfiles.docs,
             internetProfiles.projects,
             // internetProfiles.resume,
@@ -136,7 +136,7 @@ module.exports = {
         },
       ],
       // I built this website for my own personal use, but you are free to use it so long as you credit me. You can do so by linking back to evantay.com :)
-      copyright: `<a href="https://evantay.com">Design by Evan Tay</a> • <a href="https://github.com/arteiii/arteiii.github.io/commits/main">Updated ${new Date().toLocaleDateString()}</a>`,
+      copyright: `Arteii • <a href="https://github.com/arteiii/arteiii.github.io/commits/main">Updated ${new Date().toLocaleDateString()}</a>`,
     },
   },
 
@@ -166,7 +166,7 @@ module.exports = {
             defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
           // Please change this to your repo.
           editUrl:
-            "https://github.com/arteiii/arteiii.github.io/tree/main/website/",
+            "https://github.com/arteiii/arteiii.github.io/tree/main/",
 
           feedOptions: {
             type: "all",

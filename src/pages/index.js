@@ -35,7 +35,7 @@ function Home() {
           }}
         >
           <p>Hi, my name is</p>
-          <h1 className="text-success">Ben / Arteii</h1>
+          <h1 className="text-success">Arteii / Ben</h1>
           <p>
             <br />
             “Better to reign in Hell, than to serve in Heaven.”
