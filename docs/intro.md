@@ -1,47 +1,61 @@
 ---
+id: index
+title: welcome
+sidebar_label: welcome
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Please Read
 
-Let's discover **Docusaurus in less than 5 minutes**.
+<br />
 
-## Getting Started
+:::caution Please Read!!!
 
-Get started by **creating a new site**.
+Um, I don't think you can read the articles in any particular order.<br />
+However, the markdown files will build up (I think ツ)<br />
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+<br />
 
-### What you'll need
+We ask that you read the disclaimer carefully before using this document.<br />
+It is important to understand the limitations and purpose of this document.
+:::
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+<br />
 
-## Generate a new site
+## Disclaimer
 
-Generate a new Docusaurus site using the **classic template**.
+This document has not been prepared by a professional expert and is for learning purposes only.<br />
+The information and content in this document may be incomplete, outdated or inaccurate.<br />
+No warranty is made as to the accuracy, timeliness or completeness of the information provided.<br />
 
-The classic template will automatically be added to your project after you run the command:
+<br />
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+The author of this document assumes no responsibility for any damage or loss that may result from the use of the information contained herein.<br />
+Use of the information provided is at the reader's own risk.<br />
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+<br />
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+It is strongly recommended that the information used in this document be verified with others and that reference be made to recognized professional literature, scientific articles, or official sources.<br />
+Credits or references are listed below to provide you with a better and more complete explanation of the topics covered. Please take the time to consult these resources as they may provide more detailed information and expertise.<br />
 
-## Start your site
+~ ChatGpt
 
-Run the development server:
+<br />
 
-```bash
-cd my-website
-npm run start
-```
+## Credits
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+We thank the following sources and authors for their valuable contributions and encourage you to consult their works:
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+### Python
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- [Real Python](https://realpython.com)
+- [w3schools](https://www.w3schools.com/python/default.asp)
+- [Python](https://www.python.org/)
+- [Google for Education](https://developers.google.com/edu/python/)
+- [learnpython.org](https://www.learnpython.org/)
+- [Learn Microsoft](https://learn.microsoft.com/en-us/training/paths/beginner-python/)
+- [helpful.codes](https://python.helpful.codes/)
+- [Bernd Klein (Book)](https://www.amazon.com/stores/author/B00G34KN4U)
+- [Stef Maruch (Book)](https://www.amazon.com/stores/Stef-Maruch/author/B001IO9JYK)
+- [Luciano Ramalho (Book)](https://www.amazon.com/stores/Luciano-Ramalho/author/B00O6IY1S4)
+
