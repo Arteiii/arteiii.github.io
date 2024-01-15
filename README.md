@@ -1,41 +1,73 @@
-# Website
+<h1 align="center">
+  Arteii Docs/Blog
+</h1>
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+the template was built by:<br />
+[evantay.com](https://evantay.com/) <br />
+[GitHub](https://github.com/DigiPie/kaya-folio)
 
-### Installation
+<br />
 
-```bash
-yarn
-```
+I apologise for any translation or grammatical errors
 
-### Local Development
+<br />
 
-```bash
-yarn start
-```
+## [Docs](https://arteiii.github.io/docs/)
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-### Build
+[Disclaimer](https://arteiii.github.io/docs/#disclaimer)
 
-```bash
-yarn build
-```
+### Table Of Content
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+- [Privacy & Security (working)](https://arteiii.github.io/docs/Privacy_and_Security/)
+- [Hashing & Encryption](https://arteiii.github.io/docs/encryption/)
+- [Python](https://arteiii.github.io/docs/python/)
+  - [Basics](https://arteiii.github.io/docs/python/basics/)
+    - [Datatypes \& Variables:](https://arteiii.github.io/docs/python/basics/#datatypes--variables)
+    - [Variable names](https://arteiii.github.io/docs/python/basics/#variable-names)
+    - [Datatypes](https://arteiii.github.io/docs/python/basics/#datatypes)
+    - [Sequential Datatypes](https://arteiii.github.io/docs/python/basics/#sequential-datatypes)
+    - [Dictionaries:](https://arteiii.github.io/docs/python/basics/#dictionaries)
+    - [Sets](https://arteiii.github.io/docs/python/basics/#sets)
+    - [Input](https://arteiii.github.io/docs/python/basics/#input)
+    - [if else](https://arteiii.github.io/docs/python/basics/#if-else)
+    - [Loops](https://arteiii.github.io/docs/python/basics/#loops)
+    - [Read \& Write Files](https://arteiii.github.io/docs/python/basics/#read--write-files)
+    - [Formated Output](https://arteiii.github.io/docs/python/basics/#formated-output)
+    - [Shallow \& Deep Copy](https://arteiii.github.io/docs/python/basics/#shallow--deep-copy)
+    - [Functions](https://arteiii.github.io/docs/python/basics/#functions)
+    - [Recursive Functions](https://arteiii.github.io/docs/python/basics/#recursive-functions)
+    - [Lists \& Tupels](https://arteiii.github.io/docs/python/basics/#lists--tupels)
+    - [Modularization](https://arteiii.github.io/docs/python/basics/#modularization)
+    - [Global And Local Variables](https://arteiii.github.io/docs/python/basics/#global-and-local-variables)
+    - [Everything About Strings](https://arteiii.github.io/docs/python/basics/#almost-everything-about-strings)
+    - [EXCEPTIONS](https://arteiii.github.io/docs/python/basics/#exceptions)
+  - [OOP (SOON)](https://arteiii.github.io/docs/python/oop/)
+- [C++](https://arteiii.github.io/docs/cpp/)
+  - [Basics](https://arteiii.github.io/docs/cpp/basics/)
 
-### Deployment
+<br />
 
-Using SSH:
+## [Blog](https://arteiii.github.io/blog/)
 
-```bash
-USE_SSH=true yarn deploy
-```
+### Table Of Content
 
-Not using SSH:
+- [MarkDown Intro](https://arteiii.github.io/blog/MarkDown) [[Evan Tay](https://github.com/DigiPie), [Arteii](https://github.com/arteiii)]
+- [Django101 Hello World!](https://arteiii.github.io/blog/django101) [ [Arteii](https://github.com/arteiii) ]
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
+<br />
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## Credits
+
+i thank the following sources and authors for their valuable contributions and encourage you to consult their works:
+
+#### [Python](https://arteiii.github.io/docs/python/#credits)
+
+#### [C++](https://arteiii.github.io/docs/cpp/#credits)
+
+<br />
+
+## Socials
+
+Discord: <br />
+`arteii`

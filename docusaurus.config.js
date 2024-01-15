@@ -48,7 +48,7 @@ module.exports = {
   onBrokenLinks: "warn",
   favicon: "img/logo.png",
   organizationName: "digipie",
-  projectName: "wavy-web",
+  projectName: "arteii-web",
 
   themeConfig: {
     // algolia: {
@@ -92,9 +92,9 @@ module.exports = {
     },
     navbar: {
       hideOnScroll: true,
-      title: "wavy42",
+      title: "Arteii",
       logo: {
-        alt: "wavy42",
+        alt: "Arteii",
         src: "img/logo.png",
         target: "_self",
       },
@@ -136,7 +136,7 @@ module.exports = {
         },
       ],
       // I built this website for my own personal use, but you are free to use it so long as you credit me. You can do so by linking back to evantay.com :)
-      copyright: `<a href="https://evantay.com">Design by Evan Tay</a> • <a href="https://github.com/wavy42/wavy42.github.io/commits/main">Updated ${new Date().toLocaleDateString()}</a>`,
+      copyright: `<a href="https://evantay.com">Design by Evan Tay</a> • <a href="https://github.com/arteiii/arteiii.github.io/commits/main">Updated ${new Date().toLocaleDateString()}</a>`,
     },
   },
 
@@ -166,11 +166,11 @@ module.exports = {
             defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
           // Please change this to your repo.
           editUrl:
-            "https://github.com/wavy42/wavy42.github.io/tree/main/website/",
+            "https://github.com/arteiii/arteiii.github.io/tree/main/website/",
 
           feedOptions: {
             type: "all",
-            copyright: `${new Date().getFullYear()} wavy42`,
+            copyright: `${new Date().getFullYear()} Arteii`,
             createFeedItems: async (params) => {
               const { blogPosts, defaultCreateFeedItems, ...rest } = params;
               return defaultCreateFeedItems({
