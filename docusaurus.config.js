@@ -1,146 +1,211 @@
-// @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
+const math = require("remark-math");
+const katex = require("rehype-katex");
 
-import { themes as prismThemes } from "prism-react-renderer";
+const internetProfiles = {
+  discord: {
+    label: "Discord",
+    href: "Arteii",
+  },
+  linkedin: {
+    label: "LinkedIn",
+    href: "blank",
+  },
+  github: {
+    label: "GitHub",
+    href: "https://github.com/Arteiii",
+  },
+  padlet: {
+    label: "Padlet",
+    href: "#",
+  },
+  email: {
+    label: "Email",
+    href: "mailto:#",
+  },
+  blog: {
+    label: "Blog",
+    to: "blog",
+  },
+  docs: {
+    label: "Documentation",
+    to: "docs",
+  },
+  projects: {
+    label: "Projects",
+    to: "projects",
+  },
+  // resume: {
+  //   label: "Resume",
+  //   href: "https://evantay.com/pdf/resume.pdf",
+  // },
+};
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
-  favicon: "img/favicon.ico",
+module.exports = {
+  title: "Arteii",
+  tagline: "i do stuff",
+  url: "https://arteiii.github.io/",
+  baseUrl: "/",
+  onBrokenLinks: "warn",
+  favicon: "img/logo.png",
+  organizationName: "digipie",
+  projectName: "wavy-web",
 
-  // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/notes",
+  themeConfig: {
+    // algolia: {
+    //   // The application ID provided by Algolia
+    //   appId: 'YOUR_APP_ID',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "Arteiii", // Usually your GitHub org/user name.
-  projectName: "notes", // Usually your repo name.
+    //   // Public API key: it is safe to commit it
+    //   apiKey: 'YOUR_SEARCH_API_KEY',
 
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+    //   indexName: 'YOUR_INDEX_NAME',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    //   // Optional: see doc section below
+    //   contextualSearch: true,
+
+    //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+    //   //externalUrlRegex: 'external\\.com|domain\\.com',
+
+    //   // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+    //   replaceSearchResultPathname: {
+    //     from: '/docs/', // or as RegExp: /\/docs\//
+    //     to: '/',
+    //   },
+
+    //   // Optional: Algolia search parameters
+    //   searchParameters: {},
+
+    //   // Optional: path for search page that enabled by default (`false` to disable it)
+    //   searchPagePath: 'search',
+
+    //   //... other Algolia params
+    // },
+
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 5,
+    },
+    colorMode: {
+      defaultMode: "dark",
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
+    navbar: {
+      hideOnScroll: true,
+      title: "wavy42",
+      logo: {
+        alt: "wavy42",
+        src: "img/logo.png",
+        target: "_self",
+      },
+      items: [
+        { to: "blog/", label: "Blog", position: "left" },
+        {
+          to: "docs/",
+          activeBasePath: "docs",
+          label: "Docs",
+          position: "left",
+        },
+        { to: "projects/", label: "Projects", position: "right" },
+        // {
+        //   href: "https://evantay.com/pdf/resume.pdf",
+        //   label: "Resume",
+        //   position: "right",
+        // },
+      ],
+    },
+    footer: {
+      links: [
+        {
+          title: "Connect",
+          items: [
+            // internetProfiles.linkedin,
+            // internetProfiles.padlet,
+            internetProfiles.github,
+            internetProfiles.email,
+          ],
+        },
+        {
+          title: "Discover",
+          items: [
+            // internetProfiles.blog,
+            internetProfiles.docs,
+            internetProfiles.projects,
+            // internetProfiles.resume,
+          ],
+        },
+      ],
+      // I built this website for my own personal use, but you are free to use it so long as you credit me. You can do so by linking back to evantay.com :)
+      copyright: `<a href="https://evantay.com">Design by Evan Tay</a> • <a href="https://github.com/wavy42/wavy42.github.io/commits/main">Updated ${new Date().toLocaleDateString()}</a>`,
+    },
   },
 
   presets: [
     [
-      "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      "@docusaurus/preset-classic",
+      {
         docs: {
-          sidebarPath: "./sidebars.js",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          sidebarPath: require.resolve("./sidebars.js"),
+          disableVersioning: false,
+          editCurrentVersion: false,
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
         },
         blog: {
+          blogSidebarTitle: "Blog",
+          blogSidebarCount: "ALL",
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
+
+          blogTitle: "blog!",
+          blogDescription: "A Docusaurus powered blog!",
+          postsPerPage: "ALL",
+
           showReadingTime: true,
+          readingTime: ({ content, frontMatter, defaultReadingTime }) =>
+            defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/wavy42/wavy42.github.io/tree/main/website/",
+
+          feedOptions: {
+            type: "all",
+            copyright: `${new Date().getFullYear()} wavy42`,
+            createFeedItems: async (params) => {
+              const { blogPosts, defaultCreateFeedItems, ...rest } = params;
+              return defaultCreateFeedItems({
+                // keep only the 10 most recent blog posts in the feed
+                blogPosts: blogPosts.filter((item, index) => index < 10),
+                ...rest,
+              });
+            },
+          },
         },
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: require.resolve("./src/css/custom.css"),
         },
-      }),
+      },
     ],
   ],
-
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      colorMode: {
-        defaultMode: "light",
-        disableSwitch: false,
-        respectPrefersColorScheme: false,
-      },
-      // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
-      navbar: {
-        title: "Arteii",
-        logo: {
-          alt: "monkeeeeee",
-          src: "img/logo.svg",
+  stylesheets: [
+    {
+      href: "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css",
+      type: "text/css",
+      integrity:
+        "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X",
+      crossorigin: "anonymous",
+    },
+  ],
+  plugins: [
+    async function tailwindPlugin(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
         },
-        items: [
-          {
-            type: "docSidebar",
-            sidebarId: "tutorialSidebar",
-            position: "left",
-            label: "Docs",
-          },
-          { to: "/blog", label: "Blog", position: "left" },
-          {
-            href: "https://github.com/Arteiii/",
-            label: "GitHub",
-            position: "right",
-          },
-        ],
-      },
-      footer: {
-        style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Docs",
-                to: "/docs/intro",
-              },
-            ],
-          },
-          // {
-          //   title: "Community",
-          //   items: [
-          //     {
-          //       label: "Stack Overflow",
-          //       href: "https://stackoverflow.com/questions/tagged/docusaurus",
-          //     },
-          //     {
-          //       label: "Discord",
-          //       href: "https://discordapp.com/invite/docusaurus",
-          //     },
-          //     {
-          //       label: "Twitter",
-          //       href: "https://twitter.com/docusaurus",
-          //     },
-          //   ],
-          // },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/Arteiii/",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Arteii. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
+      };
+    },
+  ],
 };
-
-export default config;
