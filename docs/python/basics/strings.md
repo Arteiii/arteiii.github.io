@@ -114,7 +114,7 @@ x = ["veni", "vidi", "vici"]
 "-".join(x)
 # 'veni-vidi-vici'
 
-x = "1337369"
+x = "1337123"
 ".".join(x)
 # '1.3.3.7.3.6.9'
 ```

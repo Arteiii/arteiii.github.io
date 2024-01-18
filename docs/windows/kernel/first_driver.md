@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # First Kernel Mode Driver
 
-If you have accurately followed the installation instructions outlined in the [introduction](intro.md),  
+If you have accurately followed the installation instructions outlined in the [introduction](intro.md#prerequisites),  
 you should find the "Kernel Mode Driver, Empty" template in Visual Studio  
 Create a new project using this preset
 

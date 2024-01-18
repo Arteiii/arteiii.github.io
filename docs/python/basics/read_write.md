@@ -9,10 +9,10 @@ sidebar_position: 9
 if you want to read a file you first need to open the file:
 open(filename, mode)
 
-the open() function takes two arguments
-filename with a path if necessary
-and the mode "r" for read
-if the mode is missing, read ("r") is automatically used as default argument
+the open() function takes two arguments  
+filename with a path if necessary  
+and the mode "r" for read  
+if the mode is missing, read ("r") is automatically used as default argument  
 
 ```py
 fobj = open("read_and_write_files/read_example.txt")
@@ -72,7 +72,6 @@ with open("read_and_write_files/read_example.txt") as fobj_in:
             fobj_out.write(out.rstrip())
 ```
 
-<br />
 you can open mutiple files:
 
 ```py

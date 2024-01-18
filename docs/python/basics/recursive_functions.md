@@ -7,10 +7,8 @@ sidebar_position: 13
 
 ## Introduction
 
-recursion is a programming technique in which the function calls itself one or more times.<br/>
+recursion is a programming technique in which the function calls itself one or more times.  
 in general, you can say that in computer science recursion is a method of problem-solving that relies on solving smaller instances of the problem
-
-<br />
 
 ## Python Part
 
@@ -39,8 +37,6 @@ print(factorial(5))
 # 120
 ```
 
-<br />
-
 ## Fibonacci Sequence
 
 > 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144.
@@ -52,8 +48,6 @@ let's imagine that the initial population is formed by a pair of rabbits, newbor
 
 [Read More](https://en.wikipedia.org/wiki/Fibonacci_sequence)
 
-<br />
-
 well let's get to the python part
 
 ```py
@@ -63,8 +57,6 @@ def fibi(n):
         a, b = b, a + b
     return a
 ```
-
-<br />
 
 recursive way
 
@@ -77,8 +69,6 @@ def fib(n):
     else:
         return fib(n-1) + fib(n-2)
 ```
-
-<br />
 
 if we do it the recursive way the whole program will take much longer because the calculations are done again on each run we can easily solve this by creating a dictionary with the previous calculations
 

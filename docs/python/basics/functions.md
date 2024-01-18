@@ -13,8 +13,6 @@ def functionname(parameters):
     statement
 ```
 
-<br />
-
 a function returns one or more return statements
 if the return is left empty "None" is returned
 the same if there is no return statement
@@ -31,8 +29,6 @@ f = helloWorld(f)
 print(f)
 # Hello John !
 ```
-
-<br />
 
 ## Default Value
 
@@ -69,8 +65,6 @@ since the arguments are passed in order.
 
 If only one value is passed it is automatically the first one, so in our case value1
 
-<br />
-
 ## Key-Word-Parameters
 
 we can easily solve the problem described in the previous chapter
@@ -96,8 +90,6 @@ add(value2=12, value1=33)
 #45
 ```
 
-<br />
-
 ## Docstring
 
 docstrings are used for documentation
@@ -115,8 +107,6 @@ heyWorld("John")
 # 'Hey John !'
 ```
 
-<br />
-
 docstrings can also be placed at the beginning of a Python file
 
 ```py
@@ -133,8 +123,6 @@ def heyWorld(name="World"):
 heyWorld("John")
 # 'Hey John !'
 ```
-
-<br />
 
 ## Multiple Return Values
 
@@ -183,8 +171,6 @@ f()
 # Test123
 ```
 
-<br />
-
 ```py
 def f():
     gh = "no Test"
@@ -232,8 +218,6 @@ print(gh)
 # no Test
 ```
 
-<br />
-
 ```py
 gh
 # Traceback (most recent call last):
@@ -242,7 +226,7 @@ gh
 
 def f():
     global gh
-    gh = 369
+    gh = 123
 
 gh
 # Traceback (most recent call last):
@@ -252,10 +236,8 @@ gh
 f()
 
 gh
-# 369
+# 123
 ```
-
-<br />
 
 ## Command-Line Arguments
 
@@ -273,42 +255,36 @@ for Argument in sys.argv:
     print(Argument)
 ```
 
-<br />
-
 ## Variadic Functions
 
 variadic functions
 allow flexibility in defining functions
 where the number of parameters is not fixed at definition
 
-for this, we use "\*"
+for this, we use `"*"`
 
 ```py
 def print_args(*args):
     for argument in args:
         print(argument)
 
-print_args(369, "Lorem bli bla blu", "more bli bla")
-# 369
+print_args(123, "Lorem bli bla blu", "more bli bla")
+# 123
 # Lorem bli bla blu
 # more bli bla
 ```
-
-<br />
 
 ```py
 def print_args(number, *text):
     print(number, text)
 
-print_args(369, "Lorem bli bla blu", "more bli bla")
-# 369 ('Lorem bli bla blu', 'more bli bla')
+print_args(123, "Lorem bli bla blu", "more bli bla")
+# 123 ('Lorem bli bla blu', 'more bli bla')
 ```
-
-<br />
 
 ## \* in function calls
 
-when using a \* in the function call, an argument is unpacked
+when using a `*` in the function call, an argument is unpacked
 this can be useful when you want to separate the contents of a list or tuple
 
 ```py
@@ -320,8 +296,6 @@ print_args(*list1)
 # 3 6 9
 ```
 
-<br />
-
 if you want to pass lists you have to unpack them before you pass them
 otherwise, this list is only summarized in a tuple
 
@@ -330,8 +304,8 @@ def print_args(number, *text):
     print(number, text)
 
 list1 = [3, 4, 2, 6, 9]
-print_args(369, list1)
-# 369 ([3, 4, 2, 6, 9],)
+print_args(123, list1)
+# 123 ([3, 4, 2, 6, 9],)
 ```
 
 ```py
@@ -339,15 +313,13 @@ def print_args(number, *text):
     print(number, text)
 
 list1 = [3, 4, 2, 6, 9]
-print_args(369, *list1)
-# 369 (3, 4, 2, 6, 9)
+print_args(123, *list1)
+# 123 (3, 4, 2, 6, 9)
 ```
-
-<br />
 
 ## Any Keyword Parameter
 
-\*\* With we can generate any number of key-word parameters
+ With `**` we can generate any number of key-word parameters
 
 which are then stored in dictionaries
 
@@ -362,7 +334,7 @@ gh(de="German", en="English")
 # {'de': 'German', 'en': 'English'}
 ```
 
-as in the last article, we can also use \*\* in the function call
+as in the last article, we can also use `**` in the function call
 
 ```py
 def f(a, b, c, h):

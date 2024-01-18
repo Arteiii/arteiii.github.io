@@ -14,15 +14,14 @@ with print you can output any number of arguments separated by commas
 
 ```py
 import sys
-a = 3.369
+a = 3.123
 print("a =", a)
-# a: 3.369
+# a: 3.123
 print("a = \n", a)
 # a =
-#  3.369
+#  3.123
 ```
 
-<br />
 with the argument sep you can change the separator that is output between the values:
 
 ```py
@@ -39,7 +38,6 @@ print("a", "b", sep=":)")
 # a:)b
 ```
 
-<br />
 after the output python ends with a newline:
 
 ```py
@@ -50,8 +48,7 @@ for i in range(3):
 # 2
 ```
 
-<br />
-you can change the default ("\n") using end=''
+you can change the default (`"\n"`) using `end=" "`
 
 ```py
 for i in range(3):
@@ -64,7 +61,6 @@ for i in range(3):
 # 0 :) 1 :) 2 :)
 ```
 
-<br />
 using file you can output in to a file
 
 ```py
@@ -73,7 +69,6 @@ print("42", file=fh)
 fh.close()
 ```
 
-<br />
 its also possible to output into the default error channel:
 
 ```py
@@ -83,15 +78,17 @@ print("Error: 42", file=sys.stderr)
 
 ## C-Style Formating
 
-is seen as an **deprecated** and bad style in python!!!!
+:::info
+is seen as an deprecated and bad style in python
+:::
 
 ```py
-print("some value: %4d, another: %3.1f" % (369, 1234.042))
+print("some value: %4d, another: %3.1f" % (123, 1234.042))
 ```
 
 Output:
 
-`some value:  369, another: 1234.0`
+`some value:  123, another: 1234.0`
 
 | Placeholder | Meaning                                                                                                                 |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -118,8 +115,6 @@ Output:
 |      | if no sign is specified, a blank character is placed in front of the value |
 | +    | the result will be signed (+ or -) this flag overwrites a "space" flag     |
 
-<br />
-
 ## Python-Method (format)
 
 the format syntax looks like this:
@@ -127,8 +122,6 @@ the format syntax looks like this:
 ```py
 template.formate(p0, p1, ..., k0=v0, k1=v1, ...)
 ```
-
-<br />
 
 ```py
 "first argument: {0}, second: {1}".format(47, 11)
@@ -144,8 +137,6 @@ template.formate(p0, p1, ..., k0=v0, k1=v1, ...)
 # 'first argument: 47, second: 11'
 ```
 
-<br />
-
 argumnents can be used multiple times:
 
 ```py
@@ -153,16 +144,12 @@ argumnents can be used multiple times:
 # 'first argument:   1.41, second:  1.415'
 ```
 
-<br />
-
 this method also works:
 
 ```py
 "first argument: {a:5d}, second: {p:8.2f}".format(a=458, p=59.058)
 # "first argument: {0:6.2f}, second: {0:6.3f}".format(1.4148)
 ```
-
-<br />
 
 with the .format method you can output data flush left (<) or flush right (>)
 
@@ -186,16 +173,12 @@ with the .format method you can output data flush left (<) or flush right (>)
 # '         something & lorem ipsum:   3.99'
 ```
 
-<br />
-
 | Option | Meaning                                                                                                          |
 | ------ | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | '<'    | field is left-justified within the existing space (strings are left-justified by default)                        |
 | '>'    | field is output right-justified within the existing space (numeric values are output right-justified by default) |
 | '='    | padding characters are introduced between the sign, if a sign is output, and the actual                          | beginning of the digit of a number so that fields of the type '+00000420' can be output (can only be applied to numeric values) |
 | '^'    | a field is output centered within the available space                                                            |
-
-<br />
 
 works only with numerical!!:
 
@@ -204,8 +187,6 @@ works only with numerical!!:
 | '+'    | sign should always be output, regardless of whether the number is positive or negative.                            |
 | '-'    | signshould only be used for negative numbers                                                                       |
 | space  | instead of a "+", positive numbers are preceded by a " " space. negative numbers are preceded by a minus sign "-". |
-
-<br />
 
 ### String Literals
 
@@ -220,12 +201,10 @@ f"Animal: {animal}, Height: {height:6.2f}"
 # 'Animal: Dog, Height: 187.40'
 
 width, precision = 10, 3
-x = 369.4238
+x = 123.4238
 f"Value: {x:{width}.{precision}}"
 # 'Value:   3.69e+02'
 ```
-
-<br />
 
 ### Dictionaries
 
@@ -256,8 +235,6 @@ switzerland: Bern
 austria: vienna
 ```
 
-<br />
-
 you can also use the dictionary directly in the call to the format method
 (the ouput is the same)
 
@@ -269,15 +246,13 @@ for c in capital_country:
 
 ```
 
-<br />
-
 ### Local Variables
 
 locals is a function that returns a dictionary with the locally defined names and their current values
 
 ```py
 a = 42
-b = 369
+b = 123
 def f(): return 42
 
 
@@ -286,7 +261,5 @@ locals()
 
 
 print("a={a}, b={b} and f={f}".format(**locals()))
-# a=42, b=369 and f=<function f at 0x…>
+# a=42, b=123 and f=<function f at 0x…>
 ```
-
-<br />

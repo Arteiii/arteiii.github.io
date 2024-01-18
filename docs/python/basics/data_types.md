@@ -18,8 +18,6 @@ very_long *= very_long
 print(very_long)
 ```
 
-<br />
-
 ### Binary
 
 if you want to output/store a binary number you need the 0 or 0b/0B for it
@@ -30,8 +28,6 @@ binarie = 0B101010
 
 print('prints binaie 0B101010:',binarie)
 ```
-
-<br />
 
 ### Octa
 
@@ -44,8 +40,6 @@ okta = 0o10
 print('prints okta 0o10:',okta)
 ```
 
-<br />
-
 ### Hex
 
 hexadecimal with: 0x/0X
@@ -56,8 +50,6 @@ hexa = 0x10
 
 print('prints hexa 0x10',hexa)
 ```
-
-<br />
 
 ### Convert Hex/Bin/Oct
 
@@ -129,8 +121,6 @@ with % the rest of an integer division can be determined safely
 # 2.0
 ```
 
-<br />
-
 correlations between the integer and modulo ZeroDivisionError
 
 ```py
@@ -169,12 +159,10 @@ type conversions are needed when you want to express strings and numeric values:
 ```py
 string1 = 'abcd'
 string2 = 'dcba'
-number = 369
+number = 123
 
 print(string1 + ' ' + string2 + '  number: ' + str(number))
 ```
-
-<br />
 
 here we have specifically converted 'number' to a string using the str function
 if we had not converted the integer to a string before, python would have generated a TypeError:
@@ -187,12 +175,11 @@ print(string1 + ' ' + string2 + '  number: ' + number)
 # TypeError: can only concatenate str (not "int") to str
 ```
 
-<br />
 python does not support implicit type conversions as they are possible in php or
-perl <br />
+perl  
 but there are exceptions for example when we mix integer and float values in an
-expression <br />
-there the integer value was implicitly converted to a float value <br />
+expression  
+there the integer value was implicitly converted to a float value  
 
 ## Determine Datatypes
 
@@ -216,8 +203,6 @@ type(x)
 # <class 'str'>
 ```
 
-<br />
-
 isinstance(object, ct)
 an alternative to type is: "isinstance" which returns either true or false
 object is the object to check and ct is the class to check for
@@ -227,8 +212,6 @@ x = (3, 6, 9)
 isinstance(x, tuple)
 # True
 ```
-
-<br />
 
 if you want to find out if it is a variable or an integer you could:
 
@@ -241,8 +224,6 @@ x = 4.8
 isinstance(x, int ) or isinstance(x, float)
 # True
 ```
-
-<br />
 
 with isinstance, however, this can also be done differently:
 

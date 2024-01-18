@@ -2,12 +2,10 @@
 sidebar_position: 18
 ---
 
-# EXCEPTIONS
+# Exceptions
 
-<br />
-
-a common problem is that when an error occurs within a program,<br/>
-the entire program terminates.<br/>
+a common problem is that when an error occurs within a program,  
+the entire program terminates.  
 
 ```py
 something = int(input("enter a number: "))
@@ -16,8 +14,6 @@ something = int(input("enter a number: "))
 #   File "<stdin>", line 1, in <module>
 # ValueError: invalid literal for int() with base 10: '12.5'
 ```
-
-<br />
 
 for problems like this we can use exceptions like in the next example
 
@@ -40,11 +36,7 @@ the try statement is executed and if no exception occurs the except part is skip
 
 however, if an exception occurs in the execution of the try-block, the rest of the try-block is skipped
 
-<br />
-
 ## Multiple Exceptions
-
-<br />
 
 several exceptions can be defined
 

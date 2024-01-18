@@ -5,8 +5,6 @@ sidebar_position: 15
 
 # Modularization
 
-<br />
-
 ## Modules
 
 > ```py
@@ -14,8 +12,6 @@ sidebar_position: 15
 > ```
 
 is used to provide a library
-
-<br />
 
 ```py
 math.sin(3.1415)
@@ -26,8 +22,6 @@ sin(3.1415)
 #   File "<stdin>", line 1, in <module>
 # NameError: name 'sin' is not defined
 ```
-
-<br /> <br />
 
 > ```py
 > from math import sin, pi
@@ -40,10 +34,8 @@ sin(3.1415)
 # 9.265358966049026e-05
 ```
 
-however, only the functions that you explicitly import are available, <br/>
+however, only the functions that you explicitly import are available,  
 i.e. sin and pi in our case.
-
-<br /> <br />
 
 > ```py
 > from math import *
@@ -61,8 +53,6 @@ print(pi)
 # 3.141592653589793
 ```
 
-<br />
-
 ### Rename
 
 > ```py
@@ -71,26 +61,18 @@ print(pi)
 
 you can also simply import the library and assign a new name for the namespace
 
-<br />
-
 ```py
 import math as m
 m.pi
 # 3.141592653589793
 ```
 
-<br />
-
 ### Modul-Types
-
-<br />
 
 Python:
 
 - .py
 - .pyc
-
-<br />
 
 C-Modules:
 
@@ -98,8 +80,6 @@ C-Modules:
 - .dll
 - .so
 - …
-
-<br />
 
 c modules linked with the interpreter:
 
@@ -109,19 +89,15 @@ print(sys.builtin_module_names)
 # …
 ```
 
-<br />
-
 ### Search For Modules
 
-when importing a module, the interpreter searches in the following directories: <br/>
+when importing a module, the interpreter searches in the following directories:  
 
 1. in the current directory
 2. pythonpath
 3. if pythonpath is not set the default directory is searched for
 
 with sys.path you get the directories you are searching in
-
-<br />
 
 ### Contents
 
@@ -133,18 +109,15 @@ dir(math)
 # …
 ```
 
-<br />
 without an argument "dir" returns all names defined in the namespace
 
 ```py
 import math
-blibla = 369
+blibla = 123
 bli = "asldfhioasp9dasdapsdas"
 dir()
 # …
 ```
-
-<br />
 
 ### Own Modules
 
@@ -156,8 +129,6 @@ must be present in the search path ([Search For Modules](#search-for-modules))
 import example_py_file
 ```
 
-<br />
-
 ### Documetation
 
 we can use docstring's to document our modules
@@ -166,10 +137,7 @@ we can use docstring's to document our modules
 help(example_py_file)
 ```
 
-[Docstring](#docstring)
-
-<br />
-<br />
+[Docstring](modularization.md#docstring)
 
 ## Packages
 
@@ -177,19 +145,15 @@ like creating a module in python, creating a package is just as easy
 
 create a folder with the following struct:
 
-![](image/simple_packages.png)
+![simple_package](image/simple_packages.png)
 
-the file \_\_init\_\_.py can be empty
-
-<br />
+the file `__init__.py` can be empty
 
 the modules can now be imported with:
 
 ```py
 from simple_package import a, b
 ```
-
-<br />
 
 ```py
 import simple_package
@@ -199,4 +163,4 @@ will generate an error message because the modules must be imported individually
 
 to change this we can put:
 `from simple_package import a, b`
-in \_\_init\_\_.py
+in `__init__.py`

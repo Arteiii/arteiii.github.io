@@ -11,8 +11,6 @@ if condition:
     statement
 ```
 
-<br />
-
 the code(statement) will only be executed if the condition is true
 
 ```py
@@ -89,7 +87,7 @@ a = 42
 20 < a and a < 100
     # True
 
-b = 369
+b = 123
 20 < b and b < 100
     # False
 ```

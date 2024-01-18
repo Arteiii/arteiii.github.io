@@ -8,8 +8,6 @@ dictionaries are entered with curly brackets
 a key value couple is separated with a double point (:)
 and the different couples are separated with a comma
 
-<br />
-
 ```py
 food = {"ham":"yes", "egg":"yes", "spam":"no"}
 print(food)
@@ -31,8 +29,6 @@ food["spam"] = "yes"
 print(food)
     # {'ham': 'yes', 'egg': 'yes', 'spam': 'yes'}
 ```
-
-<br />
 
 ## Define
 
@@ -56,8 +52,6 @@ print("red is in french: " + de_fr[en_de['red']])
     # red is in french: rouge
 ```
 
-<br />
-
 ## Errors
 
 If you try on a non defined key (color)
@@ -68,8 +62,6 @@ en_de("brown")
     #   File "<stdin>", line 1, in <module>
     # TypeError: 'dict' object is not callable
 ```
-
-<br />
 
 ## Nested Dictionaries
 
@@ -83,8 +75,6 @@ dictonaries = {"en" : de_en, "fr" : de_fr}
 print(dictonaries["fr"]["blau"])
     # bleu
 ```
-
-<br />
 
 ## Allowed Types
 
@@ -117,8 +107,6 @@ dic
 
 ```
 
-<br />
-
 ### .len
 
 len also works on dictionaries
@@ -128,8 +116,6 @@ en_de = {"red":"rot", "green":"grün", "blue":"blau", "yellow":"gelb"}
 len(en_de)
     # 4
 ```
-
-<br />
 
 ## Error-Free Access
 
@@ -144,7 +130,6 @@ en_de = {"red":"rot", "green":"grün", "blue":"blau", "yellow":"gelb"}
     # False
 ```
 
-<br />
 this could be used to first check if the input is valid and if not, output a corresponding
 error message:
 
@@ -183,8 +168,6 @@ en_de.get("brown","default")
     # 'default'
 ```
 
-<br />
-
 ## Create From List
 
 dictionaries which consist only of strings which conform to the conventions for variable names
@@ -196,8 +179,6 @@ en_de
     # {'red': 'rot', 'green': 'grün',
     #  'blue': 'blau', 'yellow': 'gelb'}
 ```
-
-<br />
 
 ```py
 number  = ["1", "2", "3", "4", "5", "6"]
@@ -225,14 +206,14 @@ this goes on until one of the iterable objects is used up
 
 ```py
 name = ["Peter", "Sarah", "Maria", "Frank", "Eddie"]
-value = ["12", "65", "42", "369", "5632"]
+value = ["12", "65", "42", "123", "5632"]
 
 for name, money in zip(name, value):
     print(name + " got " + money)
         # Peter got 12
         # Sarah got 65
         # Maria got 42
-        # Frank got 369
+        # Frank got 123
         # Eddie got 5632
 
 
@@ -249,8 +230,6 @@ T
 list(T)
     # [(11, 21, 31), (12, 22, 32), (13, 23, 33)]
 ```
-
-<br />
 
 from a zip object you can create such a list only once,
 after that it is used up
@@ -280,8 +259,6 @@ list(TZ)
     # [(11, 21, 31), (12, 22, 32), (13, 23, 33)]
 ```
 
-<br />
-
 you can also connect two flat lists or tuples
 
 ```py
@@ -291,8 +268,6 @@ l2 = [21, 22, 23, 24]
 list(zip(l1, l2))
     # [(11, 21), (12, 22), (13, 23), (14, 24)]
 ```
-
-<br />
 
 If the arguments of zip are of different length,
 only the smallest length is processed, all other elements are ignored
@@ -305,7 +280,7 @@ list(zip(l1, l2))
     # [(11, 21), (12, 22), (13, 23)]
 ```
 
-## Methods:
+## Methods
 
 ### .items
 
@@ -332,8 +307,6 @@ x
     #             ('blau', 'blue'),
     #             ('gelb', 'yellow')])
 ```
-
-<br />
 
 ### .copy
 
@@ -375,8 +348,6 @@ d
     #  'gelblich': "yellow'"}
 ```
 
-<br />
-
 ### .popitem
 
 ```py
@@ -408,8 +379,6 @@ de_en.popitem()
     # KeyError: 'popitem(): dictionary is empty'
 ```
 
-<br />
-
 ### .fromkeys
 
 ```py
@@ -434,8 +403,6 @@ d
     #  'Grilled Chicken': 'enjoy'}
 ```
 
-<br />
-
 ### .keys
 
 ```py
@@ -458,8 +425,6 @@ type(x)
 x
     # dict_keys(['rot', 'grün', 'blau', 'gelb'])
 ```
-
-<br />
 
 ### .pop
 
@@ -490,8 +455,6 @@ x = de_en.pop("braun", "error test 123")
 x
     # 'error test 123'
 ```
-
-<br />
 
 ### .setdefault
 
@@ -547,8 +510,6 @@ de_en
     #  'yellow': 'gelb',
     #  'red': 'rötlich'}
 ```
-
-<br />
 
 ### .clear
 

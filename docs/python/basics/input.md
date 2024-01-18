@@ -23,8 +23,6 @@ type(text)
     # <class 'str'>
 ```
 
-<br />
-
 ## int & float
 
 if you now want to set a specific datatype you have to use int/float
@@ -45,8 +43,6 @@ text
 type(text)
     # <class 'float'>
 ```
-
-<br />
 
 ## Eval
 
