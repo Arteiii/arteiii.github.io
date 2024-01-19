@@ -26,4 +26,4 @@ Implements device-independent I/O and is responsible for dispatching to the appr
 
 ### Plug and Play (PnP) manager
 
-kb purp mark for more
+soon...
