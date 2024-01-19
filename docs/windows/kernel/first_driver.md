@@ -7,11 +7,7 @@ keyword:
     - C++ Driver Programming
     - Windows Kernel Programming
   
-last_update:
-  date: 19/01/2024
-  author: arteii
-
-image: ./img/devenv_N2bwT42RVY.png
+image: ./img/first_driver_preview.jpg
 
 description: Start pasting your first kernel driver now!
 ---
