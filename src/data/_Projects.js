@@ -12,11 +12,11 @@ const projects = [
     description: (
       <>
         <p>
-        Authly is a user management application built on{" "}
-        <a href="https://fastapi.tiangolo.com/">
-        FastAPI
-        </a>
-        , designed to provide user authentication and access control for various applications.
+          Authly is a user management application built on{" "}
+          <a href="https://fastapi.tiangolo.com/">
+            FastAPI
+          </a>
+          , designed to provide user authentication and access control for various applications.
         </p>
         <p>
           I worked on this project to learn more about {" "}

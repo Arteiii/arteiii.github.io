@@ -36,13 +36,6 @@ function Home() {
         >
           <p>Hi, my name is</p>
           <h1 className="text-success">Arteii / Ben</h1>
-          <p>
-            <br />
-            “Better to reign in Hell, than to serve in Heaven.”
-          </p>
-          <Link to={"https://de.wikipedia.org/wiki/Elon_Musk"}>
-            <div>~ Niccolo Machiavelli</div>
-          </Link>
         </div>
       </header>
       <main id="main" ref={mainRef} hidden={true}>
