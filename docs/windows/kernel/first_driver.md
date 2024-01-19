@@ -10,7 +10,10 @@ keyword:
 last_update:
   date: 19/01/2024
   author: arteii
-image: img/devenv_N2bwT42RVY.png
+
+image: ./img/devenv_N2bwT42RVY.png
+
+description: Start pasting your first kernel driver now!
 ---
 
 # First Kernel Mode Driver
