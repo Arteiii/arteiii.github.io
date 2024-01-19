@@ -1,5 +1,16 @@
 ---
 sidebar_position: 2
+
+keyword: 
+    - Kernel Mode Driver Development
+    - Windows Driver Kit (WDK)
+    - C++ Driver Programming
+    - Windows Kernel Programming
+  
+last_update:
+  date: 19/01/2024
+  author: arteii
+image: img/devenv_N2bwT42RVY.png
 ---
 
 # First Kernel Mode Driver

@@ -4,6 +4,7 @@ title: Red Hat 1x1
 authors: [arteii]
 keywords: [linux101, Linux, Linux 1x1. Linux Cheat Sheet, Red Hat]
 date: 2023-07-15T18:00
+draft: true
 ---
 
 everything is a file and what is not should be one

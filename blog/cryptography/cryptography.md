@@ -11,9 +11,10 @@ keywords:
     Caeser Cipher,
   ]
 date: 2023-07-25T18:00
----
+draft: true
 
 ---
+
 
 In today's digital world, where data has immense value and communication is networked, the security of sensitive information is paramount.
 Encryption plays a critical role. It allows data to be transformed into an unreadable form so that it can only be decrypted by authorized parties.
@@ -46,8 +47,6 @@ encryption can be used for multiple securing operations such as:
 - Blu-Ray: AACS ([**A**dvanced **A**ccess **C**ontent **S**ystem](https://en.wikipedia.org/wiki/Advanced_Access_Content_System))
 
 ### SSL/TLS and HTTPS key exchange
-
-![ssl_simple](images/ssl_simple.png)
 
 The client sends a request to the server to establish a secure connection.
 
