@@ -21,8 +21,8 @@ bcdedit /debug on
 
 ### VM setup (COM)
 
-import adddevice from "/img/kernel_debugging/vmware_YU0yTtaigA.png"
-import configurevmwaredevice from "/img/kernel_debugging/vmware_agquvVy0bW.png"
+import adddevice from "/img/windows/kernel/kernel_debugging/vmware_YU0yTtaigA.png"
+import configurevmwaredevice from "/img/windows/kernel/kernel_debugging/vmware_agquvVy0bW.png"
 
 ```cmd
 bcdedit /dbgsettings serial debugport:1 baudrate:115200
@@ -61,9 +61,9 @@ For further assistance on configuring named pipes in VMware, refer to the [VMwar
 Start the virtual machine and ensure that the virtual COM device is correctly connected
 
 ### WinDBG (COM)
-import WinDbgFile from "/img/kernel_debugging/DbgX.Shell_hnysQdHmnu.png"
-import AttachToKernel from "/img/kernel_debugging/DbgX.Shell_KGZopkn2gw.png"
-import ComAttachMenu from "/img/kernel_debugging/DbgX.Shell_9hq8b5YEXp.png"
+import WinDbgFile from "/img/windows/kernel/kernel_debugging/DbgX.Shell_hnysQdHmnu.png"
+import AttachToKernel from "/img/windows/kernel/kernel_debugging/DbgX.Shell_KGZopkn2gw.png"
+import ComAttachMenu from "/img/windows/kernel/kernel_debugging/DbgX.Shell_9hq8b5YEXp.png"
 
 
 [Download](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/)
@@ -102,7 +102,7 @@ bcdedit /dbgsettings net hostip:192.168.56.1 port:51234
 
 
 ### WinDBG (Net)
-import NetConfig from "/img/kernel_debugging/DbgX.Shell_Hg7BXHCNZq.png"
+import NetConfig from "/img/windows/kernel/kernel_debugging/DbgX.Shell_Hg7BXHCNZq.png"
 
 
 In the NET settings, enter the port you defined (`51234`). Additionally, set the baud rate to `115200`. Click "OK" to confirm the configuration
