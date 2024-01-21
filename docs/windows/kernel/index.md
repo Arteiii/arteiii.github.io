@@ -1,6 +1,6 @@
 ---
-sidebar_label: Intro
-sidebar_position: 1
+sidebar_label: Windows Kernel Driver
+sidebar_position: 7
 ---
 
 # Prerequisites
