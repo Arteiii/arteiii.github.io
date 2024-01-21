@@ -1,5 +1,11 @@
+const code_themes = {
+  light: require('prism-react-renderer/themes/github'),
+  dark: require('prism-react-renderer/themes/vsDark'),
+};
+
 const math = require("remark-math");
 const katex = require("rehype-katex");
+
 
 const internetProfiles = {
   discord: {
@@ -51,6 +57,30 @@ module.exports = {
   projectName: "arteii-web",
 
   themeConfig: {
+    prism: {
+      theme: code_themes.light,
+      darkTheme: code_themes.dark,
+      additionalLanguages: [
+        'dart',
+        'ruby',
+        'groovy',
+        'kotlin',
+        'java',
+        'swift',
+        'objectivec',
+      ],
+      magicComments: [
+        {
+          className: 'theme-code-block-highlighted-line',
+          line: 'highlight-next-line',
+          block: { start: 'highlight-start', end: 'highlight-end' },
+        },
+        {
+          className: 'code-block-error-line',
+          line: 'highlight-next-line-error',
+        },
+      ],
+    },
     // algolia: {
     //   // The application ID provided by Algolia
     //   appId: 'YOUR_APP_ID',
