@@ -3,6 +3,8 @@ const code_themes = {
   dark: require('prism-react-renderer/themes/vsDark'),
 };
 
+const fs = require('fs');
+const resourcesHTML = fs.readFileSync('./src/navbar/resources.html', 'utf-8');
 const math = require("remark-math");
 const katex = require("rehype-katex");
 
@@ -35,10 +37,6 @@ const internetProfiles = {
   docs: {
     label: "Documentation",
     to: "docs",
-  },
-  projects: {
-    label: "Projects",
-    to: "projects",
   },
 };
 
@@ -91,11 +89,29 @@ module.exports = {
       hideOnScroll: true,
       title: "Arteii",
       // logo: {
-      //   alt: "Arteii",
-      //   src: "img/logo.svg",
-      //   target: "_self",
+      //   alt: 'Arteii',
+      //   srcDark: 'img/logo_dark.svg',
+      //   href: 'https://docusaurus.io/',
+      //   target: '_self',
+      //   width: 32,
+      //   height: 32,
+      //   className: 'custom-navbar-logo-class',
+      //   style: {border: 'solid red'},
       // },
       items: [
+        {
+          label: 'Socials',
+          type: 'dropdown',
+          className: 'dyte-dropdown resources-dropdown',
+          position: 'left',
+          items: [
+            {
+              type: 'html',
+              value: resourcesHTML,
+              className: 'dyte-dropdown',
+            },
+          ],
+        },
         { to: "blog/", label: "Blog", position: "left" },
         {
           to: "docs/",
@@ -120,7 +136,6 @@ module.exports = {
           items: [
             internetProfiles.blog,
             internetProfiles.docs,
-            internetProfiles.projects,
             // internetProfiles.resume,
           ],
         },
@@ -180,15 +195,6 @@ module.exports = {
         },
       },
     ],
-  ],
-  stylesheets: [
-    {
-      href: "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css",
-      type: "text/css",
-      integrity:
-        "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X",
-      crossorigin: "anonymous",
-    },
   ],
   plugins: [
     async function tailwindPlugin(context, options) {

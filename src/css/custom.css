@@ -114,20 +114,20 @@
 
 @layer components {
   .noise-bg {
-    background-image: url('/static/landing-page/grid-light.svg');
+    background-image: url('/landing-page/grid-light.svg');
   }
 
   html[data-theme='dark'] .noise-bg {
-    background-image: url('/static/landing-page/grid-dark.svg');
+    background-image: url('/landing-page/grid-dark.svg');
   }
   
   .noise-bg-faded {
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('/static/landing-page/grid-light.svg');
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('/landing-page/grid-light.svg');
     background-blend-mode: overlay;
   }
   
   html[data-theme='dark'] .noise-bg-faded {
-    background: linear-gradient(rgba(31, 29, 29, 0.9), rgb(10, 10, 10)), url('/static/landing-page/grid-dark.svg');
+    background: linear-gradient(rgba(31, 29, 29, 0.9), rgb(10, 10, 10)), url('/landing-page/grid-dark.svg');
     background-blend-mode: overlay;
   }
 
@@ -188,6 +188,14 @@ body {
 }
 
 /* Docusaurus Theming */
+
+.navbar__title {
+  color: var(--docs-color-primary);
+  margin-right: 15px; 
+  margin-left: 20px; 
+  font-size: large; 
+  font-weight: bold;
+}
 
 :root {
   /* Default values */

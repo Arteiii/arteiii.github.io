@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 
 import HeroSection from '../components/homepage/HeroSection';
+import ResourcesSection from '../components/homepage/ResourcesSection';
 import Head from '@docusaurus/Head';
 
 export default function Homepage() {
@@ -16,6 +17,7 @@ export default function Homepage() {
       </Head>
       
       <HeroSection />
+      <ResourcesSection />
     </Layout>
   );
 }
