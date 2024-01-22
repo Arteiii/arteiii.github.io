@@ -120,6 +120,16 @@
   html[data-theme='dark'] .noise-bg {
     background-image: url('/static/landing-page/grid-dark.svg');
   }
+  
+  .noise-bg-faded {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('/static/landing-page/grid-light.svg');
+    background-blend-mode: overlay;
+  }
+  
+  html[data-theme='dark'] .noise-bg-faded {
+    background: linear-gradient(rgba(31, 29, 29, 0.9), rgb(10, 10, 10)), url('/static/landing-page/grid-dark.svg');
+    background-blend-mode: overlay;
+  }
 
   .dyte-badge {
     @apply mb-2 inline-block rounded-sm text-text-400;

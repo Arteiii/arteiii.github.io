@@ -7,6 +7,8 @@ import {
   OpenRegular,
   RecordRegular,
   VideoRegular,
+  WindowDevToolsRegular,
+  CodePyRectangle16Regular
 } from '@fluentui/react-icons';
 import clsx from 'clsx';
 import { ChevronRight, GitHub } from 'react-feather';
@@ -20,22 +22,16 @@ interface Guide {
 
 const guides: Guide[] = [
   {
-    title: 'Start Recording a Meeting',
-    icon: RecordRegular,
-    text: 'Check out an example of this integration of recording a meeting.',
-    link: '/guides/capabilities/recording',
+    title: 'Start Windows Kernel Development',
+    icon: WindowDevToolsRegular,
+    text: 'Create a kernel driver, learn kernel debugging basics.',
+    link: '/docs/windows/kernel/',
   },
   {
-    title: 'Migrate from Twilio',
-    icon: VideoRegular,
-    text: 'Migration simplified. Refer the guide.',
-    link: '/guides/migration/twilio/concepts-twilio-vs-dyte',
-  },
-  {
-    title: 'Create a Breakout Room',
-    icon: AppsAddInRegular,
-    text: 'Easily split a meeting in separate sessions.',
-    link: '/guides/capabilities/breakoutroom/create-breakout-rooms',
+    title: 'Python',
+    icon: CodePyRectangle16Regular,
+    text: 'Explore basic Python functionality.',
+    link: '/docs/python',
   },
 ];
 
@@ -49,25 +45,22 @@ interface Sample {
 
 const samples: Sample[] = [
   {
-    title: 'Code Sharing Platform',
-    platform: 'React',
-    source: 'https://github.com/dyte-io/blog-live-code-sharing',
-    blog: 'https://dyte.io/blog/live-code-sharing-platform/',
-    demo: 'https://dyte-code-editor.herokuapp.com/room/bbbf8c1f-5eee-4548-90e6-54c1301711cb',
+    title: 'Apex VPK Unpacked',
+    platform: 'Game Hacking',
+    source: 'https://github.com/Arteiii/Apex-VPK-unpacked',
+    // blog: 'link_to_dox.html',
+    // demo: 'no demooo????',
   },
   {
-    title: 'Async Interview Platform',
-    platform: 'React',
-    blog: 'https://dyte.io/blog/async-interview-platform/',
-    source: 'https://github.com/dyte-io/async-interview',
-    demo: 'https://dyte-async-interview.vercel.app',
+    title: 'Authly',
+    platform: 'User Managment',
+    source: 'https://github.com/wavy42/Authly',
   },
   {
-    title: 'Live Proctoring System',
-    platform: 'React',
-    blog: 'https://dyte.io/blog/live-proctoring-system/',
-    source: 'https://github.com/dyte-io/proctored-live-interviews',
-    demo: 'https://dyte-multi-faces.netlify.app/',
+    title: 'Windows Sample Driver',
+    platform: 'Windows Kernel',
+    blog: 'soooonnnn',
+    source: 'https://github.com/Arteiii/simpleWinDriver',
   },
 ];
 
@@ -128,13 +121,13 @@ function Sample({ title, platform, blog, source, demo }: Sample) {
 
 export default function GuidesAndSamples() {
   return (
-    <section className="no-underline-links my-40 mx-auto flex w-full max-w-5xl flex-col gap-10 p-4 py-0 md:flex-row md:gap-0">
+    <section className="no-underline-links mx-auto flex w-full max-w-5xl flex-col p-4 md:flex-row md:gap-0">
       <div className="flex-1">
         <div className="mb-8 flex items-center justify-between">
-          <h3 className="m-0">Popular how to guides</h3>
+          <h3 className="m-0">Docs & Notes</h3>
 
-          <Link to="/guides" className="font-jakarta text-sm font-semibold">
-            View more guides <ArrowRightFilled className="ml-1" />
+          <Link to="/docs" className="font-jakarta text-sm font-semibold">
+            View more <ArrowRightFilled className="ml-1" />
           </Link>
         </div>
 
@@ -154,13 +147,13 @@ export default function GuidesAndSamples() {
 
       <div className="w-full md:max-w-sm">
         <div className="mb-8 flex items-center justify-between">
-          <h3 className="m-0">Popular sample apps</h3>
+          <h3 className="m-0">Repositories</h3>
 
           <Link
-            to="https://github.com/dyte-io"
+            to="https://github.com/Arteiii?tab=repositories"
             className="font-jakarta text-sm font-semibold"
           >
-            All apps <ArrowRightFilled className="ml-1" />
+            All  <ArrowRightFilled className="ml-1" />
           </Link>
         </div>
 
