@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from '@docusaurus/Link';
+import React from "react";
+import Link from "@docusaurus/Link";
 import {
   AppsAddInRegular,
   ArrowRightFilled,
@@ -8,10 +8,10 @@ import {
   RecordRegular,
   VideoRegular,
   WindowDevToolsRegular,
-  CodePyRectangle16Regular
-} from '@fluentui/react-icons';
-import clsx from 'clsx';
-import { ChevronRight, GitHub } from 'react-feather';
+  CodePyRectangle16Regular,
+} from "@fluentui/react-icons";
+import clsx from "clsx";
+import { ChevronRight, GitHub } from "react-feather";
 
 interface Guide {
   title: string;
@@ -22,16 +22,16 @@ interface Guide {
 
 const guides: Guide[] = [
   {
-    title: 'Start Windows Kernel Development',
+    title: "Start Windows Kernel Development",
     icon: WindowDevToolsRegular,
-    text: 'Create a kernel driver, learn kernel debugging basics.',
-    link: '/docs/windows/kernel/',
+    text: "Create a kernel driver, learn kernel debugging basics.",
+    link: "/docs/windows/kernel/",
   },
   {
-    title: 'Python',
+    title: "Python",
     icon: CodePyRectangle16Regular,
-    text: 'Explore basic Python functionality.',
-    link: '/docs/python',
+    text: "Explore basic Python functionality.",
+    link: "/docs/python",
   },
 ];
 
@@ -45,22 +45,22 @@ interface Sample {
 
 const samples: Sample[] = [
   {
-    title: 'Apex VPK Unpacked',
-    platform: 'Game Hacking',
-    source: 'https://github.com/Arteiii/Apex-VPK-unpacked',
+    title: "uptimeMon",
+    platform: "Docker",
+    source: "https://github.com/Arteiii/uptimeMon",
     // blog: 'link_to_dox.html',
     // demo: 'no demooo????',
   },
   {
-    title: 'Authly',
-    platform: 'User Managment',
-    source: 'https://github.com/wavy42/Authly',
+    title: "Authly",
+    platform: "User Managment",
+    source: "https://github.com/wavy42/Authly",
   },
   {
-    title: 'Windows Sample Driver',
-    platform: 'Windows Kernel',
-    blog: 'soooonnnn',
-    source: 'https://github.com/Arteiii/simpleWinDriver',
+    title: "Windows Sample Driver",
+    platform: "Windows Kernel",
+    blog: "soooonnnn",
+    source: "https://github.com/Arteiii/simpleWinDriver",
   },
 ];
 
@@ -140,8 +140,8 @@ export default function GuidesAndSamples() {
 
       <div
         className={clsx(
-          'mx-8 block flex-shrink-0 bg-gradient-to-b from-transparent via-secondary-700 to-transparent',
-          'hidden w-px md:block'
+          "mx-8 block flex-shrink-0 bg-gradient-to-b from-transparent via-secondary-700 to-transparent",
+          "hidden w-px md:block"
         )}
       />
 
@@ -153,7 +153,7 @@ export default function GuidesAndSamples() {
             to="https://github.com/Arteiii?tab=repositories"
             className="font-jakarta text-sm font-semibold"
           >
-            All  <ArrowRightFilled className="ml-1" />
+            All <ArrowRightFilled className="ml-1" />
           </Link>
         </div>
 
