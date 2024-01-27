@@ -57,7 +57,7 @@ function Resource({ youtubeId, title }: Resource) {
       <div>
         <div className="mb-3 overflow-hidden rounded-lg">
           <img
-            src={`https://img.youtube.com/vi/${youtubeId}/sddefault.jpg`}
+            src={`https://img.youtube.com/vi/${youtubeId}/mqdefault.jpg`}
             alt={`Thumbnail for the video titled "${title}"`}
             loading="lazy"
             className="aspect-video h-full w-full object-cover transition-transform group-hover:scale-110"

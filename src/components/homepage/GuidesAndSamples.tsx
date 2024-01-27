@@ -94,13 +94,13 @@ export function Sample({ title, platform, blog, source, demo }: Sample) {
 
       <div className="flex items-center gap-2.5">
         {blog && (
-          <Link to={blog} className="text-inherit">
+          <Link to={blog} className="text-inherit" aria-label="Open Blog">
             <DocumentRegular className="h-5 w-5" />
           </Link>
         )}
 
         {demo && (
-          <Link to={demo} className="text-inherit">
+          <Link to={demo} className="text-inherit" aria-label="Open Demo">
             <OpenRegular className="h-5 w-5" />
           </Link>
         )}
@@ -109,6 +109,7 @@ export function Sample({ title, platform, blog, source, demo }: Sample) {
           <Link
             to={source}
             className="flex items-center gap-1 rounded-lg py-1 px-3 text-inherit transition-colors group-hover:bg-primary group-hover:text-white"
+            aria-label="Open Repositorie"
           >
             <GitHub className="h-4 w-4" />
             <span className="font-semibold">Clone</span>
