@@ -1,13 +1,13 @@
-import Link from '@docusaurus/Link';
-import React, { useState } from 'react';
-import clsx from 'clsx';
-import axios from 'axios';
+import Link from "@docusaurus/Link";
+import React, { useState } from "react";
+import clsx from "clsx";
+import axios from "axios";
 
 import {
   ArrowRightFilled,
   ChevronLeftRegular,
   ChevronRightRegular,
-} from '@fluentui/react-icons';
+} from "@fluentui/react-icons";
 
 interface Resource {
   youtubeId: string;
@@ -16,37 +16,33 @@ interface Resource {
 
 const ALL_RESOURCES: Resource[] = [
   {
-    youtubeId: 'ppJWQLvR15c',
-    title: 'Fortnite Ep 2',
+    youtubeId: "ppJWQLvR15c",
+    title: "Fortnite Ep 2",
   },
   {
-    youtubeId: 'b0sdJfhui00',
-    title: 'XDefiant Beta was fun',
+    youtubeId: "b0sdJfhui00",
+    title: "XDefiant Beta was fun",
   },
   {
-    youtubeId: '3j63CkHwytI',
-    title: 'Rainbow Six Siege EP 1',
+    youtubeId: "3j63CkHwytI",
+    title: "Rainbow Six Siege EP 1",
   },
   {
-    youtubeId: 'plNRcHh17dc',
-    title: 'Rainbow Six Siege EP 2',
+    youtubeId: "plNRcHh17dc",
+    title: "Rainbow Six Siege EP 2",
   },
   {
-    youtubeId: '48hjHs-gENI',
-    title: 'Fortnite Ep 1',
+    youtubeId: "48hjHs-gENI",
+    title: "Fortnite Ep 1",
   },
   {
-    youtubeId: 'gvhFTAT-Ewc',
-    title: 'Apex Legends',
+    youtubeId: "gvhFTAT-Ewc",
+    title: "Apex Legends",
   },
 ];
 
-function Resource({
-  youtubeId,
-  title,
-}: Resource) {
+function Resource({ youtubeId, title }: Resource) {
   const [isPreviewVisible, setIsPreviewVisible] = useState<boolean>(true);
-
 
   const handlePreviewClick = () => {
     setIsPreviewVisible(false);
@@ -62,7 +58,7 @@ function Resource({
         <div className="mb-3 overflow-hidden rounded-lg">
           <img
             src={`https://img.youtube.com/vi/${youtubeId}/sddefault.jpg`}
-            alt={title}
+            alt={`Thumbnail for the video titled "${title}"`}
             loading="lazy"
             className="aspect-video h-full w-full object-cover transition-transform group-hover:scale-110"
           />
@@ -70,7 +66,6 @@ function Resource({
         <h3 className="font-semibold text-black group-hover:text-primary dark:text-white dark:group-hover:text-primary-100 lg:text-xl">
           {title}
         </h3>
-
       </div>
     </Link>
   );
@@ -78,12 +73,9 @@ function Resource({
 
 export default function ResourcesSection() {
   const [page, setPage] = useState(1);
-  const [activeType, setActiveType] = useState<'all'>('all');
+  const [activeType, setActiveType] = useState<"all">("all");
 
-  const resources =
-    activeType === 'all'
-      ? ALL_RESOURCES
-      : ALL_RESOURCES;
+  const resources = activeType === "all" ? ALL_RESOURCES : ALL_RESOURCES;
 
   const currentResources = resources.slice((page - 1) * 3, page * 3);
 
@@ -117,7 +109,6 @@ export default function ResourcesSection() {
           </Link>
         </div>
 
-
         <div className="relative flex flex-col">
           <div className="no-underline-links grid grid-cols-3 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {currentResources.map((resource, idx) => {
@@ -129,6 +120,7 @@ export default function ResourcesSection() {
             <button
               onClick={prevPage}
               className="top-1/2 -left-14 rounded-lg bg-transparent p-1 hover:bg-secondary-800 md:absolute md:-translate-y-1/2"
+              aria-label="Previous Page"
             >
               <ChevronLeftRegular className="h-6 w-6" />
             </button>
@@ -136,6 +128,7 @@ export default function ResourcesSection() {
             <button
               onClick={nextPage}
               className="top-1/2 -right-14 rounded-lg bg-transparent p-1 hover:bg-secondary-800 md:absolute md:-translate-y-1/2"
+              aria-label="Next Page"
             >
               <ChevronRightRegular className="h-6 w-6" />
             </button>

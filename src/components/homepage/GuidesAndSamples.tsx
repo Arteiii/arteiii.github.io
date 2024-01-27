@@ -82,7 +82,7 @@ function Guide({ title, text, icon: Icon, link }: (typeof guides)[0]) {
   );
 }
 
-function Sample({ title, platform, blog, source, demo }: Sample) {
+export function Sample({ title, platform, blog, source, demo }: Sample) {
   return (
     <div className="group flex cursor-pointer items-center justify-between rounded-lg border-2 border-transparent p-3 text-text-400/60 transition-colors hover:border-primary hover:text-primary">
       <div className="flex flex-col">
@@ -119,7 +119,7 @@ function Sample({ title, platform, blog, source, demo }: Sample) {
   );
 }
 
-export default function GuidesAndSamples() {
+export function GuidesAndSamples() {
   return (
     <section className="no-underline-links mx-auto flex w-full max-w-5xl flex-col p-4 md:flex-row md:gap-0">
       <div className="flex-1">

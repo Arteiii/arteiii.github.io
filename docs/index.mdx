@@ -4,35 +4,66 @@ title: welcome
 sidebar_position: 1
 ---
 
-# Please Read
-
-
-
-The information and content in this document may be incomplete, outdated or inaccurate.  
-No warranty is made as to the accuracy, timeliness or completeness of the information provided.  
-
-The author of this document assumes no responsibility for any damage or loss that may result from the use of the information contained herein.  
-Use of the information provided is at the reader's own risk.  
-
+:::note
 It is strongly recommended that the information used in this document be verified with others and that reference be made to recognized professional literature,  
-scientific articles, or official sources. Credits or references are listed below to provide you with a better and more complete explanation of the topics covered.    
+scientific articles, or official sources.  
+
+Credits or references are listed below to provide you with a better and more complete explanation of the topics covered.    
 Please take the time to consult these resources as they may provide more detailed information and expertise.  
+:::
 
 
-## Credits
+## Content
 
-We thank the following sources and authors for their valuable contributions and encourage you to consult their works:
+import {
+    DeveloperBoardRegular,
+    ProductionRegular,
+    AppGenericRegular
+} from '@fluentui/react-icons';
 
-### Python
 
-- [Real Python](https://realpython.com)
-- [w3schools](https://www.w3schools.com/python/default.asp)
-- [Python](https://www.python.org/)
-- [Google for Education](https://developers.google.com/edu/python/)
-- [learnpython.org](https://www.learnpython.org/)
-- [Learn Microsoft](https://learn.microsoft.com/en-us/training/paths/beginner-python/)
-- [helpful.codes](https://python.helpful.codes/)
-- [Bernd Klein (Book)](https://www.amazon.com/stores/author/B00G34KN4U)
-- [Stef Maruch (Book)](https://www.amazon.com/stores/Stef-Maruch/author/B001IO9JYK)
-- [Luciano Ramalho (Book)](https://www.amazon.com/stores/Luciano-Ramalho/author/B00O6IY1S4)
+import {CardSection, Card} from '../src/components/CardComponents'
 
+
+Welcome! These nodes serve as my personal learning and reference points.  
+Your contributions are appreciated. Thank you!
+
+<CardSection
+  id="Windows"
+  title="Windows"
+>
+  <Card
+    title="Kernel"
+    icon={<DeveloperBoardRegular />}
+    to="/docs/windows/kernel"
+    description='First Driver, Kernel Debugging'
+  />
+  <Card
+    title="Internals"
+    icon={<ProductionRegular />}
+    to="/docs/category/windows-internals"
+    description='Handles, PE structure, Common DLLs, Virtualization Based Security (VBS)...'
+  />
+  <Card
+    title="Programming"
+    icon={<AppGenericRegular />}
+    to="/docs/category/programming"
+    description='Pipes'
+  />
+</CardSection>
+
+<CardSection
+  id="Other"
+  title="Other"
+>
+  <Card
+    title="Web CheatSheet"
+    to="/docs/web"
+    description='HTTP Status Codes, HTTP Verbs'
+  />
+  <Card
+    title="Python"
+    to="/docs/python/"
+    description='Variables, Shallow & Deep Copy, if else, Functions, Exceptions...'
+  />
+</CardSection>

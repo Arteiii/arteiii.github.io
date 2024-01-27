@@ -4,8 +4,6 @@ sidebar_position: 7
 
 # Pico Processes
 
-## TL;DR
-
 WSL functions as a "translation tool", enabling the execution of Linux commands and Unix-based executables on Windows. It utilizes a unique approach called 'Pico Processes,' which distinguishes it from conventional subsystems. Unlike standalone Linux environments, WSL translates Linux system calls into Windows equivalents, facilitating seamless interaction with the Windows kernel. This distinctive feature makes WSL an efficient compatibility layer, allowing Linux software to run smoothly on a Windows platform.
 
 ## The Windows Portable Executable (PE) format

@@ -1,7 +1,7 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 ---
 
-# TCP/IP Model
+# Networking
 
 ![TCP IP Model](img/tcp_ip_model_2023-11-28.svg)
