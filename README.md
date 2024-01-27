@@ -1,73 +1,45 @@
-<h1 align="center">
-  Arteii Docs/Blog
-</h1>
+# Arteii - Ben
 
-the template was built by:<br />
-[evantay.com](https://evantay.com/) <br />
-[GitHub](https://github.com/DigiPie/kaya-folio)
+- [Arteii - Ben](#arteii---ben)
+  - [About](#about)
+  - [Socials](#socials)
+  - [Getting Started](#getting-started)
+  - [Contributing](#contributing)
+  - [Feedback](#feedback)
+  - [License](#license)
 
-<br />
+## About
 
-I apologise for any translation or grammatical errors
-
-<br />
-
-## [Docs](https://arteiii.github.io/docs/)
-
-
-[Disclaimer](https://arteiii.github.io/docs/#disclaimer)
-
-### Table Of Content
-
-- [Privacy & Security (working)](https://arteiii.github.io/docs/Privacy_and_Security/)
-- [Hashing & Encryption](https://arteiii.github.io/docs/encryption/)
-- [Python](https://arteiii.github.io/docs/python/)
-  - [Basics](https://arteiii.github.io/docs/python/basics/)
-    - [Datatypes \& Variables:](https://arteiii.github.io/docs/python/basics/#datatypes--variables)
-    - [Variable names](https://arteiii.github.io/docs/python/basics/#variable-names)
-    - [Datatypes](https://arteiii.github.io/docs/python/basics/#datatypes)
-    - [Sequential Datatypes](https://arteiii.github.io/docs/python/basics/#sequential-datatypes)
-    - [Dictionaries:](https://arteiii.github.io/docs/python/basics/#dictionaries)
-    - [Sets](https://arteiii.github.io/docs/python/basics/#sets)
-    - [Input](https://arteiii.github.io/docs/python/basics/#input)
-    - [if else](https://arteiii.github.io/docs/python/basics/#if-else)
-    - [Loops](https://arteiii.github.io/docs/python/basics/#loops)
-    - [Read \& Write Files](https://arteiii.github.io/docs/python/basics/#read--write-files)
-    - [Formated Output](https://arteiii.github.io/docs/python/basics/#formated-output)
-    - [Shallow \& Deep Copy](https://arteiii.github.io/docs/python/basics/#shallow--deep-copy)
-    - [Functions](https://arteiii.github.io/docs/python/basics/#functions)
-    - [Recursive Functions](https://arteiii.github.io/docs/python/basics/#recursive-functions)
-    - [Lists \& Tupels](https://arteiii.github.io/docs/python/basics/#lists--tupels)
-    - [Modularization](https://arteiii.github.io/docs/python/basics/#modularization)
-    - [Global And Local Variables](https://arteiii.github.io/docs/python/basics/#global-and-local-variables)
-    - [Everything About Strings](https://arteiii.github.io/docs/python/basics/#almost-everything-about-strings)
-    - [EXCEPTIONS](https://arteiii.github.io/docs/python/basics/#exceptions)
-  - [OOP (SOON)](https://arteiii.github.io/docs/python/oop/)
-- [C++](https://arteiii.github.io/docs/cpp/)
-  - [Basics](https://arteiii.github.io/docs/cpp/basics/)
-
-<br />
-
-## [Blog](https://arteiii.github.io/blog/)
-
-### Table Of Content
-
-- [MarkDown Intro](https://arteiii.github.io/blog/MarkDown) [[Evan Tay](https://github.com/DigiPie), [Arteii](https://github.com/arteiii)]
-- [Django101 Hello World!](https://arteiii.github.io/blog/django101) [ [Arteii](https://github.com/arteiii) ]
-
-<br />
-
-## Credits
-
-i thank the following sources and authors for their valuable contributions and encourage you to consult their works:
-
-#### [Python](https://arteiii.github.io/docs/python/#credits)
-
-#### [C++](https://arteiii.github.io/docs/cpp/#credits)
-
-<br />
+This documentation website is a collection of blogs and documents I've created to aid my personal learning journey. Topics cover a range of subjects, including programming, technology, and more. The site is organized using Docusaurus, a modern static site generator.
 
 ## Socials
 
-Discord: <br />
-`arteii`
+Connect with me:
+
+- GitHub: [Arteiii](https://github.com/Arteiii)
+- Discord: `arteii`
+- Email: <ben.arteii@proton.me>
+
+## Getting Started
+
+To explore the content on this website, simply visit [https://arteiii.github.io](https://arteiii.github.io).  
+You can navigate through the different sections and find articles on various topics.  
+If you have specific questions or need assistance, feel free to reach out.
+
+## Contributing
+
+Contributions are welcome! If you find any errors, have suggestions, or want to contribute new content, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/my-contribution`.
+3. Make your changes and commit them: `git commit -m 'Add my contribution'`.
+4. Push to the branch: `git push origin feature/my-contribution`.
+5. Open a pull request.
+
+## Feedback
+
+If you have any feedback, suggestions, or questions about the content, feel free to open an issue or reach out to me directly.
+
+## License
+
+This documentation is licensed under the [MIT License](LICENSE). Feel free to use and modify the content, but please provide attribution.
