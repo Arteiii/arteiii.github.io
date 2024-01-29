@@ -32,6 +32,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-feather": "^2.0.10",
+    "react-text-transition": "^3.1.0",
     "rehype-katex": "^5.0.0",
     "remark-math": "^3.0.1",
     "tailwindcss": "^3.3.2"

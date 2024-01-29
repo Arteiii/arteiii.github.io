@@ -48,7 +48,7 @@ module.exports = {
   onBrokenLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "arteii",
-  projectName: "arteii-web",
+  projectName: "arteiii.github.io",
 
   themeConfig: {
     prism: {

@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
+sidebar_label: Web
 ---
 
-# Cheat Sheet
 
 ## HTTP Status Codes Cheat Sheet
 
