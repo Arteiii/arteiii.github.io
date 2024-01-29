@@ -51,6 +51,8 @@ module.exports = {
   projectName: "arteiii.github.io",
 
   themeConfig: {
+    image: "img/Website-Social-Card.jpeg",
+
     prism: {
       theme: code_themes.light,
       darkTheme: code_themes.dark,
