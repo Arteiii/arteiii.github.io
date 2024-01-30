@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { GuidesAndSamples } from "./GuidesAndSamples";
 import TextTransition, { presets } from "react-text-transition";
@@ -17,7 +18,6 @@ const text = {
       "Scoop-diddy-whoop",
       "Whoop-diddy-scoop",
       "Whoop-diddy-scoop, poop",
-      // Weitere Zeilen für Song A
     ],
   },
   Ich_feier_den_scheiss: {
@@ -35,17 +35,26 @@ const text = {
   ORCA_FREESTYLE: {
     link: "https://genius.com/Absent-orca-freestyle-lyrics",
     lines: [
-      "Ich schwimm' wie ein Orca und all deine Chains blinken so fake, ich kauf' dir kein Wort ab",
-      "Immer nur hoch, Bruder, verlieren ist nicht in mei'm Wortschatz (Ja)",
-      "Geht's um mein Team, lass' ich nix durch, ich fühl' mich wie'n Torwart (Woah)",
-      "Ich hätte 'ne Fußballerline droppen könn'n, aber kenn' keine Spielernam'n",
-      "Hah, oh mein Gott, er ist wieder da, wieder Mikrofon, wieder Heat gemacht",
+      "Ich schwimm' wie ein Orca",
+      "und all deine Chains blinken so fake,",
+      " ich kauf' dir kein Wort ab",
+      "Immer nur hoch, Bruder,",
+      "verlieren ist nicht in mei'm Wortschatz (Ja)",
+      "Geht's um mein Team, lass' ich nix durch,",
+      "ich fühl' mich wie'n Torwart (Woah)",
+      "Ich hätte 'ne Fußballerline droppen könn'n,",
+      "aber kenn' keine Spielernam'n",
+      "Hah, oh mein Gott,",
+      "er ist wieder da, wieder Mikrofon,",
+      "wieder Heat gemacht",
       "Wieder Kippchen an und an sie gedacht (Jaa)",
-      "Fick' deine Party, ich häng' mit zehn Junkies, Loner, Crocodile Dundee",
-      "Ich will nur Liebe — Mahatma Gandhi, du willst ein G sein, ja, find' ich funny,",
+      "Fick' deine Party, ich häng' mit zehn Junkies,",
+      "Loner, Crocodile Dundee",
+      "Ich will nur Liebe — Mahatma Gandhi,",
+      "du willst ein G sein, ja, find' ich funny,",
     ],
   },
-  ORCA_sFREESTYLE: {
+  Words_In_A_Minute: {
     link: "https://www.youtube.com/watch?v=KiuZAAFAvA4",
     lines: [
       "Ready? Go!",

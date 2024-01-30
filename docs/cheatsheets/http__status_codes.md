@@ -2,7 +2,7 @@
 sidebar_position: 4
 sidebar_label: Web
 ---
-
+# Web
 
 ## HTTP Status Codes Cheat Sheet
 

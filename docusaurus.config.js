@@ -157,6 +157,8 @@ module.exports = {
           editCurrentVersion: false,
           remarkPlugins: [math],
           rehypePlugins: [katex],
+          editUrl:
+            "https://github.com/arteiii/arteiii.github.io/tree/main/",
         },
         blog: {
           blogSidebarTitle: "Blog",
