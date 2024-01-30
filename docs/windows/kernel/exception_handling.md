@@ -98,17 +98,19 @@ __except (EXCEPTION_EXECUTE_HANDLER) {
 }
 ```
 
-__try Block:
+### ``__try`` Block
 
-The code inside the __try block is monitored for exceptions.
-If an exception occurs within this block, control is transferred to the corresponding__except block.
-__except Block:
+The code inside the ``__try`` block is monitored for exceptions.
+If an exception occurs within this block, control is transferred to the corresponding ``__except`` block.
 
-The __except block contains the code to handle the exception.
+### ``__except`` Block
+
+The ``__except`` block contains the code to handle the exception.
 EXCEPTION_EXECUTE_HANDLER is a common constant used, indicating that the exception handler should be executed.
-Accessing Exception Information:
 
-The GetExceptionCode and GetExceptionInformation functions can be used within the __except block to obtain information about the exception.
+### Accessing Exception Information
+
+The GetExceptionCode and GetExceptionInformation functions can be used within the ``__except`` block to obtain information about the exception.
 
 ```c
 
@@ -118,9 +120,9 @@ __except (EXCEPTION_EXECUTE_HANDLER) {
 }
 ```
 
-Cleanup Code in__finally Block:
+### Cleanup Code in ``__finally`` Block
 
-Developers can also use a __finally block to include cleanup code that will be executed whether an exception occurs or not.
+Developers can also use a ``__finally`` block to include cleanup code that will be executed whether an exception occurs or not.
 
 ```c
 __try {
@@ -131,7 +133,7 @@ __finally {
 }
 ```
 
-Example:
+### Example
 
 Here's a simple example demonstrating the usage of SEH to handle a divide-by-zero exception:
 
