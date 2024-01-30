@@ -41,6 +41,7 @@ interface Sample {
   source?: string;
   blog?: string;
   demo?: string;
+  buttonlabel?: string;
 }
 
 const samples: Sample[] = [
@@ -82,7 +83,7 @@ function Guide({ title, text, icon: Icon, link }: (typeof guides)[0]) {
   );
 }
 
-export function Sample({ title, platform, blog, source, demo }: Sample) {
+export function Sample({ title, platform, blog, source, demo, buttonlabel = "Clone" }: Sample) {
   return (
     <div className="group flex cursor-pointer items-center justify-between rounded-lg border-2 border-transparent p-3 text-text-400/60 transition-colors hover:border-primary hover:text-primary">
       <div className="flex flex-col">
@@ -112,7 +113,7 @@ export function Sample({ title, platform, blog, source, demo }: Sample) {
             aria-label="Open Repositorie"
           >
             <GitHub className="h-4 w-4" />
-            <span className="font-semibold">Clone</span>
+            <span className="font-semibold">{buttonlabel}</span>
           </Link>
         )}
       </div>
