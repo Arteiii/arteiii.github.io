@@ -18,7 +18,11 @@ Please take the time to consult these resources as they may provide more detaile
 import {
     DeveloperBoardRegular,
     ProductionRegular,
-    AppGenericRegular
+    AppGenericRegular,
+    AnimalTurtleRegular,
+    DeveloperBoardSearchRegular,
+    EngineRegular,
+    EmojiHintRegular,
 } from '@fluentui/react-icons';
 
 
@@ -53,17 +57,38 @@ Your contributions are appreciated. Thank you!
 </CardSection>
 
 <CardSection
-  id="Other"
-  title="Other"
+  id="python"
+  title="Python"
 >
   <Card
-    title="Web CheatSheet"
-    to="/docs/web"
+    icon={<AnimalTurtleRegular />}
+    title="Basic's"
+    to="/docs/category/basics"
+    description='Variables, Shallow & Deep Copy, if else, Functions, Exceptions, Read & Write Files...'
+  />
+</CardSection>
+
+
+<CardSection
+  id="cheatsheet"
+  title="CheatSheet's"
+>
+  <Card
+    icon={<EmojiHintRegular />}
+    title="Web"
+    to="/docs/cheatsheets/web"
     description='HTTP Status Codes, HTTP Verbs'
   />
   <Card
-    title="Python"
-    to="/docs/python/"
-    description='Variables, Shallow & Deep Copy, if else, Functions, Exceptions, Read & Write Files...'
+    icon={<DeveloperBoardSearchRegular />}
+    title="Assembly"
+    to="/docs/cheatsheets/Assembly/"
+    description='Key Concepts, x86-64'
+  />
+  <Card
+    icon={<EngineRegular />}
+    title="Computer Architecture"
+    to="/docs/cheatsheets/ComuterArchitecture/"
+    description='Formulas'
   />
 </CardSection>

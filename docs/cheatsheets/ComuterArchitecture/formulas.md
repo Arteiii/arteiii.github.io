@@ -43,4 +43,4 @@ sidebar_label: Formulas
 3. Bandwidth Rule: Bandwidth grows by at least the square of the improvement in latency
 4. 2:1 Cache Rule: The miss rate of a direct-mapped cache of size $$N$$ is about the same as a two-way set-associative cache of size $$\frac{N}{2}$$
 5. Dependability Rule: Design with no single point of failure
-6. Watt-Year Rule:The fully burdened cot of a Watt per year in a Warehouse Scale Computer in North America in 2011, including the cost of amortizing the power and cooling infrastructure, is about $2.
+6. Watt-Year Rule:The fully burdened cost of a Watt per year in a Warehouse Scale Computer in North America in 2011, including the cost of amortizing the power and cooling infrastructure, is about $2.
