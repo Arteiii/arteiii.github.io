@@ -11,7 +11,6 @@ draft: true
 VXLAN, which stands for Virtual Extensible LAN, addresses the limitations and challenges associated with traditional network architectures in the context of modern virtualized and cloud environments. As organizations increasingly embrace virtualization and cloud computing, the need for a more flexible, scalable, and efficient network infrastructure becomes paramount.
 
 <!--truncate-->
- >
 
 ## Overview
 
