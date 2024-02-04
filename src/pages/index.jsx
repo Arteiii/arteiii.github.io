@@ -8,14 +8,14 @@ import Head from '@docusaurus/Head';
 export default function Homepage() {
   return (
     <Layout
-      description="Arteii - Ben i do things"
+      description="Arteii - not a web dev"
       wrapperClassName="homepage flex flex-col"
       noFooter
     >
       <Head>
         <link rel="prefetch" href="/assets/css/elements.min.css" />
       </Head>
-      
+
       <HeroSection />
       <ResourcesSection />
     </Layout>

@@ -46,10 +46,10 @@ interface Sample {
 
 const samples: Sample[] = [
   {
-    title: "uptimeMon",
-    platform: "Docker",
-    source: "https://github.com/Arteiii/uptimeMon",
-    // blog: 'link_to_dox.html',
+    title: "RegistryHelper",
+    platform: "RegistryHelper",
+    source: "https://github.com/Arteiii/RegistryHelper",
+    blog: 'https://learn.microsoft.com/en-us/archive/msdn-magazine/authors/giovanni_dicanio',
     // demo: 'no demooo????',
   },
   {
@@ -60,7 +60,7 @@ const samples: Sample[] = [
   {
     title: "Windows Sample Driver",
     platform: "Windows Kernel",
-    blog: "soooonnnn",
+    // blog: "soooonnnn",
     source: "https://github.com/Arteiii/simpleWinDriver",
   },
 ];
