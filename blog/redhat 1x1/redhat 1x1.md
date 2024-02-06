@@ -11,8 +11,6 @@ everything is a file and what is not should be one
 
 <!--truncate-->
 
->
-
 ## Linux File System
 
 ```shell
