@@ -4,24 +4,9 @@ import { GuidesAndSamples } from "./GuidesAndSamples";
 import TextTransition, { presets } from "react-text-transition";
 
 const text = {
-  Lift_Yourself: {
-    link: "https://www.youtube.com/watch?v=8fbyfDbi-MI",
-    lines: [
-      "Poopy-di scoop",
-      "Scoop-diddy-whoop",
-      "Whoop-di-scoop-di-poop",
-      "Poop-di-scoopty",
-      "Scoopty-whoop",
-      "Whoopity-scoop, whoop-poop",
-      "Poop-diddy, whoop-scoop",
-      "Poop, poop",
-      "Scoop-diddy-whoop",
-      "Whoop-diddy-scoop",
-      "Whoop-diddy-scoop, poop",
-    ],
-  },
   Ich_feier_den_scheiss: {
-    link: "https://www.youtube.com/watch?v=BF7HfAvybCk",
+    link: "https://youtu.be/BF7HfAvybCk?si=ckI_ovLKzQ8pl-zp&t=88",
+    time: 2000,
     lines: [
       "Frankfurt am Main, Gang, Gang",
       "Meine Jungs machen groß, deine Jungs sind broke",
@@ -33,7 +18,8 @@ const text = {
     ],
   },
   ORCA_FREESTYLE: {
-    link: "https://genius.com/Absent-orca-freestyle-lyrics",
+    link: "https://www.youtube.com/watch?v=PHz_E3a0l-g",
+    time: 2000,
     lines: [
       "Ich schwimm' wie ein Orca",
       "und all deine Chains blinken so fake,",
@@ -46,24 +32,12 @@ const text = {
   },
   bandits_remix: {
     link: "https://www.youtube.com/watch?v=QCnOjOjgSu0",
+    time: 1500,
     lines: [
       "One thousand dollars is one band",
       "Ten bands is one rack",
       "Ten racks is a brick (haha)",
       "A brick, is a hundred thousand dollars (Aye, yuh)",
-    ],
-  },
-  Dias_Freestyle: {
-    link: "https://www.youtube.com/watch?v=OOJvJBdjXsc",
-    lines: [
-      "Poppe Diaz und mir geht's prima",
-      "Teile gerne, habe viel da, Nike, kein Adidas",
-      "Rote Augen wie Uchiha, so sind Berliner",
-      "Louis Fake, doch Scheine lila, exe ein'n Liter",
-      "Fick' dein Bierball",
-      "Kette scheint, weiße Nikes",
-      "Steige in den Tesla ein, hah, aight",
-      "Deine Bitch hat mich als Klingelton, keinen Bock auf Mindestlohn",
     ],
   },
 };
@@ -90,7 +64,7 @@ export default function HeroSection() {
       } else {
         nextSong();
       }
-    }, 2000); // every 2 seconds
+    }, currentSong.time);
 
     return () => clearInterval(intervalId);
   }, [currentSong, currentLineIndex]);

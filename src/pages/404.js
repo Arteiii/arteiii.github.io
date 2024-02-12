@@ -8,7 +8,6 @@ const NotFound = () => (
                 <h1 className="font-jakarta text-7xl font-bold">$=$  -  N07 F0und</h1>
             </section>
             <div className="absolute bottom-0 left-0 right-0 text-center">
-                {/* Display GIF at the bottom */}
                 <img src="/landing-page/travolta.gif" alt="Not Found GIF" />
             </div>
 
