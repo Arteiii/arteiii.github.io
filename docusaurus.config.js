@@ -1,7 +1,4 @@
-const code_themes = {
-  light: require('prism-react-renderer/themes/github'),
-  dark: require('prism-react-renderer/themes/vsDark'),
-};
+import {themes as prismThemes} from 'prism-react-renderer';
 
 const fs = require('fs');
 const resourcesHTML = fs.readFileSync('./src/navbar/resources.html', 'utf-8');
@@ -54,8 +51,8 @@ module.exports = {
     image: "img/Website-Social-Card.jpeg",
 
     prism: {
-      theme: code_themes.light,
-      darkTheme: code_themes.dark,
+      theme: prismThemes.github,
+      darkTheme: prismThemes.vsDark,
       additionalLanguages: [
         'dart',
         'ruby',
@@ -64,6 +61,7 @@ module.exports = {
         'java',
         'swift',
         'objectivec',
+        'asm6502',
       ],
       magicComments: [
         {

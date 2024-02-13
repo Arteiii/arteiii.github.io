@@ -5,7 +5,6 @@
   - [Socials](#socials)
   - [Getting Started](#getting-started)
   - [Feedback](#feedback)
-  - [License](#license)
 
 ## About
 
@@ -28,7 +27,3 @@ If you have specific questions or need assistance, feel free to reach out.
 ## Feedback
 
 If you have any feedback, suggestions, or questions about the content, feel free to open an issue or reach out to me directly.
-
-## License
-
-This documentation is licensed under the [MIT License](LICENSE). Feel free to use and modify the content, but please provide attribution.

@@ -7,7 +7,7 @@ date: 2023-07-02T18:00
 ---
 
 just a short intro to markdown and mdx
-for docusaurus or different tools/websites
+for docusaurus or different tools / websites
 
 ---
 
@@ -17,9 +17,6 @@ You can write content using [GitHub-flavored Markdown syntax](https://github.git
 To serve as an example page when styling markdown based Docusaurus sites.
 
 <!--truncate-->
-
-{/* truncate caps the preview */}
-/>
 
 ## Headers
 
@@ -37,7 +34,6 @@ To serve as an example page when styling markdown based Docusaurus sites.
 
 ###### H6 - Create the best documentation
 
-<br />
 
 ## Emphasis
 
@@ -68,7 +64,6 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 - Or pluses
 
-<br />
 
 ## Links
 
@@ -84,7 +79,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 Or leave it empty and use the [link text itself].
 
-URLs and URLs in angle brackets will automatically get turned into links. http://www.example.com/ or <http://www.example.com/> and sometimes example.com (but not on GitHub, for example).
+URLs and URLs in angle brackets will automatically get turned into links. http://www.example.com/ or http://www.example.com/ and sometimes example.com (but not on GitHub, for example).
 
 Some text to show that the reference links can follow later.
 
@@ -92,13 +87,13 @@ Some text to show that the reference links can follow later.
 [1]: http://slashdot.org/
 [link text itself]: http://www.reddit.com/
 
-<br />
+
 
 ## Images
 
 ---
 
-<br />
+
 
 you can import assets and use them like this: (only if you use mdx)
 
@@ -108,13 +103,12 @@ import myImageUrl from "./assets/docusaurus-asset-example-banner.svg";
 <img src={myImageUrl} width={250} height={250} alt="Example banner" />;
 ```
 
-<br />
+
 
 import Logo from "../../static/img/logo.svg";
 
 <img src={Logo} width={250} height={250} alt="Example banner" />
 
-<br />
 
 ---
 
@@ -130,7 +124,7 @@ Reference-style: ![alt text][logo]
 
 Images from any folder can be used by providing path to file. Path should be relative to markdown file.
 
-<br />
+
 
 ## Code
 
@@ -157,7 +151,6 @@ function highlightMe() {
 }
 ```
 
-<br />
 
 you can also set titles
 
@@ -171,7 +164,7 @@ s = "Python syntax highlighting"
 print(s)
 ```
 
-<br />
+
 
 ## Tables
 
@@ -192,7 +185,7 @@ There must be at least 3 dashes separating each header cell. The outer pipes (|)
 | _Still_  | `renders` | **nicely** |
 | 1        | 2         | 3          |
 
-<br />
+
 
 ## Blockquotes
 
@@ -204,7 +197,7 @@ Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
 
-<br />
+
 
 ## Inline HTML
 
@@ -266,7 +259,6 @@ This is a warning
 
 :::
 
-<br />
 
 ## MDX
 
@@ -276,15 +268,12 @@ lets you use jsx in markdown
 
 [read more](https://mdxjs.com/)
 
-<br />
 
 ### Tabs
 
 ---
 
 [**read docu**](https://docusaurus.io/docs/markdown-features/tabs)
-
-<br />
 
 ```mdx
 import Tabs from "@theme/Tabs";
@@ -303,7 +292,6 @@ import TabItem from "@theme/TabItem";
 </Tabs>
 ```
 
-<br />
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
@@ -320,5 +308,3 @@ import TabItem from "@theme/TabItem";
   </TabItem>
 </Tabs>
 
-<br />
-<br />

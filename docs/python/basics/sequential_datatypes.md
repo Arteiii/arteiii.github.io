@@ -122,21 +122,21 @@ an alternative would be to use the """ but here newlines are taken over into the
 >>> print(s)
 ```
 
-|            |                                                                                               |
-| ---------- | --------------------------------------------------------------------------------------------- |
-| //         | substitute representation of a backslash                                                      |
-| \'         | quotation mark                                                                                |
-| \"         | quotes                                                                                        |
-| \b         | backspace                                                                                     |
-| \f         | form feed                                                                                     |
-| \n         | line break                                                                                    |
-| \NNAME     | unicode character name for example: print("\n{GREEK SMALL LETTER PI}") prints the greek "pi". |
-| \t         | horizontal tab                                                                                |
-| \v         | vertical tab                                                                                  |
-| \uXXXX     | 16-bit-unicode-character                                                                      |
-| \uXXXXXXXX | 32-bit-unicode-character                                                                      |
-| \ooo       | ASCII-character okta                                                                          |
-| \xhh       | ASCII-character hexadezimal                                                                   |
+|                |                                                                                                     |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| ``//``         | substitute representation of a backslash                                                            |
+| ``\'``         | quotation mark                                                                                      |
+| ``\"``         | quotes                                                                                              |
+| ``\b``         | backspace                                                                                           |
+| ``\f``         | form feed                                                                                           |
+| ``\n``         | line break                                                                                          |
+| `\NNAME`       | unicode character name for example: ``print("\n {GREEK SMALL LETTER PI} ")`` prints the greek "pi". |
+| ``\t``         | horizontal tab                                                                                      |
+| ``\v``         | vertical tab                                                                                        |
+| ``\uXXXX``     | 16-bit-unicode-character                                                                            |
+| ``\uXXXXXXXX`` | 32-bit-unicode-character                                                                            |
+| ``\ooo``       | ASCII-character okta                                                                                |
+| ``\xhh``       | ASCII-character hexadezimal                                                                         |
 
 sometimes you don't want python to express these escape characters
 this can be done by defining a python string as a "raw" string (r/R)
@@ -144,16 +144,16 @@ this can be done by defining a python string as a "raw" string (r/R)
 ```py
 >>> s = "\one line\aandanother one"
 >>> print(s)
-one line
-andanother one
+'one line'
+'andanother one'
 
 >>> s = r"\one line\aandanother one"
 >>> print(s)
-\one line\aandanother one
+'\one line\aandanother one'
 
 >>> s = R"\one line\aandanother one"
 >>> print(s)
-\one line\aandanother one
+'\one line\aandanother one'
 ```
 
 ## subdivision operators

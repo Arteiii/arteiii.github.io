@@ -58,12 +58,12 @@ else:
 
 | operator |                          |
 | -------- | ------------------------ |
-| x == y   | Equals                   |
-| x != y   | Not Equals               |
-| x < y    | Less than                |
-| x <= y   | Less than or equal to    |
-| x > y    | Greater than             |
-| x >= y   | Greater than or equal to |
+| ``x == y``   | Equals                   |
+| ``x != y``   | Not Equals               |
+| ``x < y``    | Less than                |
+| ``x <= y``   | Less than or equal to    |
+| ``x > y``    | Greater than             |
+| ``x >= y``   | Greater than or equal to |
 
 ## True and False
 
