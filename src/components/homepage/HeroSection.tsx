@@ -4,32 +4,6 @@ import { GuidesAndSamples } from "./GuidesAndSamples";
 import TextTransition, { presets } from "react-text-transition";
 
 const text = {
-  Ich_feier_den_scheiss: {
-    link: "https://youtu.be/BF7HfAvybCk?si=ckI_ovLKzQ8pl-zp&t=88",
-    time: 2000,
-    lines: [
-      "Frankfurt am Main, Gang, Gang",
-      "Meine Jungs machen groß, deine Jungs sind broke",
-      "Alle sind auf Koks, sie sind alle auf Dope",
-      "Wenn die Sonne aufgeht, geht die Party erst los",
-      "Hab' Ballermann dabei, alle druff im Bando",
-      "Vierzig Mille rip in 'nem Hotel",
-      "Drei Tage kein'n Schlaf im Opel",
-    ],
-  },
-  ORCA_FREESTYLE: {
-    link: "https://www.youtube.com/watch?v=PHz_E3a0l-g",
-    time: 2000,
-    lines: [
-      "Ich schwimm' wie ein Orca",
-      "und all deine Chains blinken so fake,",
-      "ich kauf' dir kein Wort ab",
-      "Fick' deine Party, ich häng' mit zehn Junkies,",
-      "Loner, Crocodile Dundee",
-      "Ich will nur Liebe — Mahatma Gandhi,",
-      "du willst ein G sein, ja, find' ich funny,",
-    ],
-  },
   bandits_remix: {
     link: "https://www.youtube.com/watch?v=QCnOjOjgSu0",
     time: 1500,
@@ -37,7 +11,7 @@ const text = {
       "One thousand dollars is one band",
       "Ten bands is one rack",
       "Ten racks is a brick (haha)",
-      "A brick, is a hundred thousand dollars (Aye, yuh)",
+      "A brick, is a hundred thousand dollars",
     ],
   },
 };
