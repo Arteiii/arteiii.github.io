@@ -9,7 +9,7 @@ const katex = require("rehype-katex");
 const internetProfiles = {
   discord: {
     label: "Discord",
-    href: "Arteii",
+    href: "arteii",
   },
   linkedin: {
     label: "LinkedIn",
@@ -25,7 +25,7 @@ const internetProfiles = {
   },
   email: {
     label: "Email",
-    href: "mailto:#",
+    href: "mailto:ben.arteii@proton.me",
   },
   blog: {
     label: "Blog",

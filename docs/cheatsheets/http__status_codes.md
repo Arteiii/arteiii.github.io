@@ -3,6 +3,7 @@ sidebar_position: 4
 sidebar_label: Web
 id: web
 ---
+
 # Web
 
 ## HTTP Status Codes Cheat Sheet
