@@ -154,7 +154,9 @@ module.exports = {
       indexName: 'arteiiiio',
 
       // Optional: see doc section below
-      contextualSearch: true,
+      contextualSearch: false, // search wont work with it active 
+      // no need to fix since there is only one language and only en
+      //(https://stackoverflow.com/questions/72838375/algolia-docsearch-in-docusaurus-doesnt-bring-any-results#:~:text=The%20problem%20is%20a%20recent%20update%20of%20Docusaurus%2C,the%20crawler.%20To%20solve%3A%20Delete%20the%20current%20index)
 
       // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
       // externalUrlRegex: 'external\\.com|domain\\.com',
@@ -164,9 +166,6 @@ module.exports = {
       //   from: '/docs/', // or as RegExp: /\/docs\//
       //   to: '/',
       // },
-
-      // Optional: Algolia search parameters
-      searchParameters: {},
 
       // Optional: path for search page that enabled by default (`false` to disable it)
       searchPagePath: 'search',
