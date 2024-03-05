@@ -17,19 +17,17 @@ Used for file operations, like reading or writing data to files.
 ```cpp
 #include <Windows.h>
 
-int
-main()
-{
+int main() {
   // Create a file handle
   HANDLE hFile =
-    CreateFile("example.txt", // File name
-               GENERIC_READ,   // Desired access (read-only in this case)
-               0,              // Share mode (0 for no sharing)
-               nullptr,        // Security attributes (default)
-               OPEN_EXISTING,  // Creation disposition (open existing file)
-               FILE_ATTRIBUTE_NORMAL, // File attributes (normal)
-               nullptr                // Template file (none in this case)
-    );
+      CreateFile(L"example.txt",  // File name
+                 GENERIC_READ,    // Desired access (read-only in this case)
+                 0,               // Share mode (0 for no sharing)
+                 nullptr,         // Security attributes (default)
+                 OPEN_EXISTING,   // Creation disposition (open existing file)
+                 FILE_ATTRIBUTE_NORMAL,  // File attributes (normal)
+                 nullptr                 // Template file (none in this case)
+      );
 
   if (hFile != INVALID_HANDLE_VALUE) {
     // File operations here
@@ -50,16 +48,13 @@ Represent windows in graphical user interfaces.
 #include <Windows.h>
 
 // Window procedure for handling window messages
-LRESULT CALLBACK
-WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
-{
+LRESULT CALLBACK WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam,
+                            LPARAM lParam) {
   // Window procedure logic
   return DefWindowProc(hWnd, uMsg, wParam, lParam);
 }
 
-int
-main()
-{
+int main() {
   // Get the instance handle of the current module
   HINSTANCE hInstance = GetModuleHandle(nullptr);
 
@@ -67,21 +62,21 @@ main()
   WNDCLASS wc = {};
   wc.lpfnWndProc = WindowProc;
   wc.hInstance = hInstance;
-  wc.lpszClassName = "MyWindowClass";
+  wc.lpszClassName = L"MyWindowClass";
   RegisterClass(&wc);
 
   // Create the window
-  HWND hWnd = CreateWindow("MyWindowClass",     // Window class name
-                           "My Window",         // Window title
-                           WS_OVERLAPPEDWINDOW, // Window style
-                           CW_USEDEFAULT,       // X position
-                           CW_USEDEFAULT,       // Y position
-                           800,                 // Width
-                           600,                 // Height
-                           nullptr,             // Parent window
-                           nullptr,             // Menu
-                           hInstance,           // Instance handle
-                           nullptr              // Additional application data
+  HWND hWnd = CreateWindow(L"MyWindowClass",     // Window class name
+                           L"My Window",         // Window title
+                           WS_OVERLAPPEDWINDOW,  // Window style
+                           CW_USEDEFAULT,        // X position
+                           CW_USEDEFAULT,        // Y position
+                           800,                  // Width
+                           600,                  // Height
+                           nullptr,              // Parent window
+                           nullptr,              // Menu
+                           hInstance,            // Instance handle
+                           nullptr               // Additional application data
   );
 
   if (hWnd) {
@@ -111,8 +106,7 @@ Used for managing processes and threads.
 ```cpp
 #include <Windows.h>
 
-int
-main()
+int main()
 {
   // Process information structures
   STARTUPINFO si = {};
@@ -120,7 +114,7 @@ main()
 
   // Create a new process
   if (CreateProcess(
-        "example.exe", // Application name
+        L"example.exe", // Application name
         nullptr,       // Command line (none in this case)
         nullptr,       // Process security attributes (default)
         nullptr,       // Thread security attributes (default)
@@ -148,24 +142,20 @@ main()
 #include <Windows.h>
 
 // Function to be executed by the new thread
-DWORD WINAPI
-ThreadFunction(LPVOID lpParam)
-{
+DWORD WINAPI ThreadFunction(LPVOID lpParam) {
   // Thread operations here
   return 0;
 }
 
-int
-main()
-{
+int main() {
   // Create a thread handle
   HANDLE hThread = CreateThread(
-    nullptr,        // Thread security attributes (default)
-    0,              // Stack size (0 for default size)
-    ThreadFunction, // Thread function
-    nullptr,        // Thread function parameters (none in this case)
-    0,              // Creation flags (0 for no special flags)
-    nullptr         // Thread ID (receives the thread identifier if non-null)
+      nullptr,         // Thread security attributes (default)
+      0,               // Stack size (0 for default size)
+      ThreadFunction,  // Thread function
+      nullptr,         // Thread function parameters (none in this case)
+      0,               // Creation flags (0 for no special flags)
+      nullptr          // Thread ID (receives the thread identifier if non-null)
   );
 
   if (hThread != nullptr) {
@@ -180,11 +170,41 @@ main()
 
   return 0;
 }
+
 ```
 
 ### GDI Object Handles
 
 Graphics Device Interface handles for graphical objects like pens, brushes, and bitmaps.
+
+Graphics Device Interface (GDI) object handles in Windows represent graphical elements such as pens, brushes, and bitmaps. While they share similarities with other handles, GDI object handles have unique characteristics:
+
+No Reference Counting:
+Unlike some other handle types, GDI object handles do not employ reference counting. Therefore, developers must explicitly manage the creation and destruction of GDI objects to prevent resource leaks.
+
+Process-Specific Validity:
+GDI object handles are only valid within the process that created them. Attempting to use a GDI object handle in a different process will result in undefined behavior. Developers must ensure that GDI objects are created, used, and destroyed within the same process context.
+
+Non-Shared Between Processes:
+GDI object handles cannot be easily shared between processes. This limitation reinforces the importance of creating and managing GDI objects within a single process. If cross-process communication is required, developers should consider alternative IPC mechanisms.
+
+```cpp
+# include <Windows.h>
+
+int main() {
+  // Example: Creating and using a GDI brush handle
+  HBRUSH hBrush = CreateSolidBrush(RGB(255, 0, 0));
+
+  if (hBrush != nullptr) {
+    // GDI operations using the brush handle here...
+
+    // Deleting the brush handle when done
+    DeleteObject(hBrush);
+  }
+
+  return 0;
+}
+```
 
 ## Lifetime
 
@@ -197,21 +217,11 @@ Handles can become invalid if the associated resource is released or closed. Thi
 ```cpp
 #include <Windows.h>
 
-int
-main()
-{
+int main() {
   // Example: Validating a window handle before usage
-  HWND hWnd = CreateWindow("MyWindowClass",
-                           "My Window",
-                           WS_OVERLAPPEDWINDOW,
-                           CW_USEDEFAULT,
-                           CW_USEDEFAULT,
-                           800,
-                           600,
-                           nullptr,
-                           nullptr,
-                           nullptr,
-                           nullptr);
+  HWND hWnd = CreateWindow(L"MyWindowClass", L"My Window", WS_OVERLAPPEDWINDOW,
+                           CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, nullptr,
+                           nullptr, nullptr, nullptr);
 
   if (hWnd != nullptr) {
     // Window operations here
@@ -234,29 +244,18 @@ Handle duplication is a mechanism to share access to the same resource among mul
 ```cpp
 #include <Windows.h>
 
-int
-main()
-{
+int main() {
   // Example: Duplicating a file handle
-  HANDLE hOriginalFile = CreateFile("example.txt",
-                                    GENERIC_READ,
-                                    0,
-                                    nullptr,
-                                    OPEN_EXISTING,
-                                    FILE_ATTRIBUTE_NORMAL,
-                                    nullptr);
+  HANDLE hOriginalFile =
+      CreateFile(L"example.txt", GENERIC_READ, 0, nullptr, OPEN_EXISTING,
+                 FILE_ATTRIBUTE_NORMAL, nullptr);
 
   if (hOriginalFile != INVALID_HANDLE_VALUE) {
     HANDLE hDuplicateFile;
 
     // Duplicating the file handle
-    if (DuplicateHandle(GetCurrentProcess(),
-                        hOriginalFile,
-                        GetCurrentProcess(),
-                        &hDuplicateFile,
-                        0,
-                        FALSE,
-                        DUPLICATE_SAME_ACCESS)) {
+    if (DuplicateHandle(GetCurrentProcess(), hOriginalFile, GetCurrentProcess(),
+                        &hDuplicateFile, 0, FALSE, DUPLICATE_SAME_ACCESS)) {
       // File operations using the duplicated handle here
 
       // Note: Always check for success when duplicating a handle
@@ -280,11 +279,10 @@ Failing to release handles properly can lead to handle leaks. This occurs when h
 ```cpp
 #include <Windows.h>
 
-int
-main()
+int main()
 {
   // Opening a file without closing the handle
-  HANDLE hFile = CreateFile("example.txt",
+  HANDLE hFile = CreateFile(L"example.txt",
                             GENERIC_READ,
                             0,
                             nullptr,
@@ -312,3 +310,57 @@ Closing a handle, using functions like CloseHandle in Windows, doesn't always re
 ## Identifiers
 
 Handles are typically represented as numeric identifiers, but it's crucial to treat them as opaque values. This means that developers should not make assumptions about the internal structure or meaning of handle values. Treating handles as opaque ensures compatibility and allows the operating system to change the underlying implementation without affecting application code. Developers should rely on documented APIs and use handles as provided by the system.
+
+## Windows Implementation Library (WIL)
+
+The Windows Implementation Library (WIL) is a modern C++ library developed by Microsoft to simplify and improve error handling, as well as provide a more convenient and expressive API for Windows programming. WIL aims to replace older error-handling and COM-related patterns with a cleaner and more consistent approach. It includes features such as Result types, smart pointers, and utilities for working with Windows Runtime (WinRT) components.
+
+Read More:  
+[GitHub Repository](https://github.com/microsoft/wil)
+
+### Installing WIL using NuGet in Visual Studio
+
+To use WIL in your Visual Studio project, you can leverage NuGet, a package manager for .NET development. Here's how you can install WIL using NuGet:
+
+1. Open your Visual Studio project.
+2. Right-click on your project in Solution Explorer and select "Manage NuGet Packages."
+3. In the "Browse" tab, search for "Microsoft.Windows.CppWinRT" – this is the NuGet package that includes WIL.
+4. Select the desired version of the package and click "Install."
+5. NuGet will download and install the package, and WIL will be ready for use in your project.
+6. Once installed, you can include WIL headers in your C++ files and start using its features.
+
+### Managing Windows Handles with wil::unique_handle
+
+Let's consider a scenario where we create and manage a file handle using wil::unique_handle. This smart handle wrapper ensures proper resource cleanup and provides a safer alternative to raw handle management.
+
+```cpp
+#include <wil/resource.h>
+
+#include <iostream>
+
+void ProcessFile(wil::unique_handle& fileHandle) {
+  if (fileHandle) {
+    // Perform file operations using fileHandle
+
+    std::cout << "File operations successful." << std::endl;
+  } else {
+    std::cerr << "Failed to open the file." << std::endl;
+  }
+}
+
+int main() {
+  // Use wil::unique_handle to manage file handle
+  wil::unique_handle fileHandle(CreateFile(L"example.txt", GENERIC_READ, 0,
+                                           nullptr, OPEN_EXISTING,
+                                           FILE_ATTRIBUTE_NORMAL, nullptr));
+
+  // Process the file with RAII-managed fileHandle
+  ProcessFile(fileHandle);
+
+  // fileHandle is automatically closed when it goes out of scope
+
+  return 0;
+}
+```
+
+In this example, wil::unique_handle is employed to manage the file handle. The handle is automatically closed when the wil::unique_handle instance goes out of scope, ensuring proper cleanup and minimizing the risk of resource leaks. This approach simplifies resource management and contributes to safer and more readable code.
