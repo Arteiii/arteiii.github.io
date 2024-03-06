@@ -19,9 +19,9 @@ const internetProfiles = {
     label: "GitHub",
     href: "https://github.com/Arteiii",
   },
-  padlet: {
-    label: "Padlet",
-    href: "#",
+  keybase: {
+    label: "keybase",
+    href: "https://keybase.io/arteii",
   },
   email: {
     label: "Email",
@@ -129,6 +129,7 @@ module.exports = {
             // internetProfiles.linkedin,
             internetProfiles.github,
             internetProfiles.email,
+            internetProfiles.keybase,
           ],
         },
         {
