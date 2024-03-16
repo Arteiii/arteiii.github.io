@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkarteiii_github_io=self.webpackChunkarteiii_github_io||[]).push([[8652],{2954:i=>{i.exports=JSON.parse('{"title":"Basics","slug":"/category/basics","permalink":"/docs/category/basics","navigation":{"previous":{"title":"Python","permalink":"/docs/python/"},"next":{"title":"Variables","permalink":"/docs/python/basics/datatypes_variables"}}}')}}]);
