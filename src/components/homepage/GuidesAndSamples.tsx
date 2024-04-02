@@ -53,9 +53,11 @@ const samples: Sample[] = [
     // demo: 'no demooo????',
   },
   {
-    title: "Authly",
-    platform: "User Managment",
-    source: "https://github.com/wavy42/Authly",
+    title: "Unicode Icons",
+    platform: "Rust Crate",
+    source: "https://github.com/Arteiii/unicode-icons",
+    blog: 'https://docs.rs/unicode-icons/1.0.0/unicode_icons/',
+    demo: 'https://crates.io/crates/unicode-icons',
   },
   {
     title: "Windows Sample Driver",
