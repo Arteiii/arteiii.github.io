@@ -46,24 +46,24 @@ interface Sample {
 
 const samples: Sample[] = [
   {
-    title: "RegistryHelper",
-    platform: "RegistryHelper",
-    source: "https://github.com/Arteiii/RegistryHelper",
-    blog: 'https://learn.microsoft.com/en-us/archive/msdn-magazine/authors/giovanni_dicanio',
-    // demo: 'no demooo????',
-  },
-  {
-    title: "Unicode Icons",
-    platform: "Rust Crate",
-    source: "https://github.com/Arteiii/unicode-icons",
-    blog: 'https://docs.rs/unicode-icons/1.0.0/unicode_icons/',
-    demo: 'https://crates.io/crates/unicode-icons',
+    title: "zenity",
+    platform: "Rust, CLI",
+    source: "https://github.com/Arteiii/zenity",
+    blog: 'https://docs.rs/zenity/latest/zenity/',
+    demo: 'https://crates.io/crates/zenity',
   },
   {
     title: "Windows Sample Driver",
     platform: "Windows Kernel",
-    // blog: "soooonnnn",
+    blog: "https://arteiii.github.io/docs/windows/kernel/",
     source: "https://github.com/Arteiii/simpleWinDriver",
+  },
+  {
+    title: "RegistryHelper",
+    platform: "Windows, Modern C++",
+    source: "https://github.com/Arteiii/RegistryHelper",
+    blog: 'https://learn.microsoft.com/en-us/archive/msdn-magazine/authors/giovanni_dicanio',
+    // demo: 'no demooo????',
   },
 ];
 
