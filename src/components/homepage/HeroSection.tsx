@@ -14,6 +14,15 @@ const text = {
       "A brick, is a hundred thousand dollars",
     ],
   },
+  slow_jamz: {
+    link: "https://youtu.be/pwkYUhePecQ?si=4vrIMaYHrBC9jIdG&t=75",
+    time: 1500,
+    lines: [
+      "She got a light skin friend, look like Michael Jackson.",
+      "Got a dark skin friend, look like Michael Jackson",
+
+    ],
+  },
 };
 
 function getRandomSong() {
