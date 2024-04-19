@@ -1,0 +1,61 @@
+---
+id: windows
+title: Windows
+sidebar_position: 3
+description: This section aims to provide an overview of fundamental concepts, internals, and programming aspects related to the Windows operating system.
+---
+
+
+import {
+    DeveloperBoardRegular,
+    ProductionRegular,
+    AppGenericRegular,
+    AnimalTurtleRegular,
+    DeveloperBoardSearchRegular,
+    EngineRegular,
+    EmojiHintRegular,
+} from '@fluentui/react-icons';
+
+
+import {CardSection, Card
+} from '../../src/components/CardComponents'
+
+
+This section aims to provide an overview of fundamental concepts, internals, and programming aspects related to the Windows operating system. 
+
+---
+
+It covers a range of topics, including kernel basics, the structure of the Windows OS, and essential tools for development and system analysis. 
+
+It also touches on programming concepts such as Interprocess Communication (IPC), handle management, and other key elements crucial for building robust Windows applications. 
+
+Contributions to enrich this section are welcome!  
+[GitHub](https://github.com/Arteiii/arteiii.github.io)  
+
+<CardSection
+  id="Windows"
+  title="Windows"
+>
+  <Card
+    title="Kernel"
+    icon={<DeveloperBoardRegular />
+}
+    to="/docs/windows/kernel"
+    description='First Driver, Kernel Debugging'
+  />
+  <Card
+    title="Internals"
+    icon={<ProductionRegular />
+}
+    to="/docs/category/windows-internals"
+    description='PE structure, Common DLLs, Conventions, Virtualization Based Security (VBS)...'
+  />
+  <Card
+    title="Programming"
+    icon={<AppGenericRegular />
+}
+    to="/docs/category/programming"
+    description='Handles, Pipes'
+  />
+</CardSection>
+

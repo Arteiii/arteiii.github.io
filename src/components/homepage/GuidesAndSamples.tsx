@@ -1,13 +1,11 @@
 import React from "react";
 import Link from "@docusaurus/Link";
 import {
-  AppsAddInRegular,
   ArrowRightFilled,
   DocumentRegular,
   OpenRegular,
-  RecordRegular,
-  VideoRegular,
   WindowDevToolsRegular,
+  DocumentBulletList16Regular,
   CodePyRectangle16Regular,
 } from "@fluentui/react-icons";
 import clsx from "clsx";
@@ -32,6 +30,12 @@ const guides: Guide[] = [
     icon: CodePyRectangle16Regular,
     text: "Explore basic Python functionality.",
     link: "/docs/python",
+  },
+  {
+    title: "Cheat Sheet's",
+    icon: DocumentBulletList16Regular,
+    text: "Some CheatSheets",
+    link: "/docs/cheatsheets/",
   },
 ];
 

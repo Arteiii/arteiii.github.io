@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 
 const NotFound = () => (
-    <Layout title="404: Not Found">
+    <Layout title="$=$; N07 F0und">
         <div className="noise-bg-faded no-underline-links px-4 pt-8 lg:py-0 h-screen overflow-y-auto">
             <section className="flex flex-col items-center justify-center py-32">
                 <h1 className="font-jakarta text-7xl font-bold">$=$  -  N07 F0und</h1>
