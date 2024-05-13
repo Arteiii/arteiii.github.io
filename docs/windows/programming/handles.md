@@ -319,15 +319,15 @@ Read More:
 To use WIL in your Visual Studio project, you can leverage NuGet, a package manager for .NET development. Here's how you can install WIL using NuGet:
 
 1. Open your Visual Studio project.
-2. Right-click on your project in Solution Explorer and select "Manage NuGet Packages"
-3. In the "Browse" tab, search for "Microsoft.Windows.ImplementationLibrary"
-4. Select the desired version of the package and click "Install"
+2. Right-click on your project in Solution Explorer and select **"Manage NuGet Packages"**
+3. In the **"Browse"** tab, search for `Microsoft.Windows.ImplementationLibrary`
+4. Select the desired version of the package and click **"Install"**
 5. NuGet will download and install the package, and WIL will be ready for use in your project
 6. Once installed, you can include WIL headers in your C++ files and start using its features
 
 ### Managing Windows Handles with wil::unique_handle
 
-Let's consider a scenario where we create and manage a file handle using wil::unique_handle. This smart handle wrapper ensures proper resource cleanup and provides a safer alternative to raw handle management
+Let's consider a scenario where we create and manage a file handle using `wil::unique_handle`. This smart handle wrapper ensures proper resource cleanup and provides a safer alternative to raw handle management
 
 ```cpp
 #include <wil/resource.h>
@@ -359,4 +359,4 @@ int main() {
 }
 ```
 
-In this example, wil::unique_handle is employed to manage the file handle. The handle is automatically closed when the wil::unique_handle instance goes out of scope, ensuring proper cleanup and minimizing the risk of resource leaks. This approach simplifies resource management and contributes to safer and more readable code
+In this example, `wil::unique_handle` is employed to manage the file handle. The handle is automatically closed when the `wil::unique_handle` instance goes out of scope, ensuring proper cleanup and minimizing the risk of resource leaks. This approach simplifies resource management and contributes to safer and more readable code
