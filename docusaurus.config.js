@@ -1,4 +1,4 @@
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 const fs = require('fs');
 const resourcesHTML = fs.readFileSync('./src/navbar/resources.html', 'utf-8');
@@ -208,9 +208,13 @@ module.exports = {
             copyright: `${new Date().getFullYear()} Arteii`,
             createFeedItems: async (params) => {
               const { blogPosts, defaultCreateFeedItems, ...rest } = params;
+
+              // Ensure blogPosts is an array before filtering
+              const validBlogPosts = Array.isArray(blogPosts) ? blogPosts : [];
+
               return defaultCreateFeedItems({
                 // keep only the 10 most recent blog posts in the feed
-                blogPosts: blogPosts.filter((item, index) => index < 10),
+                blogPosts: validBlogPosts.filter((item, index) => index < 10),
                 ...rest,
               });
             },
