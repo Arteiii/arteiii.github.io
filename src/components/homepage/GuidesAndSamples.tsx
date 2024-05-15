@@ -57,10 +57,10 @@ const samples: Sample[] = [
     demo: 'https://crates.io/crates/zenity',
   },
   {
-    title: "Windows Sample Driver",
-    platform: "Windows Kernel",
-    blog: "https://arteiii.github.io/docs/windows/kernel/",
-    source: "https://github.com/Arteiii/simpleWinDriver",
+    title: "membrs",
+    platform: "Rust, Next.js, Discord",
+    blog: "https://github.com/Arteiii/membrs",
+    source: "https://github.com/Arteiii/membrs",
   },
   {
     title: "RegistryHelper",
