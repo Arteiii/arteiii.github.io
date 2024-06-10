@@ -50,6 +50,19 @@ module.exports = {
   themeConfig: {
     image: "img/Website-Social-Card.jpeg",
 
+
+    // Declare some <meta> tags
+    metadata: [
+      { name: 'robots', content: 'index, follow' },
+      { property: 'og:title', content: 'Arteii - i do stuff' },
+      { property: 'og:description', content: 'Explore Arteii’s blog and documentation.' },
+      { property: 'og:image', content: 'https://arteiii.github.io/img/Website-Social-Card.jpeg' },
+      { property: 'og:url', content: 'https://arteiii.github.io/' },
+      { property: 'og:type', content: 'website' },
+      { name: 'description', content: 'Arteii - A personal blog and documentation site.' },
+      { name: 'keywords', content: 'rteii, blog, documentation, programming, windows, kernel' },
+    ],
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.vsDark,

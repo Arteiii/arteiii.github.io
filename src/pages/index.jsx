@@ -17,7 +17,7 @@ export default function Homepage() {
       </Head>
 
       <HeroSection />
-
+ 
       <ResourcesSection />
     </Layout>
   );
