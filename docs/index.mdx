@@ -6,89 +6,76 @@ sidebar_position: 1
 
 :::note
 It is strongly recommended that the information used in this document be verified with others and that reference be made to recognized professional literature,  
-scientific articles, or official sources.  
+scientific articles, or official sources.
 
-Credits or references are listed below to provide you with a better and more complete explanation of the topics covered.    
+Credits or references are listed below to provide you with a better and more complete explanation of the topics covered.  
 Please take the time to consult these resources as they may provide more detailed information and expertise.  
 :::
-
 
 ## Content
 
 import {
-    DeveloperBoardRegular,
-    ProductionRegular,
-    AppGenericRegular,
-    AnimalTurtleRegular,
-    DeveloperBoardSearchRegular,
-    EngineRegular,
-    EmojiHintRegular,
-} from '@fluentui/react-icons';
+  DeveloperBoardRegular,
+  ProductionRegular,
+  AppGenericRegular,
+  AnimalTurtleRegular,
+  DeveloperBoardSearchRegular,
+  EngineRegular,
+  EmojiHintRegular,
+} from "@fluentui/react-icons";
 
-
-import {CardSection, Card} from '../src/components/CardComponents'
-
+import { CardSection, Card } from "../src/components/CardComponents";
 
 Welcome! These nodes serve as my personal learning and reference points.  
 Your contributions are appreciated. Thank you!
 
-<CardSection
-  id="Windows"
-  title="Windows"
->
+<CardSection id="Windows" title="Windows">
   <Card
     title="Kernel"
     icon={<DeveloperBoardRegular />}
     to="/docs/windows/kernel"
-    description='First Driver, Kernel Debugging'
+    description="First Driver, Kernel Debugging"
   />
   <Card
     title="Internals"
     icon={<ProductionRegular />}
-    to="/docs/category/windows-internals"
-    description='PE structure, Common DLLs, Conventions, Virtualization Based Security (VBS)...'
+    to="/docs/windows/internals"
+    description="PE structure, Common DLLs, Conventions, Virtualization Based Security (VBS)..."
   />
   <Card
     title="Programming"
     icon={<AppGenericRegular />}
-    to="/docs/category/programming"
-    description='Handles, Pipes'
+    to="/docs/windows/programming"
+    description="Handles, Pipes"
   />
 </CardSection>
 
-<CardSection
-  id="python"
-  title="Python"
->
+<CardSection id="python" title="Python">
   <Card
     icon={<AnimalTurtleRegular />}
     title="Basic's"
-    to="/docs/category/basics"
-    description='Variables, Shallow & Deep Copy, if else, Functions, Exceptions, Read & Write Files...'
+    to="/docs/python/basics"
+    description="Variables, Shallow & Deep Copy, if else, Functions, Exceptions, Read & Write Files..."
   />
 </CardSection>
 
-
-<CardSection
-  id="cheatsheet"
-  title="CheatSheet's"
->
+<CardSection id="cheatsheet" title="CheatSheet's">
   <Card
     icon={<EmojiHintRegular />}
-    title="Web"
-    to="/docs/cheatsheets/web"
-    description='HTTP Status Codes, HTTP Verbs'
+    title="Networking"
+    to="/docs/cheatsheets/networking"
+    description="HTTP Status Codes, HTTP Verbs, TCP/IP, Ports"
   />
   <Card
     icon={<DeveloperBoardSearchRegular />}
     title="Assembly"
     to="/docs/cheatsheets/Assembly/"
-    description='Key Concepts, x86-64'
+    description="Key Concepts, x86-64"
   />
   <Card
     icon={<EngineRegular />}
     title="Computer Architecture"
     to="/docs/cheatsheets/ComuterArchitecture/"
-    description='Formulas'
+    description="Formulas"
   />
 </CardSection>

@@ -2,7 +2,6 @@
 sidebar_position: 15
 ---
 
-
 # Modularization
 
 ## Modules
@@ -91,7 +90,7 @@ print(sys.builtin_module_names)
 
 ### Search For Modules
 
-when importing a module, the interpreter searches in the following directories:  
+when importing a module, the interpreter searches in the following directories:
 
 1. in the current directory
 2. pythonpath
@@ -137,7 +136,7 @@ we can use docstring's to document our modules
 help(example_py_file)
 ```
 
-[Docstring](modularization.md#docstring)
+[Docstring](functions.md#docstring)
 
 ## Packages
 

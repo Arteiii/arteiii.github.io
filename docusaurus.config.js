@@ -42,6 +42,7 @@ module.exports = {
   url: "https://arteiii.github.io/",
   baseUrl: "/",
   onBrokenLinks: "throw",
+  onBrokenAnchors: "throw",
   favicon: "img/favicon.ico",
   organizationName: "arteii",
   projectName: "arteiii.github.io",
