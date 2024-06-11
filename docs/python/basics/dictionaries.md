@@ -310,7 +310,7 @@ x
 
 ### .copy
 
-copy creates a flat copy ([Shallow & Deep Copy](Basics.md#shallow--deep-copy))
+copy creates a flat copy ([Shallow & Deep Copy](shallow_deep.md))
 
 ```py
 de_en = {"rot":"red", "grün":"green", "blau":"blue", "gelb":"yellow"}

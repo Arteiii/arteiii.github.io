@@ -1,12 +1,12 @@
 ---
-sidebar_label: Windows Kernel Driver
+sidebar_label: Kernel Driver
 sidebar_position: 7
 ---
 
 # Prerequisites
 
 Developing a Windows kernel driver is essential for tasks like hardware interaction, performance optimization,  
-security software creation, virtualization support, implementing custom system services, and achieving real-time processing.  
+security software creation, virtualization support, implementing custom system services, and achieving real-time processing.
 
 Kernel drivers operate with higher privileges, directly interacting with the kernel for tasks like hardware management,  
 offering superior performance. However, they require meticulous security considerations to prevent system instability,  
@@ -38,7 +38,7 @@ The instructions provided are based on the usage of Visual Studio 2022 Preview, 
 
 Install the Windows SDK from [this link](https://developer.microsoft.com/ja-jp/windows/downloads/windows-sdk/).
 
-After installing the Windows SDK, download and install the Windows Driver Kit (WDK) from [here](https://download.microsoft.com/download/7/b/f/7bfc8dbe-00cb-47de-b856-70e696ef4f46/wdk/wdksetup.exe).  
+After installing the Windows SDK, download and install the Windows Driver Kit (WDK) from [here](https://download.microsoft.com/download/7/b/f/7bfc8dbe-00cb-47de-b856-70e696ef4f46/wdk/wdksetup.exe).
 
 If you encounter any issues with the links, please open an issue on [GitHub](https://github.com/Arteiii/arteiii.github.io/issues/new) so that I can fix it. You can also refer to the official documentation [here](https://learn.microsoft.com/ja-jp/windows-hardware/drivers/download-the-wdk).
 

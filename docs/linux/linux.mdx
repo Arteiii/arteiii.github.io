@@ -1,0 +1,211 @@
+---
+id: linux
+title: Linux
+sidebar_position: 3
+description: The World’s First Computer Virus
+---
+
+import {
+  DeveloperBoardRegular,
+  AppGenericRegular,
+} from "@fluentui/react-icons";
+
+import { CardSection, Card } from "../../src/components/CardComponents";
+import QuoteComponent from "../../src/components/QuoteComponent";
+
+import ThemedImage from "@theme/ThemedImage";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+<div style={{ display: "flex", alignItems: "center" }}>
+  <div style={{ marginRight: "20px" }}>
+    <QuoteComponent />
+    <CardSection id="linux" title="Topics">
+      <Card
+        title="Administration"
+        icon={<AppGenericRegular />}
+        to="/docs/linux/sysadmin/"
+        description="User management, file permissions, network configuration, maintenance"
+      />
+    </CardSection>
+  </div>
+  <div>
+    {/* Your Tux image */}
+    <ThemedImage
+      alt="Tux"
+      width="200"
+      sources={{
+        light: useBaseUrl("/img/linux/tux.svg"),
+        dark: useBaseUrl("/img/linux/tux.svg"),
+      }}
+    />
+  </div>
+</div>
+
+<br></br>
+<br></br>
+
+:::tip
+Contributions to enrich this section are welcome!  
+[GitHub](https://github.com/Arteiii/arteiii.github.io)  
+:::
+
+## History
+
+In 1983, Richard Stallman initiated the GNU Project with the aim of creating a free Unix-like operating system. Meanwhile, Linus Torvalds independently developed the Linux kernel in 1991.
+
+At that time, various Unix-based operating systems existed, including proprietary ones like UnixWare by Novell and SunOS by Sun Microsystems, as well as open-source alternatives like BSD from the University of California, Berkeley.
+
+## Why GNU/Linux?
+
+- **Kernel**: A kernel serves as the core of an operating system, managing system resources and facilitating interaction between software and hardware.
+
+- **GNU Tools**: These encompass compilers, text editors, and other essential utilities vital for operating a Unix-like system.
+
+## Combining Forces
+
+GNU/Linux emerged through the amalgamation of the Linux kernel and GNU tools. Torvalds' kernel provided core functionality and hardware support, while Stallman's GNU tools furnished a comprehensive suite of software for system administration and programming.
+
+By blending these components, GNU/Linux offers a complete, free, and open-source operating system. This collaboration epitomizes the ethos of open-source development, yielding a robust platform utilized worldwide for its versatility and accessibility.
+
+## Distributions (distros)
+
+They bundle the Linux kernel, GNU tools, and additional software into user-friendly packages.
+Each distro offers different features, tailored to specific needs.
+
+Of course, the preceding distros are absolutely not ordered based on how much I like them :3  
+they're all just equally fantastic, right?
+
+### [NixOS](https://nixos.org/)
+
+NixOS is a GNU/Linux distribution that takes a novel approach to system configuration and package management.
+It uses the Nix package manager and a declarative configuration model, allowing users to define the entire system configuration in a single configuration file.
+This approach enables reproducible system setups, easy rollbacks, and atomic upgrades, making system administration more predictable and manageable.
+
+### [Fedora](https://fedoraproject.org/)
+
+Sponsored by [Red Hat](https://www.redhat.com/), Fedora is a cutting-edge distribution that emphasizes the use of the latest software technologies.
+It's well-suited for developers and enthusiasts who want to stay on the forefront of Linux development.
+Fedora serves as a testing ground for features that eventually make their way into [RHEL](#red-hat-enterprise-linux-rhel).
+
+### [Debian](https://www.debian.org/index.en.html)
+
+Known for its stability and commitment to free software principles, Debian serves as the foundation for many other distributions, including [Ubuntu](#ubuntu).
+It's favored by users who prioritize reliability and software freedom.
+Debian supports multiple architectures and is widely used in servers and embedded systems.
+
+### [Ubuntu](https://ubuntu.com/)
+
+Based on [Debian](#debian), Ubuntu is one of the most popular distro, known for its user-friendly interface and extensive community support.
+It's suitable for beginners and experienced users alike and is often used for desktop computing, servers, and cloud deployments.
+
+### [CentOS](https://centos.org/)
+
+Based on [RHEL](#red-hat-enterprise-linux-rhel), CentOS is a community-driven distribution known for its stability and long-term support.
+It's often used in server environments, especially in enterprise settings where stability and security are paramount.
+CentOS provides a free alternative to RHEL without the need for commercial support subscriptions.
+
+### [openSUSE](https://www.opensuse.org/)
+
+Sponsored by [SUSE](https://www.suse.com/), openSUSE is a versatile distribution suitable for desktops, servers, and development environments.
+It offers two main editions: Leap, which follows a stable release model similar to Debian,
+and Tumbleweed, which provides rolling updates with the latest software versions.
+openSUSE is known for its powerful YaST configuration tool and robust package management system.
+
+### [Linux Mint](https://linuxmint.com/)
+
+Designed to be user-friendly and familiar for Windows users, Linux Mint provides a polished desktop experience out of the box.
+It's based on Ubuntu and offers several desktop environments, including Cinnamon and Xfce.
+Linux Mint is popular among users looking for a seamless transition to Linux.
+
+### [Red Hat Enterprise Linux (RHEL)](https://www.redhat.com/technologies/linux-platforms/enterprise-linux)
+
+Developed by Red Hat, RHEL is a leading enterprise-focused distribution known for its stability, security, and long-term support.
+It's designed to meet the needs of businesses and organizations with critical workloads, providing a reliable platform for mission-critical applications.
+
+### [Arch Linux](https://archlinux.org/)
+
+Known for its simplicity, minimalism, and flexibility,
+Arch Linux is a distribution that appeals to experienced users who prefer to build their system from the ground up.
+It follows a rolling release model, providing the latest software updates continuously.
+Arch Linux offers extensive customization options but requires more manual configuration compared to other distros.
+
+> "I use Arch btw"
+
+### Specialized Distros
+
+In addition to the commonly used GNU/Linux distributions mentioned above, there are specialized distros tailored for specific professional or other use cases:
+
+#### [Remnux](https://remnux.org/)
+
+> reverse-engineering and analyzing malware
+
+It comes pre-installed with a variety of tools and utilities specifically curated for malware analysis and digital forensics.
+Security professionals and researchers often use Remnux to dissect and understand the behavior of malicious software.
+
+#### [Kali Linux](https://www.kali.org/)
+
+> penetration testing, ethical hacking, and digital forensics
+
+It provides a vast array of tools and frameworks for security testing and analysis, making it a popular choice among cybersecurity professionals and enthusiasts.
+Kali Linux is regularly updated with the latest security tools and features.
+
+#### [Parrot OS](https://www.parrotsec.org/)
+
+> ethical hacking, penetration testing, and privacy protection
+
+It offers a comprehensive suite of security tools and utilities, including cryptography tools, network analysis tools, and anonymity tools.
+Parrot OS is known for its user-friendly interface and robust security features, making it suitable for both beginners and experienced security professionals.
+
+#### [Tails](https://tails.net/index.en.html)
+
+> preserve anonymity and privacy while browsing the internet
+
+It routes all internet traffic through the Tor network, encrypts user data, and leaves no traces on the system.
+Tails is often used by journalists, activists, and individuals concerned about online privacy.
+
+#### [Qubes OS](https://www.qubes-os.org/)
+
+> implements a security-by-compartmentalization approach
+
+It uses Xen-based virtualization to isolate different tasks or environments into separate compartments called qubes.
+Qubes OS is designed to protect against various security threats, including malware, targeted attacks, and data leakage.
+
+#### [Ubuntu Studio](https://ubuntustudio.org/)
+
+> for content creators, artists, musicians, and audiovisual professionals
+
+It comes pre-installed with a comprehensive suite of creative tools for audio production, graphic design, video editing, and photography.
+Ubuntu Studio provides a stable and reliable platform for multimedia production.
+
+#### [Endless OS](https://www.endlessos.org/os)
+
+> education-focused for students, teachers, and learners in resource-constrained environments
+
+It offers a rich collection of educational content, including interactive applications, textbooks and offline resources.
+Endless OS is designed to be easy to use and accessible, making it suitable for learners of all ages and backgrounds.
+
+In addition to the operating system, they also offer various programmes such as Endless Laptop and Endless Key
+
+"We create equity in learning"
+
+### Release Cycles
+
+GNU/Linux distributions vary in how frequently they release updates, which impacts both stability and access to new features.
+
+#### Long Release Cycle
+
+Distributions like Ubuntu LTS and Debian Stable have longer release cycles, with updates spaced out over months or even years.
+This ensures stability and reliability, making them suitable for production environments and users who prioritize consistency.
+
+#### Short Release Cycle
+
+Other distros, such as Fedora and Ubuntu non-LTS, have shorter release cycles, with updates pushed more frequently, typically every few months.
+While this allows users to access new features sooner, it may introduce more frequent changes and potential instability, especially in bleeding-edge software.
+
+:::info
+Choosing between release cycles involves balancing the need for stability with the desire for cutting-edge features.
+
+Longer release cycles provide stability but may lag behind in feature updates.
+Shorter release cycles offer newer features but may require more frequent updates and potentially introduce instability.
+The choice depends on users' preferences and the specific requirements of their use case.
+:::
