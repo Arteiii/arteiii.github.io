@@ -5,6 +5,89 @@ sidebar_position: 1
 
 # Administration
 
+## The Shell
+
+:::info
+im currently using fedora 40  
+and bash 5.2.26
+:::
+
+<br/>
+
+In Linux systems, the default shell, which is the command interpreter that allows users to interact with the operating system,
+is often the Bourne Again Shell (BASH).  
+However, there are alternatives such as the Korn Shell (KSH), ZSH, and others.
+
+When you first open a terminal, you'll see a prompt that typically consists of the current username followed by the hostname,
+then the current directory (often represented by `~` indicating the home directory of the user),
+and finally a '`$`' symbol for regular users or `#` for the root user.
+
+For example:
+
+- Regular user prompt: `arteii@centre:~$`
+- Root user prompt: `root@centre:~#`
+
+If you wish to customize this prompt, you can modify the PS1 environment variable.  
+This variable controls the appearance of the prompt. Here's an example of modifying the prompt to display the date, time, username, hostname, current directory, and a symbol representing the user's permissions:
+
+    ```bash
+    PS1="[\d \t \u@\h:\W\$] "
+    ```
+
+After setting this, your prompt will display like this:
+
+    ```shell
+    [Tue Jun 11 18:24:29 root@centre:~$]
+    ```
+
+This prompt customization is useful for personalizing your command line interface and making it more informative or visually appealing.
+Feel free to experiment with different configurations to find one that suits your preferences.
+
+## Commands
+
+In Linux, a command refers to any file with executable privileges.  
+These files can be programs, scripts, or utilities that perform specific tasks when invoked.
+
+For example, running `man ls` in the terminal returns the documentation for the `ls` command,
+which is used to list files and directories.  
+The documentation typically shows the command's syntax, options, and usage.
+
+For ls, the syntax is:
+
+    ```bash
+    ls [OPTION]... [FILE]...
+    ```
+
+Here, the square brackets `[]` indicate that the `options` and `file` arguments are optional.
+
+Options for commands often come in short and long forms. For instance, `-h` and `--help` are short and long forms for displaying help information.  
+Similarly, `ls -a` and `ls --all` both list all files in the current directory, including hidden ones.
+
+Another command, `rm` (remove), is used for deleting files or directories.  
+For example:
+
+    ```bash
+    rm -file
+    ```
+
+In this case, the command fails with an error message because it interprets `-file` as an option, not a filename.
+
+To avoid this, you can use the `--` (double dash) to signify the end of options and treat subsequent arguments as filenames.  
+For instance:
+
+    ```bash
+    rm -- -file
+    ```
+
+Additionally, you can activate logging for a command using the `-v` (verbose) option.  
+This can be helpful for debugging and identifying errors.
+
+In some cases, programs do not follow these conventions, so it's best to consult the documentation for these tools.
+
+## Globbing
+
 import DocCardList from "@theme/DocCardList";
+
+---
 
 <DocCardList />
