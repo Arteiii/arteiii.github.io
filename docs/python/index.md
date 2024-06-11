@@ -1,5 +1,5 @@
 ---
-sidebar_label: Basics
+sidebar_label: Python
 sidebar_position: 2
 ---
 
