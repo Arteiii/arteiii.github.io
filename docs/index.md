@@ -15,13 +15,13 @@ Please take the time to consult these resources as they may provide more detaile
 ## Content
 
 import {
-  DeveloperBoardRegular,
-  ProductionRegular,
-  AppGenericRegular,
-  AnimalTurtleRegular,
-  DeveloperBoardSearchRegular,
-  EngineRegular,
-  EmojiHintRegular,
+DeveloperBoardRegular,
+ProductionRegular,
+AppGenericRegular,
+AnimalTurtleRegular,
+DeveloperBoardSearchRegular,
+EngineRegular,
+EmojiHintRegular,
 } from "@fluentui/react-icons";
 
 import { CardSection, Card } from "../src/components/CardComponents";
@@ -54,7 +54,7 @@ Your contributions are appreciated. Thank you!
   <Card
     icon={<AnimalTurtleRegular />}
     title="Basic's"
-    to="/docs/python/basics"
+    to="/docs/python"
     description="Variables, Shallow & Deep Copy, if else, Functions, Exceptions, Read & Write Files..."
   />
 </CardSection>

@@ -29,4 +29,4 @@ _OpenProcess_ only opens the process without attaching to it. This allows you to
 
 There are two debuggers available for kernel-mode debugging: a command-line application (Kd.exe) and one with a GUI (Windbg.exe). Both can be used for three types of kernel mode debugging.
 
-[Read More](/docs/windows/kernel/kernel_debugging.mdx)
+[Read More](/docs/windows/kernel/kernel_debugging.md)
