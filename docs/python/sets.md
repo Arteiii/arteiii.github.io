@@ -36,8 +36,6 @@ False
 <class 'set'>
 ```
 
-<br />
-
 sets are implemented in a way that they **do not** allow mutable objects
 
 ```py
@@ -49,8 +47,6 @@ Traceback (most recent call last):
 TypeError: unhashable type: 'list'
 ```
 
-<br />
-
 even if sets cannot contain mutable objects, a set can be modified:
 
 ```py
@@ -59,8 +55,6 @@ even if sets cannot contain mutable objects, a set can be modified:
 >>> cities
 {'Lubbock', 'Corpus Christi', 'Pittsburgh', 'Lincoln', 'Frankfurt'}
 ```
-
-<br />
 
 frozensets are like sets only they can not be changed!!
 
@@ -74,9 +68,7 @@ AttributeError: 'frozenset' object has no attribute 'add'
 
 ## Methods
 
-<br />
-
-### Add:
+### Add
 
 an object is only added as a new element if it is not already contained
 if it is already contained calling the function has no effect
@@ -93,7 +85,7 @@ Traceback (most recent call last):
 TypeError: unhashable type: 'list'
 ```
 
-### Clear:
+### Clear
 
 removes every element of a list
 
@@ -104,7 +96,7 @@ removes every element of a list
 set()
 ```
 
-### Copy:
+### Copy
 
 copy creates a flat copy of the set
 
@@ -129,7 +121,7 @@ only creates a pointer (another name for the same object)
 set()
 ```
 
-### Difference Update:
+### Difference Update
 
 the method difference_update removes all elements of another set from a set
 
@@ -147,7 +139,7 @@ the method difference_update removes all elements of another set from a set
 {'a', 'e', 'd'}
 ```
 
-### Difference:
+### Difference
 
 the difference of two or more sets
 
@@ -173,7 +165,7 @@ instead of using difference we could also use "-".
 {'e', 'a'}
 ```
 
-### Discard:
+### Discard
 
 discard(el)
 
@@ -192,7 +184,7 @@ if not nothing happens
 {'e', 'b', 'd', 'a', 'c'}
 ```
 
-### Intersection:
+### Intersection
 
 .intersection(_s_)
 
@@ -215,7 +207,7 @@ alternative can also be used &
 {'d', 'e', 'c'}
 ```
 
-### isDisjoint:
+### isDisjoint
 
 .isdisjoint()
 
@@ -232,7 +224,7 @@ True
 False
 ```
 
-### isSubset:
+### isSubset
 
 .issubset()
 
@@ -262,7 +254,7 @@ False
 True
 ```
 
-### pop:
+### pop
 
 .pop()
 

@@ -4,7 +4,6 @@ sidebar_position: 2
 
 # Kernel Debugging
 
-
 ## Full Kernel Debuggers
 
 Establishing communication for comprehensive kernel debugging within a virtual machine offers various options. This article will guide you through the process of setting up communication with a COM device exposed to the host system as a named pipe
@@ -61,14 +60,14 @@ For further assistance on configuring named pipes in VMware, refer to the [VMwar
 Start the virtual machine and ensure that the virtual COM device is correctly connected
 
 ### WinDBG (COM)
+
 import WinDbgFile from "/img/windows/kernel/kernel_debugging/DbgX.Shell_hnysQdHmnu.png"
 import AttachToKernel from "/img/windows/kernel/kernel_debugging/DbgX.Shell_KGZopkn2gw.png"
 import ComAttachMenu from "/img/windows/kernel/kernel_debugging/DbgX.Shell_9hq8b5YEXp.png"
 
-
 [Download](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/)
 
-1. Launch WinDbg and navigate to the "File" menu located in the top left corner  
+1. Launch WinDbg and navigate to the "File" menu located in the top left corner
 
    <img src={WinDbgFile} width={350} height={350} alt="WinDbg File highlight" />
 
@@ -80,7 +79,6 @@ import ComAttachMenu from "/img/windows/kernel/kernel_debugging/DbgX.Shell_9hq8b
 Additionally, set the baud rate to `115200`. Click "OK" to confirm the configuration
 
    <img src={ComAttachMenu} width={300} height={250} alt="com menu config screenshot" />
-
 
 ### VM setup (Net)
 
@@ -100,15 +98,13 @@ example:
 bcdedit /dbgsettings net hostip:192.168.56.1 port:51234
 ```
 
-
 ### WinDBG (Net)
-import NetConfig from "/img/windows/kernel/kernel_debugging/DbgX.Shell_Hg7BXHCNZq.png"
 
+import NetConfig from "/img/windows/kernel/kernel_debugging/DbgX.Shell_Hg7BXHCNZq.png"
 
 In the NET settings, enter the port you defined (`51234`). Additionally, set the baud rate to `115200`. Click "OK" to confirm the configuration
 
 <img src={NetConfig} width={300} height={250} alt="Net configuration in WinDbg" />
-
 
 The encryption key is generated automatically when you run the bcdedit command.  
 Alternatively, you have the option to manually define the key using the `key:<key>` parameter
@@ -129,9 +125,8 @@ Additionally, note that the virtual machine will remain in a "frozen" state unti
 
 :::info
 For a quick reference guide to WinDbg commands and usage,  
-check out the [WinDbg Cheat Sheet by repnz](https://github.com/repnz/windbg-cheat-sheet). 
+check out the [WinDbg Cheat Sheet by repnz](https://github.com/repnz/windbg-cheat-sheet).
 :::
-
 
 ### Breakpoints
 
@@ -168,7 +163,6 @@ check out the [WinDbg Cheat Sheet by repnz](https://github.com/repnz/windbg-chea
 
 `SRV*c:\Symbols*http://msdl.microsoft.com/downloads/symbols`
 set the symbols path to this value either by using the registry key or the options in windbg (File > Settings > Debugging Settings > Sybmols Path)
-
 
 ## Debugging ur Kernel Driver
 

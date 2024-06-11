@@ -151,7 +151,7 @@ this method also works:
 # "first argument: {0:6.2f}, second: {0:6.3f}".format(1.4148)
 ```
 
-with the .format method you can output data flush left (``<``) or flush right (``>``)
+with the .format method you can output data flush left (`<`) or flush right (`>`)
 
 ```py
 "{0:<20s} {1:6.2f}".format("something and something else:", 3.69)
@@ -175,10 +175,10 @@ with the .format method you can output data flush left (``<``) or flush right (`
 
 | Option | Meaning                                                                                                          |
 | ------ | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| '``<``'    | field is left-justified within the existing space (strings are left-justified by default)                        |
-| '``>``'    | field is output right-justified within the existing space (numeric values are output right-justified by default) |
-| '``=``'    | padding characters are introduced between the sign, if a sign is output, and the actual                          | beginning of the digit of a number so that fields of the type '+00000420' can be output (can only be applied to numeric values) |
-| '``^``'    | a field is output centered within the available space                                                            |
+| '`<`'  | field is left-justified within the existing space (strings are left-justified by default)                        |
+| '`>`'  | field is output right-justified within the existing space (numeric values are output right-justified by default) |
+| '`=`'  | padding characters are introduced between the sign, if a sign is output, and the actual                          | beginning of the digit of a number so that fields of the type '+00000420' can be output (can only be applied to numeric values) |
+| '`^`'  | a field is output centered within the available space                                                            |
 
 works only with numerical!!:
 
@@ -235,7 +235,7 @@ switzerland: Bern
 austria: vienna
 ```
 
-you can also use the dictionary directly in the call to the format method
+you can also use the [dictionary](dictionaries.md) directly in the call to the format method
 (the ouput is the same)
 
 ```py
@@ -248,7 +248,7 @@ for c in capital_country:
 
 ### Local Variables
 
-locals is a function that returns a dictionary with the locally defined names and their current values
+locals is a function that returns a [dictionary](dictionaries.md) with the locally defined names and their current values
 
 ```py
 a = 42
