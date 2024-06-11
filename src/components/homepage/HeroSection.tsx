@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { GuidesAndSamples } from "./GuidesAndSamples";
 import TextTransition, { presets } from "react-text-transition";
@@ -20,7 +19,22 @@ const text = {
     lines: [
       "She got a light skin friend, look like Michael Jackson.",
       "Got a dark skin friend, look like Michael Jackson",
-
+    ],
+  },
+  problematic: {
+    link: "https://youtu.be/qHlYdVzFX8c?si=KDG-1Dy3TqnLWVYe&t=21",
+    time: 1500,
+    lines: ["They lookin' like prey,", "I guess that's why they prayin'"],
+  },
+  wash_us_in_the_blood: {
+    link: "https://youtu.be/A12SMuz_MpY?si=KFmn49vPaB4skiRW&t=142",
+    time: 1500,
+    lines: [
+      "They don't want me to Kanye",
+      "They don't want Kanye to be Kanye",
+      "They wanna sign a fake Kanye",
+      "They tryna sign a calm Ye",
+      "That's right, I call 'em Calm-Ye",
     ],
   },
 };
@@ -61,7 +75,11 @@ export default function HeroSection() {
       <section className="flex flex-col items-center justify-center py-32">
         <h1 className="font-jakarta text-7xl font-bold">Arteii - Ben</h1>
         <h2 onClick={openLinkInNewTab} style={{ cursor: "pointer" }}>
-          <TextTransition className="text-center text-text-400 text-sm mt-2" inline={true} springConfig={presets.wobbly}>
+          <TextTransition
+            className="text-center text-text-400 text-sm mt-2"
+            inline={true}
+            springConfig={presets.wobbly}
+          >
             {currentSong.lines[currentLineIndex % currentSong.lines.length]}
           </TextTransition>
         </h2>

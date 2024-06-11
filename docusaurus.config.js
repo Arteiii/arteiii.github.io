@@ -1,10 +1,9 @@
-import { themes as prismThemes } from 'prism-react-renderer';
+import { themes as prismThemes } from "prism-react-renderer";
 
-const fs = require('fs');
-const resourcesHTML = fs.readFileSync('./src/navbar/resources.html', 'utf-8');
+const fs = require("fs");
+const resourcesHTML = fs.readFileSync("./src/navbar/resources.html", "utf-8");
 const math = require("remark-math");
 const katex = require("rehype-katex");
-
 
 const internetProfiles = {
   discord: {
@@ -42,7 +41,7 @@ module.exports = {
   tagline: "i do stuff",
   url: "https://arteiii.github.io/",
   baseUrl: "/",
-  onBrokenLinks: "warn",
+  onBrokenLinks: "throw",
   favicon: "img/favicon.ico",
   organizationName: "arteii",
   projectName: "arteiii.github.io",
@@ -50,41 +49,52 @@ module.exports = {
   themeConfig: {
     image: "img/Website-Social-Card.jpeg",
 
-
     // Declare some <meta> tags
     metadata: [
-      { name: 'robots', content: 'index, follow' },
-      { property: 'og:title', content: 'Arteii - i do stuff' },
-      { property: 'og:description', content: 'Explore Arteii’s blog and documentation.' },
-      { property: 'og:image', content: 'https://arteiii.github.io/img/Website-Social-Card.jpeg' },
-      { property: 'og:url', content: 'https://arteiii.github.io/' },
-      { property: 'og:type', content: 'website' },
-      { name: 'description', content: 'Arteii - A personal blog and documentation site.' },
-      { name: 'keywords', content: 'rteii, blog, documentation, programming, windows, kernel' },
+      { name: "robots", content: "index, follow" },
+      { property: "og:title", content: "Arteii - i do stuff" },
+      {
+        property: "og:description",
+        content: "Explore Arteii’s blog and documentation.",
+      },
+      {
+        property: "og:image",
+        content: "https://arteiii.github.io/img/Website-Social-Card.jpeg",
+      },
+      { property: "og:url", content: "https://arteiii.github.io/" },
+      { property: "og:type", content: "website" },
+      {
+        name: "description",
+        content: "Arteii - A personal blog and documentation site.",
+      },
+      {
+        name: "keywords",
+        content: "rteii, blog, documentation, programming, windows, kernel",
+      },
     ],
 
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.vsDark,
       additionalLanguages: [
-        'dart',
-        'ruby',
-        'groovy',
-        'kotlin',
-        'java',
-        'swift',
-        'objectivec',
-        'asm6502',
+        "dart",
+        "ruby",
+        "groovy",
+        "kotlin",
+        "java",
+        "swift",
+        "objectivec",
+        "asm6502",
       ],
       magicComments: [
         {
-          className: 'theme-code-block-highlighted-line',
-          line: 'highlight-next-line',
-          block: { start: 'highlight-start', end: 'highlight-end' },
+          className: "theme-code-block-highlighted-line",
+          line: "highlight-next-line",
+          block: { start: "highlight-start", end: "highlight-end" },
         },
         {
-          className: 'code-block-error-line',
-          line: 'highlight-next-line-error',
+          className: "code-block-error-line",
+          line: "highlight-next-line-error",
         },
       ],
     },
@@ -113,15 +123,15 @@ module.exports = {
       // },
       items: [
         {
-          label: 'Socials',
-          type: 'dropdown',
-          className: 'dyte-dropdown resources-dropdown',
-          position: 'left',
+          label: "Socials",
+          type: "dropdown",
+          className: "dyte-dropdown resources-dropdown",
+          position: "left",
           items: [
             {
-              type: 'html',
+              type: "html",
               value: resourcesHTML,
-              className: 'dyte-dropdown',
+              className: "dyte-dropdown",
             },
           ],
         },
@@ -160,15 +170,15 @@ module.exports = {
 
     algolia: {
       // The application ID provided by Algolia
-      appId: 'D3ST694UAZ',
+      appId: "D3ST694UAZ",
 
       // Public API key: it is safe to commit it
-      apiKey: 'd358a9d8d689d82a8e64b1dcf4f99b33',
+      apiKey: "d358a9d8d689d82a8e64b1dcf4f99b33",
 
-      indexName: 'arteiiiio',
+      indexName: "arteiiiio",
 
       // Optional: see doc section below
-      contextualSearch: false, // search wont work with it active 
+      contextualSearch: false, // search wont work with it active
       // no need to fix since there is only one language and only en
       //(https://stackoverflow.com/questions/72838375/algolia-docsearch-in-docusaurus-doesnt-bring-any-results#:~:text=The%20problem%20is%20a%20recent%20update%20of%20Docusaurus%2C,the%20crawler.%20To%20solve%3A%20Delete%20the%20current%20index)
 
@@ -182,7 +192,7 @@ module.exports = {
       // },
 
       // Optional: path for search page that enabled by default (`false` to disable it)
-      searchPagePath: 'search',
+      searchPagePath: "search",
     },
   },
 
@@ -196,8 +206,7 @@ module.exports = {
           editCurrentVersion: false,
           remarkPlugins: [math],
           rehypePlugins: [katex],
-          editUrl:
-            "https://github.com/arteiii/arteiii.github.io/tree/main/",
+          editUrl: "https://github.com/arteiii/arteiii.github.io/tree/main/",
         },
         blog: {
           blogSidebarTitle: "Blog",
@@ -213,8 +222,7 @@ module.exports = {
           readingTime: ({ content, frontMatter, defaultReadingTime }) =>
             defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/arteiii/arteiii.github.io/tree/main/",
+          editUrl: "https://github.com/arteiii/arteiii.github.io/tree/main/",
 
           feedOptions: {
             type: "all",
@@ -237,7 +245,7 @@ module.exports = {
           customCss: require.resolve("./src/css/custom.css"),
         },
         gtag: {
-          trackingID: 'G-7JSR7YQ7YL',
+          trackingID: "G-7JSR7YQ7YL",
           anonymizeIP: true,
         },
       },
@@ -257,11 +265,11 @@ module.exports = {
   ],
   stylesheets: [
     {
-      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
-      type: 'text/css',
+      href: "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
+      type: "text/css",
       integrity:
-        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
-      crossorigin: 'anonymous',
+        "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
+      crossorigin: "anonymous",
     },
   ],
 };

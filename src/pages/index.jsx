@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import Layout from '@theme/Layout';
+import React, { useState } from "react";
+import Layout from "@theme/Layout";
 
-import HeroSection from '../components/homepage/HeroSection';
-import ResourcesSection from '../components/homepage/ResourcesSection';
-import Head from '@docusaurus/Head';
+import HeroSection from "../components/homepage/HeroSection";
+import ResourcesSection from "../components/homepage/ResourcesSection";
+import Head from "@docusaurus/Head";
 
 export default function Homepage() {
   return (
@@ -17,8 +17,8 @@ export default function Homepage() {
       </Head>
 
       <HeroSection />
- 
-      <ResourcesSection />
+
+      {/* <ResourcesSection /> */}
     </Layout>
   );
 }
