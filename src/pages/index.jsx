@@ -8,7 +8,7 @@ import Head from "@docusaurus/Head";
 export default function Homepage() {
   return (
     <Layout
-      description="Arteii - not a web dev"
+      description="A personal blog and documentation site. Discover articles on Linux, Windows, programming, kernel development, and Python."
       wrapperClassName="homepage flex flex-col"
       noFooter
     >

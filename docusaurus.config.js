@@ -53,24 +53,28 @@ module.exports = {
     // Declare some <meta> tags
     metadata: [
       { name: "robots", content: "index, follow" },
-      { property: "og:title", content: "Arteii - i do stuff" },
+      { property: "og:title", content: "Arteii - not a web dev" },
       {
         property: "og:description",
-        content: "Explore Arteii’s blog and documentation.",
+        content:
+          "A personal blog and documentation site. Discover articles on Linux, Windows, programming, kernel development, and Python.",
       },
       {
         property: "og:image",
         content: "https://arteiii.github.io/img/Website-Social-Card.jpeg",
       },
+      {
+        property: "twitter:description",
+        content:
+          "A personal blog and documentation site. Discover articles on Linux, Windows, programming, kernel development, and Python.",
+      },
       { property: "og:url", content: "https://arteiii.github.io/" },
       { property: "og:type", content: "website" },
-      {
-        name: "description",
-        content: "Arteii - A personal blog and documentation site.",
-      },
+      { property: "author", content: "Arteii" },
       {
         name: "keywords",
-        content: "rteii, blog, documentation, programming, windows, kernel",
+        content:
+          "arteii, blog, documentation, linux, programming, windows, kernel, python",
       },
     ],
 

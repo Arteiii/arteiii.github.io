@@ -53,8 +53,8 @@ const samples: Sample[] = [
     title: "zenity",
     platform: "Rust, CLI",
     source: "https://github.com/Arteiii/zenity",
-    blog: 'https://docs.rs/zenity/latest/zenity/',
-    demo: 'https://crates.io/crates/zenity',
+    blog: "https://docs.rs/zenity/latest/zenity/",
+    demo: "https://crates.io/crates/zenity",
   },
   {
     title: "membrs",
@@ -66,7 +66,7 @@ const samples: Sample[] = [
     title: "RegistryHelper",
     platform: "Windows, Modern C++",
     source: "https://github.com/Arteiii/RegistryHelper",
-    blog: 'https://learn.microsoft.com/en-us/archive/msdn-magazine/authors/giovanni_dicanio',
+    blog: "https://learn.microsoft.com/en-us/archive/msdn-magazine/authors/giovanni_dicanio",
     // demo: 'no demooo????',
   },
 ];
@@ -77,19 +77,29 @@ function Guide({ title, text, icon: Icon, link }: (typeof guides)[0]) {
       to={link}
       className="group flex cursor-pointer items-start gap-2 rounded-lg border-2 border-transparent p-3 text-inherit transition-colors hover:border-primary hover:text-primary"
     >
-      <Icon className="h-6 w-6" />
+      <Icon className="h-6 w-6" aria-label={`${title} icon`} />
 
       <div className="flex flex-col">
         <h4 className="mb-1 font-semibold">{title}</h4>
         <p className="mb-0 text-sm text-text-400">{text}</p>
       </div>
 
-      <ChevronRight className="ml-auto h-5 w-5 self-center opacity-0 transition-opacity group-hover:opacity-100" />
+      <ChevronRight
+        className="ml-auto h-5 w-5 self-center opacity-0 transition-opacity group-hover:opacity-100"
+        aria-label="Right arrow icon"
+      />
     </Link>
   );
 }
 
-export function Sample({ title, platform, blog, source, demo, buttonlabel = "Clone" }: Sample) {
+export function Sample({
+  title,
+  platform,
+  blog,
+  source,
+  demo,
+  buttonlabel = "Clone",
+}: Sample) {
   return (
     <div className="group flex cursor-pointer items-center justify-between rounded-lg border-2 border-transparent p-3 text-text-400/60 transition-colors hover:border-primary hover:text-primary">
       <div className="flex flex-col">
@@ -102,13 +112,13 @@ export function Sample({ title, platform, blog, source, demo, buttonlabel = "Clo
       <div className="flex items-center gap-2.5">
         {blog && (
           <Link to={blog} className="text-inherit" aria-label="Open Blog">
-            <DocumentRegular className="h-5 w-5" />
+            <DocumentRegular className="h-5 w-5" aria-label="Document icon" />
           </Link>
         )}
 
         {demo && (
           <Link to={demo} className="text-inherit" aria-label="Open Demo">
-            <OpenRegular className="h-5 w-5" />
+            <OpenRegular className="h-5 w-5" aria-label="Open icon" />
           </Link>
         )}
 
@@ -116,9 +126,9 @@ export function Sample({ title, platform, blog, source, demo, buttonlabel = "Clo
           <Link
             to={source}
             className="flex items-center gap-1 rounded-lg py-1 px-3 text-inherit transition-colors group-hover:bg-primary group-hover:text-white"
-            aria-label="Open Repositorie"
+            aria-label="Open Repository"
           >
-            <GitHub className="h-4 w-4" />
+            <GitHub className="h-4 w-4" aria-label="GitHub icon" />
             <span className="font-semibold">{buttonlabel}</span>
           </Link>
         )}
@@ -135,7 +145,8 @@ export function GuidesAndSamples() {
           <h3 className="m-0">Docs & Notes</h3>
 
           <Link to="/docs" className="font-jakarta text-sm font-semibold">
-            View more <ArrowRightFilled className="ml-1" />
+            View more{" "}
+            <ArrowRightFilled className="ml-1" aria-label="Right arrow icon" />
           </Link>
         </div>
 
@@ -151,6 +162,7 @@ export function GuidesAndSamples() {
           "mx-8 block flex-shrink-0 bg-gradient-to-b from-transparent via-secondary-700 to-transparent",
           "hidden w-px md:block"
         )}
+        aria-label="Divider"
       />
 
       <div className="w-full md:max-w-sm">
@@ -161,7 +173,8 @@ export function GuidesAndSamples() {
             to="https://github.com/Arteiii?tab=repositories"
             className="font-jakarta text-sm font-semibold"
           >
-            All <ArrowRightFilled className="ml-1" />
+            All{" "}
+            <ArrowRightFilled className="ml-1" aria-label="Right arrow icon" />
           </Link>
         </div>
 

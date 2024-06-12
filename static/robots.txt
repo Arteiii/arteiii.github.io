@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /404
 
 Sitemap: https://arteiii.github.io/sitemap.xml
