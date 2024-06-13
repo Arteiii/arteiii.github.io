@@ -57,7 +57,7 @@ module.exports = {
       {
         property: "og:description",
         content:
-          "A personal blog and documentation site. Discover articles on Linux, Windows, programming, kernel development, and Python.",
+          "A personal blog and documentation site. Linux, Windows, programming, kernel development, Python",
       },
       {
         property: "og:image",
@@ -66,7 +66,7 @@ module.exports = {
       {
         property: "twitter:description",
         content:
-          "A personal blog and documentation site. Discover articles on Linux, Windows, programming, kernel development, and Python.",
+          "A personal blog and documentation site. Linux, Windows, programming, kernel development, Python",
       },
       { property: "og:url", content: "https://arteiii.github.io/" },
       { property: "og:type", content: "website" },

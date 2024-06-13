@@ -33,19 +33,19 @@ Your contributions are appreciated. Thank you!
   <Card
     title="Kernel"
     icon={<DeveloperBoardRegular />}
-    to="/docs/windows/kernel"
+    to="/docs/windows/kernel/"
     description="First Driver, Kernel Debugging"
   />
   <Card
     title="Internals"
     icon={<ProductionRegular />}
-    to="/docs/windows/internals"
+    to="/docs/windows/internals/"
     description="PE structure, Common DLLs, Conventions, Virtualization Based Security (VBS)..."
   />
   <Card
     title="Programming"
     icon={<AppGenericRegular />}
-    to="/docs/windows/programming"
+    to="/docs/windows/programming/"
     description="Handles, Pipes"
   />
 </CardSection>
@@ -54,7 +54,7 @@ Your contributions are appreciated. Thank you!
   <Card
     icon={<AnimalTurtleRegular />}
     title="Basic's"
-    to="/docs/python"
+    to="/docs/python/"
     description="Variables, Shallow & Deep Copy, if else, Functions, Exceptions, Read & Write Files..."
   />
 </CardSection>
@@ -63,7 +63,7 @@ Your contributions are appreciated. Thank you!
   <Card
     icon={<EmojiHintRegular />}
     title="Networking"
-    to="/docs/cheatsheets/networking"
+    to="/docs/cheatsheets/networking/"
     description="HTTP Status Codes, HTTP Verbs, TCP/IP, Ports"
   />
   <Card

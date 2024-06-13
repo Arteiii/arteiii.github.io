@@ -29,7 +29,7 @@ const guides: Guide[] = [
     title: "Python",
     icon: CodePyRectangle16Regular,
     text: "Explore basic Python functionality.",
-    link: "/docs/python",
+    link: "/docs/python/",
   },
   {
     title: "Cheat Sheet's",
