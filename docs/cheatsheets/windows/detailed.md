@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 sidebar_label: Detailed Model
+description: Operating System Model in more detail image
 ---
 
 # Operating System Model in more detail
@@ -9,8 +10,8 @@ import ThemedImage from '@theme/ThemedImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <ThemedImage
-  alt="Operating System Model in more detail image"
-  sources={{
+alt="Operating System Model in more detail image"
+sources={{
     light: useBaseUrl('/img/cheatsheets/windows/detailed/light.svg'),
     dark: useBaseUrl('/img/cheatsheets/windows/detailed/dark.svg'),
   }}

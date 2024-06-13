@@ -1,15 +1,17 @@
 ---
 sidebar_position: 1
 sidebar_label: Core Files
+description: Windows Core Files image
 ---
+
 # Ring-Layer
 
 import ThemedImage from '@theme/ThemedImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <ThemedImage
-  alt="Windows Core Files image"
-  sources={{
+alt="Windows Core Files image"
+sources={{
     light: useBaseUrl('/img/cheatsheets/windows/core_files/light.svg'),
     dark: useBaseUrl('/img/cheatsheets/windows/core_files/dark.svg'),
   }}

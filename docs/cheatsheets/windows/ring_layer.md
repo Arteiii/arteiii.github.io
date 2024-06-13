@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 sidebar_label: Ring Layer
+description: Privilege Ring Layers
 ---
 
 # Ring Layer
@@ -9,9 +10,17 @@ import ThemedImage from '@theme/ThemedImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <ThemedImage
-  alt="Docusaurus themed image"
-  sources={{
+alt="Privilege Ring Layers"
+sources={{
     light: useBaseUrl('/img/cheatsheets/windows/ring/light.svg'),
     dark: useBaseUrl('/img/cheatsheets/windows/ring/dark.svg'),
   }}
 />
+
+## References
+
+[wikipedia](https://en.wikipedia.org/wiki/Protection_ring)
+
+while i think moving the kernel down to ring level 2 is more appropriate incase of a vtx based hypervisor
+
+medium
