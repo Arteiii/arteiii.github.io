@@ -98,7 +98,7 @@ dic = {[1, 2, 3]:"test123"}
     # TypeError: unhashable type: 'list'
 ```
 
-### Tupel Is Possible
+### Tuple Is Possible
 
 ```py
 dic = {(1, 2, 3):"abc", 1.337:"test1337"}

@@ -102,7 +102,7 @@ import { Sample } from "../../../src/components/homepage/GuidesAndSamples";
 
 <div className="w-full md:max-w-sm">
       <div className="flex flex-col gap-4">
-        <Sample title="simpleWinDriver" platform="" demo="https://github.com/Arteiii/simpleWinDriver" buttonlabel="Template" source="https://github.com/new?template_name=simpleWinDriver&template_owner=Arteiii" />
+        <Sample title="simpleWinDriver" platform="" demo="https://github.com/Arteiii/simpleWinDriver" buttonlabel="Template" source="https://github.com/new?template_name=simpleWinDriver&template_owner=Arteiii"></Sample>
       </div>
 </div>
 
@@ -110,7 +110,7 @@ import { Sample } from "../../../src/components/homepage/GuidesAndSamples";
 
 ## Start the driver
 
-for debugging activate testsigning on the test pc:
+for debugging activate test-signing on the test pc:
 
 ```cmd
 bcdedit /set testsigning on

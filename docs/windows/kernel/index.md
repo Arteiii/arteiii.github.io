@@ -17,6 +17,7 @@ unlike user-mode applications, which are more isolated and less prone to impacti
 :::note
 Note that other versions of Visual Studio may also work, but the steps might differ.
 :::
+
 Download Visual Studio 2022 [here](https://visualstudio.microsoft.com/de/)
 
 During installation, select "Desktop development with C++."

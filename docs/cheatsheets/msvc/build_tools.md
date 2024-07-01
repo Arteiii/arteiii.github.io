@@ -5,7 +5,7 @@ sidebar_label: Linker
 
 # Linker
 
-## Debuging Settings
+## Debugging Settings
 
 ### Generate Debug Info
 
@@ -22,5 +22,7 @@ This is a standard practice to avoid exposing sensitive information about the pr
 #### Other Options for Generate Debug Info
 
 - ``/DEBUG:FULL``: This option generates full debugging information, including file paths and symbols, in the PDB file
-- ``/DEBUG:FASTLINK``: This option is optimized for link time. It generates partial debugging information, aiming to speed up linking
-- ``/DEBUG:NONE``: This option excludes debugging information entirely. It's suitable for release builds where debugging is not required
+- ``/DEBUG:FASTLINK``: This option is optimized for link time. It generates partial debugging information, aiming to
+  speed up linking
+- ``/DEBUG:NONE``: This option excludes debugging information entirely. It's suitable for release builds where debugging
+  is not required

@@ -10,20 +10,26 @@ id: web
 
 ### 1\*\* - Informational
 
-- **100 Continue:** The initial part of the request has been received, and the client should proceed with sending the rest of the request.
-- **101 Switching Protocols:** The server is switching protocols as requested by the client (e.g., from HTTP to WebSocket).
+- **100 Continue:** The initial part of the request has been received, and the client should proceed with sending the
+  rest of the request.
+- **101 Switching Protocols:** The server is switching protocols as requested by the client (e.g., from HTTP to
+  WebSocket).
 
 ### 2\*\* - Successful
 
 - **200 OK:** The request was successful, and the server has returned the requested data.
 - **201 Created:** The request has been fulfilled, and a new resource has been created as a result.
-- **204 No Content:** The request was successful, but there is no additional information to send back (often used for DELETE and PUT).
+- **204 No Content:** The request was successful, but there is no additional information to send back (often used for
+  DELETE and PUT).
 
 ### 3\*\* - Redirection
 
-- **301 Moved Permanently:** The requested resource has been permanently moved to a new location, and the client should update its URL.
-- **302 Found (or Temporary Redirect):** The requested resource has been temporarily moved to a different location. The client should continue using the original URL.
-- **304 Not Modified:** The resource has not been modified since the client's last request, and the server instructs the client to use its cached copy.
+- **301 Moved Permanently:** The requested resource has been permanently moved to a new location, and the client should
+  update its URL.
+- **302 Found (or Temporary Redirect):** The requested resource has been temporarily moved to a different location. The
+  client should continue using the original URL.
+- **304 Not Modified:** The resource has not been modified since the client's last request, and the server instructs the
+  client to use its cached copy.
 
 ### 4\*\* - Client Errors
 

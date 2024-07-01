@@ -6,7 +6,9 @@ sidebar_position: 2
 
 ## Full Kernel Debuggers
 
-Establishing communication for comprehensive kernel debugging within a virtual machine offers various options. This article will guide you through the process of setting up communication with a COM device exposed to the host system as a named pipe
+Establishing communication for comprehensive kernel debugging within a virtual machine offers various options. This
+article will guide you through the process of setting up communication with a COM device exposed to the host system as a
+named pipe
 
 Ensure that secure boot is disabled in the virtual machine!
 
@@ -33,9 +35,12 @@ Let's break down the components:
 
 - serial: Specifies the type of debugging connection, in this case, a serial connection
 
-- debugport:1: Sets the debug port to 1. The debug port is a crucial parameter as it designates the communication channel through which debugging information is transmitted
+- debugport:1: Sets the debug port to 1. The debug port is a crucial parameter as it designates the communication
+  channel through which debugging information is transmitted
 
-- baudrate:115200: Establishes the baud rate for the serial connection at 115200. Baud rate is the speed at which data is transmitted, and in debugging scenarios, it is set to ensure efficient and reliable communication between the virtual machine and the debugging tools
+- baudrate:115200: Establishes the baud rate for the serial connection at 115200. Baud rate is the speed at which data
+  is transmitted, and in debugging scenarios, it is set to ensure efficient and reliable communication between the
+  virtual machine and the debugging tools
 
   [Read More](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/bcdedit--dbgsettings)
 
@@ -43,7 +48,8 @@ Let's break down the components:
 
 After completing the debugging configuration, shut down the virtual machine
 
-In VMware, you can add a virtual COM device to the VM. To do this, navigate to the VM settings. Look for the option to add hardware, and choose "Serial Port" from the list
+In VMware, you can add a virtual COM device to the VM. To do this, navigate to the VM settings. Look for the option to
+add hardware, and choose "Serial Port" from the list
 
 <img src={adddevice} width={550} height={350} alt="Create Serial Port device inside VMware" />
 
@@ -53,7 +59,8 @@ Once you've added the virtual serial port, configure it to use a named pipe
 This establishes a communication channel with the host system  
 In the settings, specify the pipe name for the COM device (`\\.\pipe\debugvm`)
 
-For further assistance on configuring named pipes in VMware, refer to the [VMware documentation](https://docs.vmware.com/en/VMware-Workstation-Pro/17/com.vmware.ws.using.doc/GUID-70C25BED-6791-4AF2-B530-8030E39ED749.html)
+For further assistance on configuring named pipes in VMware, refer to
+the [VMware documentation](https://docs.vmware.com/en/VMware-Workstation-Pro/17/com.vmware.ws.using.doc/GUID-70C25BED-6791-4AF2-B530-8030E39ED749.html)
 
 <img src={configurevmwaredevice} width={350} height={350} alt="Create Serial Port device inside VMware" />
 
@@ -76,7 +83,7 @@ import ComAttachMenu from "/img/windows/kernel/kernel_debugging/DbgX.Shell_9hq8b
    <img src={AttachToKernel} width={250} height={250} alt="Attach to kernel highlight in windbg menu" />
 
 3. In the COM settings, enter the port you defined in VMware (`\\.\pipe\debugvm`).  
-Additionally, set the baud rate to `115200`. Click "OK" to confirm the configuration
+   Additionally, set the baud rate to `115200`. Click "OK" to confirm the configuration
 
    <img src={ComAttachMenu} width={300} height={250} alt="com menu config screenshot" />
 
@@ -88,9 +95,11 @@ bcdedit /dbgsettings net hostip:<ip> port:<port>
 
 - `/dbgsettings net`: This flag indicates that network debugging settings are being configured.
 
-- `hostip:<ip>`: Specifies the IP address of the host machine that will be used for network debugging. Ensure that this IP address aligns with the host machine's network configuration.
+- `hostip:<ip>`: Specifies the IP address of the host machine that will be used for network debugging. Ensure that this
+  IP address aligns with the host machine's network configuration.
 
-- `port:<port>`: Sets the port number for the network debugger connection. The chosen port, in this case, is `51234` (Should be 49152 or higher)
+- `port:<port>`: Sets the port number for the network debugger connection. The chosen port, in this case, is `51234` (
+  Should be 49152 or higher)
 
 example:
 
@@ -102,7 +111,8 @@ bcdedit /dbgsettings net hostip:192.168.56.1 port:51234
 
 import NetConfig from "/img/windows/kernel/kernel_debugging/DbgX.Shell_Hg7BXHCNZq.png"
 
-In the NET settings, enter the port you defined (`51234`). Additionally, set the baud rate to `115200`. Click "OK" to confirm the configuration
+In the NET settings, enter the port you defined (`51234`). Additionally, set the baud rate to `115200`. Click "OK" to
+confirm the configuration
 
 <img src={NetConfig} width={300} height={250} alt="Net configuration in WinDbg" />
 
@@ -119,7 +129,8 @@ bcdedit /dbgsettings net hostip:192.168.56.1 port:51234 key:1.3.3.6
 
 ![WinDbg Command view](img/DbgX.Shell_NujLcclIR0.png)
 
-Additionally, note that the virtual machine will remain in a "frozen" state until you remove the breakpoint and resume execution using either **F5** or `g` in the command line
+Additionally, note that the virtual machine will remain in a "frozen" state until you remove the breakpoint and resume
+execution using either **F5** or `g` in the command line
 
 ## Basic usage of WinDbg
 
@@ -162,7 +173,8 @@ check out the [WinDbg Cheat Sheet by repnz](https://github.com/repnz/windbg-chea
 ### Symbols
 
 `SRV*c:\Symbols*http://msdl.microsoft.com/downloads/symbols`
-set the symbols path to this value either by using the registry key or the options in windbg (File > Settings > Debugging Settings > Sybmols Path)
+set the symbols path to this value either by using the registry key or the options in windbg (File > Settings >
+Debugging Settings > Sybmols Path)
 
 ## Debugging ur Kernel Driver
 

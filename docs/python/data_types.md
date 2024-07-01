@@ -43,7 +43,7 @@ print('prints okta 0o10:',okta)
 ### Hex
 
 hexadecimal with: 0x/0X
-and then the hexa number
+and then the hex number
 
 ```py
 hexa = 0x10

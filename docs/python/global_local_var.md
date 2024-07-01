@@ -6,7 +6,7 @@ sidebar_position: 16
 # Global And Local Variables
 
 variables are generally considered local in python  
-unless they are explicitly defined as globaly  
+unless they are explicitly defined as globally  
 
 however, this is considered a bad programming style
 
@@ -39,7 +39,7 @@ hello()
 # UnboundLocalError:
 ```
 
-a variable cannot be local and gloabl at the same time  
+a variable cannot be local and global at the same time  
 
 therefore python considers the variable s as local  
 but since this variable gets a value only after the call, an error is generated

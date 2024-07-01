@@ -1,44 +1,41 @@
 ---
 id: linux
 title: Linux
-sidebar_position: 3
+sidebar_position: 4
 description: The World’s First Computer Virus
 ---
 
-import {
-  DeveloperBoardRegular,
-  AppGenericRegular,
-} from "@fluentui/react-icons";
 
-import { CardSection, Card } from "../../src/components/CardComponents";
+import {AppGenericRegular,} from "@fluentui/react-icons";
+
+import {Card, CardSection} from "../../src/components/CardComponents";
 import QuoteComponent from "../../src/components/QuoteComponent";
 
 import ThemedImage from "@theme/ThemedImage";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-<div style={{ display: "flex", alignItems: "center" }}>
-  <div style={{ marginRight: "20px" }}>
-    <QuoteComponent />
-    <CardSection id="linux" title="Topics">
-      <Card
-        title="Administration"
-        icon={<AppGenericRegular />}
-        to="/docs/linux/sysadmin/"
-        description="User management, file permissions, network configuration, maintenance"
-      />
-    </CardSection>
-  </div>
-  <div>
-    {/* Your Tux image */}
-    <ThemedImage
-      alt="Tux"
-      width="200"
-      sources={{
-        light: useBaseUrl("/img/linux/tux.svg"),
-        dark: useBaseUrl("/img/linux/tux.svg"),
-      }}
-    />
-  </div>
+<div style={{display: "flex", alignItems: "center"}}>
+    <div style={{marginRight: "20px"}}>
+        <QuoteComponent/>
+        <CardSection id="linux" title="Topics">
+            <Card
+                title="Administration"
+                icon={<AppGenericRegular/>}
+                to="/docs/linux/sysadmin/"
+                description="User management, file permissions, network configuration, maintenance"
+            />
+        </CardSection>
+    </div>
+    <div>
+        <ThemedImage
+            alt="Tux"
+            width="200"
+            sources={{
+                light: useBaseUrl("/img/linux/tux.svg"),
+                dark: useBaseUrl("/img/linux/tux.svg"),
+            }}
+        />
+    </div>
 </div>
 
 <br></br>

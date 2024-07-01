@@ -67,7 +67,7 @@ const samples: Sample[] = [
     platform: "Windows, Modern C++",
     source: "https://github.com/Arteiii/RegistryHelper",
     blog: "https://learn.microsoft.com/en-us/archive/msdn-magazine/authors/giovanni_dicanio",
-    // demo: 'no demooo????',
+    // demo: 'no demo????',
   },
 ];
 

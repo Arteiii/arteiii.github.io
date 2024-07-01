@@ -69,7 +69,7 @@ print("42", file=fh)
 fh.close()
 ```
 
-its also possible to output into the default error channel:
+it's also possible to output into the default error channel:
 
 ```py
 print("Error: 42", file=sys.stderr)
@@ -79,7 +79,7 @@ print("Error: 42", file=sys.stderr)
 ## C-Style Formating
 
 :::info
-is seen as an deprecated and bad style in python
+is seen as a deprecated and bad style in python
 :::
 
 ```py
@@ -91,10 +91,10 @@ Output:
 `some value:  123, another: 1234.0`
 
 | Placeholder | Meaning                                                                                                                 |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------- |
+|-------------|-------------------------------------------------------------------------------------------------------------------------|
 | d/i         | signed integer (integer, decimal)                                                                                       |
 | o           | unsigned integer in octal format                                                                                        |
-| u           | absolete otherwise like a signed integer                                                                                |
+| u           | absolute otherwise like a signed integer                                                                                |
 | x           | unsigned integer (hexadecimal)                                                                                          |
 | X           | unsigned integer (hexadecimal), uppercase                                                                               |
 | e           | floating point numbers (exponential format)                                                                             |
@@ -137,7 +137,7 @@ template.formate(p0, p1, ..., k0=v0, k1=v1, ...)
 # 'first argument: 47, second: 11'
 ```
 
-argumnents can be used multiple times:
+arguments can be used multiple times:
 
 ```py
 "first argument: {0:6.2f}, second: {0:6.3f}".format(1.4148)
@@ -183,9 +183,9 @@ with the .format method you can output data flush left (`<`) or flush right (`>`
 works only with numerical!!:
 
 | Option | Meaning                                                                                                            |
-| ------ | ------------------------------------------------------------------------------------------------------------------ |
+|--------|--------------------------------------------------------------------------------------------------------------------|
 | '+'    | sign should always be output, regardless of whether the number is positive or negative.                            |
-| '-'    | signshould only be used for negative numbers                                                                       |
+| '-'    | sign should only be used for negative numbers                                                                      |
 | space  | instead of a "+", positive numbers are preceded by a " " space. negative numbers are preceded by a minus sign "-". |
 
 ### String Literals
