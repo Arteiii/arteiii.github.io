@@ -1,3 +1,4 @@
+// @ts-ignore
 import React, { useState, useEffect } from "react";
 import { GuidesAndSamples } from "./GuidesAndSamples";
 import TextTransition, { presets } from "react-text-transition";

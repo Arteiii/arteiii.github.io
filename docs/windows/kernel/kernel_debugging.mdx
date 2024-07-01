@@ -22,8 +22,8 @@ bcdedit /debug on
 
 ### VM setup (COM)
 
-import adddevice from "/img/windows/kernel/kernel_debugging/vmware_YU0yTtaigA.png"
-import configurevmwaredevice from "/img/windows/kernel/kernel_debugging/vmware_agquvVy0bW.png"
+import addDevice from "../../../static/img/windows/kernel/kernel_debugging/vmware_YU0yTtaigA.png"
+import configureVMwareDevice from "../../../static/img/windows/kernel/kernel_debugging/vmware_agquvVy0bW.png"
 
 ```cmd
 bcdedit /dbgsettings serial debugport:1 baudrate:115200
@@ -51,7 +51,7 @@ After completing the debugging configuration, shut down the virtual machine
 In VMware, you can add a virtual COM device to the VM. To do this, navigate to the VM settings. Look for the option to
 add hardware, and choose "Serial Port" from the list
 
-<img src={adddevice} width={550} height={350} alt="Create Serial Port device inside VMware" />
+<img src={addDevice} width={550} alt="Create Serial Port device inside VMware" />
 
 ---
 
@@ -62,7 +62,7 @@ In the settings, specify the pipe name for the COM device (`\\.\pipe\debugvm`)
 For further assistance on configuring named pipes in VMware, refer to
 the [VMware documentation](https://docs.vmware.com/en/VMware-Workstation-Pro/17/com.vmware.ws.using.doc/GUID-70C25BED-6791-4AF2-B530-8030E39ED749.html)
 
-<img src={configurevmwaredevice} width={350} height={350} alt="Create Serial Port device inside VMware" />
+<img src={configureVMwareDevice} width={350} alt="Create Serial Port device inside VMware" />
 
 Start the virtual machine and ensure that the virtual COM device is correctly connected
 
@@ -76,16 +76,16 @@ import ComAttachMenu from "/img/windows/kernel/kernel_debugging/DbgX.Shell_9hq8b
 
 1. Launch WinDbg and navigate to the "File" menu located in the top left corner
 
-   <img src={WinDbgFile} width={350} height={350} alt="WinDbg File highlight" />
+   <img src={WinDbgFile} width={350} alt="WinDbg File highlight" />
 
 2. Select "Attach to Kernel" from the menu options
 
-   <img src={AttachToKernel} width={250} height={250} alt="Attach to kernel highlight in windbg menu" />
+   <img src={AttachToKernel} width={250} alt="Attach to kernel highlight in windbg menu" />
 
 3. In the COM settings, enter the port you defined in VMware (`\\.\pipe\debugvm`).  
    Additionally, set the baud rate to `115200`. Click "OK" to confirm the configuration
 
-   <img src={ComAttachMenu} width={300} height={250} alt="com menu config screenshot" />
+   <img src={ComAttachMenu} width={300} alt="com menu config screenshot" />
 
 ### VM setup (Net)
 
@@ -114,7 +114,7 @@ import NetConfig from "/img/windows/kernel/kernel_debugging/DbgX.Shell_Hg7BXHCNZ
 In the NET settings, enter the port you defined (`51234`). Additionally, set the baud rate to `115200`. Click "OK" to
 confirm the configuration
 
-<img src={NetConfig} width={300} height={250} alt="Net configuration in WinDbg" />
+<img src={NetConfig} width={300} alt="Net configuration in WinDbg" />
 
 The encryption key is generated automatically when you run the bcdedit command.  
 Alternatively, you have the option to manually define the key using the `key:<key>` parameter
