@@ -52,30 +52,8 @@ module.exports = {
 
     // Declare some <meta> tags
     metadata: [
-      { name: "robots", content: "index, follow" },
-      { property: "og:title", content: "Arteii - not a web dev" },
-      {
-        property: "og:description",
-        content:
-          "A personal blog and documentation site. Linux, Windows, programming, kernel development, Python",
-      },
-      {
-        property: "og:image",
-        content: "https://arteiii.github.io/img/Website-Social-Card.jpeg",
-      },
-      {
-        property: "twitter:description",
-        content:
-          "A personal blog and documentation site. Linux, Windows, programming, kernel development, Python",
-      },
-      { property: "og:url", content: "https://arteiii.github.io/" },
-      { property: "og:type", content: "website" },
-      { property: "author", content: "Arteii" },
-      {
-        name: "keywords",
-        content:
-          "arteii, blog, documentation, linux, programming, windows, kernel, python",
-      },
+      { name: "robots", content: "index" },
+      {name: 'twitter:card', content: 'summary_large_image'},
     ],
 
     prism: {
