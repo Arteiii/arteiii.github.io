@@ -46,6 +46,7 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "arteii",
   projectName: "arteiii.github.io",
+  trailingSlash: true,
 
   themeConfig: {
     image: "img/Website-Social-Card.jpeg",

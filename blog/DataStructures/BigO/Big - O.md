@@ -59,7 +59,7 @@ $T(n)=O(n^2)$
 
 ### Graphs
 
-![Graphs of functions commonly used in the analysis of algorithms](assets/images/1024px-Comparison_computational_complexity.png)
+![Graphs of functions commonly used in the analysis of algorithms](../../../static/img/data_structures/assets/images/1024px-Comparison_computational_complexity.png)
 
 [Source](https://en.wikipedia.org/wiki/Big_O_notation#/media/File:Comparison_computational_complexity.svg)
 
@@ -68,5 +68,5 @@ $T(n)=O(n^2)$
 
 If you want to know more about it, have a look at this:
 
-- [Big O notation - MIT](assets/pdf/big_o_mit.pdf)
+- [Big O notation - MIT](../../../static/img/data_structures/assets/pdf/big_o_mit.pdf)
 - [Mosh](https://youtu.be/BBpAmxU_NQo?t=65)
