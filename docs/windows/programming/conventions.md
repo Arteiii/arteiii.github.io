@@ -6,12 +6,6 @@ sidebar_position: 1
 
 # Conventions
 
----
-sidebar_position: 1
----
-
-# Conventions
-
 ## Unicode
 
 In the realm of Windows internals, text strings are predominantly stored and processed in the 16-bit wide UNICODE
