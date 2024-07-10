@@ -1,0 +1,60 @@
+---
+sidebar_position: 8
+hide_table_of_contents: true
+---
+
+# Virtualization-based security (VBS)
+
+
+import ThemedImage from '@theme/ThemedImage';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+With Virtualization-based Security (VBS) enabled, VTL-1 (Virtual Trust Level) is available,  <br></br>
+which includes its own secure kernel operating in privileged processor mode (for x86/x64 it is ring-0) <br></br>
+and an isolated user mode (IUM), which operates in unprivileged mode (ring-3).
+
+
+<div style={{
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap'
+}}>
+    <div style={{flex: 1, marginRight: '20px'}}>
+        <p>
+            In this particular design, an independent binary file called securekernel.exe exists as the secure kernel on
+            the disk. The security environment, IUM, is also present which restricts the permitted system calls and
+            includes unique security system calls that can be executed under VTL-1. The functions can be accessed
+            through an internal system library dubbed Iumdll.dll, which is the VTL-1 form of Ntdll.dll, as well as
+            through a Windows subsystem library referred to as Iumbase.dll, which is the VTL-1 edition of
+            Kernelbase.dll.
+        </p>
+        <p>
+            Copy-on-write practices prohibit VTL-0 applications from modifying binaries utilized by VTL-1. The VTL-1
+            kernel, which runs in both kernel mode and VTL-1, has full access to VTL-0 memory and resources. By
+            utilizing CPU hardware support known as Second Level Address Translation (SLAT), the hypervisor can restrict
+            VTL-0 OS access to specific memory locations. Credential Guard technology, which can store classified
+            information in these locations, is based on SLAT.
+        </p>
+        <p>
+            The I/O memory management unit (MMU) virtualizes memory access for devices. This can be used to prevent
+            device drivers from using direct memory access (DMA) to directly access the hypervisor or secure kernel
+            physical areas of memory. This would bypass SLAT because no virtual memory is involved.
+        </p>
+        <p>
+            To ensure the protection of VTL-1 processes, the system has implemented trustlets. Trustlets are a special
+            class of binaries, each with a unique identifier and signature. The secure kernel has hardcoded knowledge of
+            all the trustlets created so far. As a result, it is impossible to create new trustlets without access to
+            the secure kernel, which is only accessible by Microsoft.
+        </p>
+    </div>
+    <ThemedImage
+        alt="Docusaurus themed image"
+        sources={{
+            light: useBaseUrl('/img/windows/wininternals/vbs/windows 10 and server 2016 VBS architecture 2023-09-26 14.27.08.excalidraw.light.svg'),
+            dark: useBaseUrl('/img/windows/wininternals/vbs/windows 10 and server 2016 VBS architecture 2023-09-26 14.27.08.excalidraw.dark.svg'),
+        }}
+        style={{flex: 1, maxWidth: '100%', height: 'auto'}}
+    />
+</div>

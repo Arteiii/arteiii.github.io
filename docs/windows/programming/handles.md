@@ -1,12 +1,14 @@
 ---
-sidebar_position: 10
+id: handles
+title: Handles
+sidebar_position: 2
 ---
 
 # Handles
 
 In Windows programming, a handle is essentially a reference to an object or resource that is managed by the operating system. Handles are used to uniquely identify and interact with various system resources, such as files, windows, processes, and more.
 
-They act as a way for applications to access and manipulate these resources without needing to know the internal details of how they are implemented.
+They act as a way for applications to access and manipulate these resources without needing to know the internal details of how they’re implemented.
 
 ## Types
 
@@ -180,13 +182,15 @@ Graphics Device Interface handles for graphical objects like pens, brushes, and 
 Graphics Device Interface (GDI) object handles in Windows represent graphical elements such as pens, brushes, and bitmaps. While they share similarities with other handles, GDI object handles have unique characteristics:
 
 No Reference Counting:
-Unlike some other handle types, GDI object handles do not employ reference counting. Therefore, developers must explicitly manage the creation and destruction of GDI objects to prevent resource leaks.
+Unlike some other handle types, GDI object handles don’t employ reference counting. Therefore, developers must explicitly manage the creation and destruction of GDI objects to prevent resource leaks.
 
 Process-Specific Validity:
 GDI object handles are only valid within the process that created them. Attempting to use a GDI object handle in a different process will result in undefined behavior. Developers must ensure that GDI objects are created, used, and destroyed within the same process context.
 
 Non-Shared Between Processes:
-GDI object handles cannot be easily shared between processes. This limitation reinforces the importance of creating and managing GDI objects within a single process. If cross-process communication is required, developers should consider alternative IPC mechanisms.
+GDI object handles can’t be easily shared between processes.
+This limitation reinforces the importance of creating and managing GDI objects within a single process.
+If cross-process communication is required, developers should consider alternative IPC mechanisms.
 
 ```cpp
 # include <Windows.h>
@@ -208,7 +212,7 @@ int main() {
 
 ## Lifetime
 
-Handles have a lifetime associated with the object they represent. This means that a handle remains valid as long as the corresponding resource exists. For example, a file handle is valid as long as the file it references is open. It's essential to manage the lifecycle of handles carefully, ensuring they are released when no longer needed. Failure to do so can result in resource leaks and potential issues with system stability and performance.
+Handles have a lifetime associated with the object they represent. This means that a handle remains valid as long as the corresponding resource exists. For example, a file handle is valid as long as the file it references is open. It's essential to manage the lifecycle of handles carefully, ensuring they’re released when no longer needed. Failure to do so can result in resource leaks and potential issues with system stability and performance.
 
 ## Invalidation
 
@@ -274,7 +278,7 @@ int main() {
 
 ## Leaks
 
-Failing to release handles properly can lead to handle leaks. This occurs when handles are not explicitly closed, preventing the associated system resources from being freed. Handle leaks can accumulate over time, consuming valuable system resources and degrading the performance of both the application and the system. Proper handle management, including timely closure, is essential to prevent handle leaks.
+Failing to release handles properly can lead to handle leaks. This occurs when handles aren’t explicitly closed, preventing the associated system resources from being freed. Handle leaks can accumulate over time, consuming valuable system resources and degrading the performance of both the application and the system. Proper handle management, including timely closure, is essential to prevent handle leaks.
 
 ```cpp
 #include <Windows.h>
@@ -305,7 +309,7 @@ Closing a handle, using functions like CloseHandle in Windows, doesn't always re
 
 ## Identifiers
 
-Handles are typically represented as numeric identifiers, but it's crucial to treat them as opaque values. This means that developers should not make assumptions about the internal structure or meaning of handle values. Treating handles as opaque ensures compatibility and allows the operating system to change the underlying implementation without affecting application code. Developers should rely on documented APIs and use handles as provided by the system
+Handles are typically represented as numeric identifiers, but it's crucial to treat them as opaque values. This means that developers shouldn’t make assumptions about the internal structure or meaning of handle values. Treating handles as opaque ensures compatibility and allows the operating system to change the underlying implementation without affecting application code. Developers should rely on documented APIs and use handles as provided by the system
 
 ## Windows Implementation Library (WIL)
 

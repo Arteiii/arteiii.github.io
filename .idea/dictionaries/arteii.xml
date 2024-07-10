@@ -2,6 +2,14 @@
   <dictionary name="arteii">
     <words>
       <w>arpc</w>
+      <w>excalidraw</w>
+      <w>iumbase</w>
+      <w>iumdll</w>
+      <w>kernelbase</w>
+      <w>securekernel</w>
+      <w>trustlets</w>
+      <w>undefining</w>
+      <w>wininternals</w>
     </words>
   </dictionary>
 </component>

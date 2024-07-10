@@ -1,9 +1,9 @@
 ---
-sidebar_label: Administration
+sidebar_label: Shell
 sidebar_position: 1
 ---
 
-# Administration
+# Shell
 
 ## The Shell
 
@@ -12,7 +12,7 @@ im currently using fedora 40
 and bash 5.2.26
 :::
 
-<br/>
+<br></br>
 
 In Linux systems, the default shell, which is the command interpreter that allows users to interact with the operating system,
 is often the Bourne Again Shell (BASH).  
@@ -72,7 +72,8 @@ For example:
 
 In this case, the command fails with an error message because it interprets `-file` as an option, not a filename.
 
-To avoid this, you can use the `--` (double dash) to signify the end of options and treat subsequent arguments as filenames.  
+To avoid this,
+you can use the `--` (double dash) to signify the end of options and treat further arguments as filenames.
 For instance:
 
     ```bash
@@ -82,7 +83,7 @@ For instance:
 Additionally, you can activate logging for a command using the `-v` (verbose) option.  
 This can be helpful for debugging and identifying errors.
 
-In some cases, programs do not follow these conventions, so it's best to consult the documentation for these tools.
+In some cases, programs don’t follow these conventions, so it's best to consult the documentation for these tools.
 
 ## Globbing
 
