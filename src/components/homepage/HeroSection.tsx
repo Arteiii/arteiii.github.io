@@ -16,7 +16,7 @@ const text = {
   },
   slow_jamz: {
     link: "https://youtu.be/pwkYUhePecQ?si=4vrIMaYHrBC9jIdG&t=75",
-    time: 1500,
+    time: 1800,
     lines: [
       "She got a light skin friend, look like Michael Jackson.",
       "Got a dark skin friend, look like Michael Jackson",
@@ -27,32 +27,46 @@ const text = {
     time: 1500,
     lines: ["They lookin' like prey,", "I guess that's why they prayin'"],
   },
-  wash_us_in_the_blood: {
-    link: "https://youtu.be/A12SMuz_MpY?si=KFmn49vPaB4skiRW&t=142",
-    time: 1500,
+  winners: {
+    link: "https://x.com/KanyeYezzus/status/531820111611834368",
+    time: 8000,
     lines: [
-      "They don't want me to Kanye",
-      "They don't want Kanye to be Kanye",
-      "They wanna sign a fake Kanye",
-      "They tryna sign a calm Ye",
-      "That's right, I call 'em Calm-Ye",
+      "I need a room full of mirrors so I can be surrounded by winners."
+    ],
+  },
+  not_like_us: {
+    link: "https://www.youtube.com/watch?v=H58vbez_m4E",
+    time: 2500,
+    lines: [
+      "Psst, I see dead people",
+        "Certified Lover Boy? Certified pedophiles",
+        "Why you trollin' like a bitch? Ain't you tired?",
+        "Tryna strike a chord and it's probably A minor"
     ],
   },
 };
 
-function getRandomSong() {
-  const songKeys = Object.keys(text);
+function getRandomSong(exclude = []) {
+  const songKeys = Object.keys(text).filter(key => !exclude.includes(key));
   const randomSongKey = songKeys[Math.floor(Math.random() * songKeys.length)];
   return text[randomSongKey];
 }
 
 export default function HeroSection() {
-  const [currentSong, setCurrentSong] = useState(getRandomSong());
+  const [currentSong, setCurrentSong] = useState(text.winners);
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
+  const [songQueue, setSongQueue] = useState(["winners", "not_like_us"]);
 
   useEffect(() => {
     const nextSong = () => {
-      setCurrentSong(getRandomSong());
+      let nextSongKey: string;
+      if (songQueue.length > 0) {
+        nextSongKey = songQueue.shift();
+        setSongQueue(songQueue);
+      } else {
+        nextSongKey = getRandomSong(["winners", "not_like_us"]).link;
+      }
+      setCurrentSong(text[nextSongKey]);
       setCurrentLineIndex(0);
     };
 
@@ -65,27 +79,27 @@ export default function HeroSection() {
     }, currentSong.time);
 
     return () => clearInterval(intervalId);
-  }, [currentSong, currentLineIndex]);
+  }, [currentSong, currentLineIndex, songQueue]);
 
   const openLinkInNewTab = () => {
     window.open(currentSong.link, "_blank");
   };
 
   return (
-    <div className="noise-bg-faded no-underline-links px-4 pt-8 lg:py-0 h-screen overflow-y-auto">
-      <section className="flex flex-col items-center justify-center py-32">
-        <h1 className="font-jakarta text-7xl font-bold">Arteii - Ben</h1>
-        <h2 onClick={openLinkInNewTab} style={{ cursor: "pointer" }}>
-          <TextTransition
-            className="text-center text-text-400 text-sm mt-2"
-            inline={true}
-            springConfig={presets.wobbly}
-          >
-            {currentSong.lines[currentLineIndex % currentSong.lines.length]}
-          </TextTransition>
-        </h2>
-      </section>
-      <GuidesAndSamples />
-    </div>
+      <div className="noise-bg-faded no-underline-links px-4 pt-8 lg:py-0 h-screen overflow-y-auto">
+        <section className="flex flex-col items-center justify-center py-32">
+          <h1 className="font-jakarta text-7xl font-bold">Arteii - Ben</h1>
+          <h2 onClick={openLinkInNewTab} style={{ cursor: "pointer" }}>
+            <TextTransition
+                className="text-center text-text-400 text-sm mt-2"
+                inline={true}
+                springConfig={presets.wobbly}
+            >
+              {currentSong.lines[currentLineIndex % currentSong.lines.length]}
+            </TextTransition>
+          </h2>
+        </section>
+        <GuidesAndSamples />
+      </div>
   );
 }

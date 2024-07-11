@@ -1,6 +1,9 @@
+// @ts-ignore
 import React, { ReactNode, PropsWithChildren } from "react";
 import { paramCase } from "param-case";
+// @ts-ignore
 import Link from "@docusaurus/Link";
+// @ts-ignore
 import clsx from "clsx";
 
 export function CardSection({
