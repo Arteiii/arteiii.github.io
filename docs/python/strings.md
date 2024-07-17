@@ -2,11 +2,7 @@
 sidebar_position: 17
 ---
 
-
-
 # Strings
-
-<br />
 
 ## Splitting
 
@@ -17,8 +13,6 @@ python offers several functions for splitting out a string
 - [splitlines](#splitlines)
 - [partition](#partition)
 - [rpartition](#partition)
-
-<br />
 
 ### split
 
@@ -31,8 +25,6 @@ string123.split()
 # ['Everybody', 'is', 'a', 'genius.', 'But', 'if'…
 ```
 
-<br />
-
 you can also define the separation character
 
 ```py
@@ -44,8 +36,6 @@ string123.split(';')
 # ['Everybody', 'is', 'a', 'genius.',
 # 'But', 'if you judge', 'a fish by its ability…
 ```
-
-<br />
 
 ### maxsplit
 
@@ -63,15 +53,11 @@ string123.split(None, 4)
 # 'But if you judge a fish by its ability']
 ```
 
-<br />
-
 ### rsplit
 
 rsplit works basically like split with the small difference that it does not start from the left but from the right.
 
 if no parameter is specified for maxsplit the result of split and rsplit do not differ
-
-<br />
 
 ### splitlines
 
@@ -83,8 +69,6 @@ s = "line1\nline2\nline3\nline4\nline5\nline6\n"
 s.splitlines()
 # ['line1', 'line2', 'line3', 'line4', 'line5', 'line6']
 ```
-
-<br />
 
 ### partition
 
@@ -99,9 +83,6 @@ veni = "Veni, vidi, vici."
 veni.rpartition(",")
 # ('Veni, vidi', ',', ' vici.')
 ```
-
-<br />
-<br />
 
 ## join
 
@@ -119,12 +100,7 @@ x = "1337123"
 # '1.3.3.7.3.6.9'
 ```
 
-<br />
-<br />
-
 ## Substring
-
-<br />
 
 ### "in" or "not in"
 
@@ -139,8 +115,6 @@ stringus = '“Be the change that you wish to see in the world.” ― Mahatma G
 "Gandhi" not in stringus
 # False
 ```
-
-<br />
 
 ### s.find ( substring [ , start [ , end ] ] )
 
@@ -171,8 +145,6 @@ stringus.rfind("you")
 # 69
 ```
 
-<br />
-
 ### s.index/rindex ( substring [ , start [ , end ] ] )
 
 works exactly like find/rfind only if the substring is not included an error is returned
@@ -189,8 +161,6 @@ stringus.rindex("Be", 5)
 # ValueError: substring not found
 ```
 
-<br />
-
 ### s.count ( substring [ , start [ , end ] ] )
 
 count counts the occurrence of a substring
@@ -204,9 +174,6 @@ stringus.count("e")
 stringus.count("Mahatma")
 # 1
 ```
-
-<br />
-<br />
 
 ## Search and Replace
 
@@ -223,9 +190,6 @@ stringus.replace("e", "123", 1)
 # '“B123 the change that you…
 ```
 
-<br />
-<br />
-
 ## Lowercase and Uppercase
 
 ```py
@@ -237,9 +201,6 @@ stringus.lower()
 stringus.upper()
 # '“BE THE CHANGE THAT YOU…
 ```
-
-<br />
-<br />
 
 ## Capitalize & Title
 
@@ -256,9 +217,6 @@ stringus.capitalize()
 stringus.title()
 # 'Hello “Be The Change That You…
 ```
-
-<br />
-<br />
 
 ## Striping Strings
 
@@ -280,9 +238,6 @@ stringus = "1337Test"
 stringus.strip("1337")
 # 'Test'
 ```
-
-<br />
-<br />
 
 ## Align Strings
 
@@ -309,48 +264,31 @@ stringus.zfill(15)
 
 zfill is especially for numerical values
 
-<br />
-<br />
-
 ## String-Test
-
-<br />
 
 ### s.isalnum()
 
 True if all characters in s are letters or numbers
 
-<br />
-
 ### s.isalpha()
 
 True if all characters are letters
-
-<br />
 
 ### s.isdigit()
 
 True if all characters are digits
 
-<br />
-
 ### s.islower()
 
 True if all characters are in lowercase letters
-
-<br />
 
 ### s.isupper()
 
 True if all characters are in capital letters
 
-<br />
-
 ### s.isspace()
 
 True if all characters are whitespaces
-
-<br />
 
 ### s.istitle()
 

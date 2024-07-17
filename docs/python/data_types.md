@@ -98,7 +98,7 @@ x * y   # = (24-5.5j)
 ### Operators
 
 | Operator | Meaning                                           |
-| -------- | ------------------------------------------------- |
+|----------|---------------------------------------------------|
 | x + y    | sum of x and y                                    |
 | x - y    | difference of x and y                             |
 | x \* y   | product of x and y                                |
@@ -176,10 +176,10 @@ print(string1 + ' ' + string2 + '  number: ' + number)
 ```
 
 python does not support implicit type conversions as they are possible in php or
-perl  
-but there are exceptions for example when we mix integer and float values in an
+ perl,  
+but there are exceptions, for example; when we mix integer and float values in an
 expression  
-there the integer value was implicitly converted to a float value  
+there, the integer value was implicitly converted to a float value  
 
 ## Determine Datatypes
 
