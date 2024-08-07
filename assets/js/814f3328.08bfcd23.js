@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkarteiii_github_io=self.webpackChunkarteiii_github_io||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Blog","items":[{"title":"Django101 Hello World!","permalink":"/blog/django101","unlisted":false},{"title":"MarkDown Intro","permalink":"/blog/MarkDown","unlisted":false}]}')}}]);

@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/arteii
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://arteiii.github.io
+  * I am arteii (https://keybase.io/arteii) on keybase.
+  * I have a public key ASDsrCbaVDRGcJvMbkAykDt9hmtsjrwjuOnHLHHP5umpzQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120ecac26da543446709bcc6e4032903b7d866b6c8ebc23b8e9c72c71cfe6e9a9cd0a",
+      "host": "keybase.io",
+      "kid": "0120ecac26da543446709bcc6e4032903b7d866b6c8ebc23b8e9c72c71cfe6e9a9cd0a",
+      "uid": "3c6cd76c361de9427db8b8c09b505419",
+      "username": "arteii"
+    },
+    "merkle_root": {
+      "ctime": 1709727821,
+      "hash": "66e0f7b62e3e07f748e695aff87c59db2344d24763658fd0954aedf4842afd8e5067d1eb33b9e4dab2a22214d31f9014d71d086e85c22f9d371b3b40a66adb58",
+      "hash_meta": "50a938713f063a549154d002e38d51ef3ebae6bcf365681c767058732e4c6a12",
+      "seqno": 25524447
+    },
+    "service": {
+      "entropy": "cY85E8/NcYk9XeMTbIxD1C7y",
+      "hostname": "arteiii.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.2.8"
+  },
+  "ctime": 1709727901,
+  "expire_in": 504576000,
+  "prev": "557bb0abac57ae8583fa8e0ec63b8f799951cfbfcb82c23c50cea211f2bfb818",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg7Kwm2lQ0RnCbzG5AMpA7fYZrbI68I7jpxyxxz+bpqc0Kp3BheWxvYWTESpcCBcQgVXuwq6xXroWD+o4OxjuPeZlRz7/LgsI8UM6iEfK/uBjEIHeHPmh4Ws3kSktzJcNtOgMr6MB/qNKAZHOcNBNxMf6XAgHCo3NpZ8RA05kEAxtwc+9WQJolxRgO/eDx9ld0OiCFIOPI4NzMU+4lK56OecD+xLP5ZkKpiQH+tGOKB/62AgEGG1MY+hWzD6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIN+C1OqyIkGH0qPQolvMuM4bs/3OhATII4bv9AOXBqyjo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/arteii
+
+==================================================================
