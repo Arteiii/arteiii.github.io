@@ -75,7 +75,8 @@ export default function HeroSection() {
                     className="text-center text-text-400 text-sm mt-2"
                     springConfig={presets.wobbly}
                 >
-                    {currentSong.lines[currentLineIndex % currentSong.lines.length]}
+                    NOT a Web Dev
+                    {/*{currentSong.lines[currentLineIndex % currentSong.lines.length]}*/}
                 </TextTransition>
             </h2>
         </section>

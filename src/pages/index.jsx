@@ -3,6 +3,7 @@ import Layout from "@theme/Layout";
 
 import HeroSection from "../components/homepage/HeroSection";
 import Head from "@docusaurus/Head";
+import ResourcesSection from "../components/homepage/ResourcesSection";
 
 export default function Homepage() {
   return (
@@ -29,7 +30,7 @@ export default function Homepage() {
 
         <HeroSection/>
 
-        {/* <ResourcesSection /> */}
+         {/*<ResourcesSection />*/}
       </Layout>
   );
 }
