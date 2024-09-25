@@ -31,7 +31,7 @@ The `ntddk.h` header file provides essential functionality and structures requir
 #include <ntddk.h>
 ```
 
-[Read More](https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/ntddk/)
+[Learn more about the ntddk.h header file on Microsoft’s documentation](https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/ntddk/)
 
 ## Driver Entry
 
@@ -44,32 +44,38 @@ DriverEntry(_In_ PDRIVER_OBJECT DriverObject, _In_ PUNICODE_STRING RegistryPath)
 
 ```
 
-- `extern "C"` This is a C++ language feature. It specifies that the function should be treated as if it were declared
-in the C programming
-language. [Read More](https://learn.microsoft.com/en-us/cpp/cpp/extern-cpp#extern-c-and-extern-c-function-declarations)
 
-- `NTSTATUS` is a data type representing the status of an operation in Windows kernel programming. It is an LONG value,
-where zero typically indicates success, and non-zero values indicate various error
-conditions. [Read More](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/using-ntstatus-values)
+- `extern "C"` is a C++ language feature that specifies the function should be treated as if
+it were declared in the C programming language.
+Learn more about `extern "C"` and function declarations](https://learn.microsoft.com/en-us/cpp/cpp/extern-cpp#extern-c-and-extern-c-function-declarations).
 
-- `DriverEntry` is a special function in Windows kernel-mode drivers. It serves as the entry point for the driver when
-it is loaded. The operating system calls this function after loading the driver to initialize its data structures and
-perform any necessary
-setup. [Read More](https://learn.microsoft.com/en-us/windows-hardware/drivers/wdf/driverentry-for-kmdf-drivers)
+- `NTSTATUS` is a data type representing the status of an operation in Windows kernel programming.
+It is a `LONG` value where zero typically indicates success, and non-zero values indicate various error conditions.
+See more on `NTSTATUS` values](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/using-ntstatus-values).
 
-- `_In_ PDRIVER_OBJECT` is a pointer to a structure that represents a driver in the Windows kernel. The `_In_`
-annotation indicates that the DriverObject parameter is an input parameter, and the function will receive a pointer to
-the driver
-object. [Read More](https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/ns-wdm-_driver_object)
+- `DriverEntry` is the entry point for Windows kernel-mode drivers.
+The operating system calls this function after loading the driver
+to initialize its data structures and perform setup tasks.
+Read more about the `DriverEntry` function for KMDF drivers](https://learn.microsoft.com/en-us/windows-hardware/drivers/wdf/driverentry-for-kmdf-drivers).
 
-- `_In_ PUNICODE_STRING` is a pointer to a structure that represents a Unicode string in the Windows kernel. The `_In_`
-annotation indicates that the RegistryPath parameter is an input parameter, and the function will receive a pointer to
-a Unicode string representing the registry path relevant to the
-driver. [Read More](https://learn.microsoft.com/en-us/windows/win32/api/ntdef/ns-ntdef-_unicode_string)
+- `PDRIVER_OBJECT` is a pointer to a structure that represents a driver in the Windows kernel.
+[Explore the `DRIVER_OBJECT` structure](https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/ns-wdm-_driver_object).
 
-NOTES:  
-`_In_` is part of the Source Annotation Language (SAL) and is not needed compiler wise its still recommended to use
-them. [Read More](https://learn.microsoft.com/en-us/cpp/code-quality/understanding-sal)
+- `PUNICODE_STRING` is a pointer to a structure representing a Unicode string in the Windows kernel,
+often used to reference a registry path relevant to the driver.
+Learn more about the `UNICODE_STRING` structure](https://learn.microsoft.com/en-us/windows/win32/api/ntdef/ns-ntdef-_unicode_string).
+
+:::info The Source Annotation Language (SAL)
+annotations like `_In_` and `_Out_` are not strictly required for compilation
+but are recommended to improve code clarity
+and help static analysis tools understand the intended use of function parameters.
+
+- `_In_` indicates that the parameter is an input to the function and shouldn’t be modified by the function.
+- `_Out_` specifies that the parameter is used to return data from the function to the caller.
+
+These annotations enhance code readability and can help catch potential bugs during development.
+[Learn more about SAL and its uses](https://learn.microsoft.com/en-us/cpp/code-quality/understanding-sal).
+:::
 
 ## Driver Unload
 
@@ -112,6 +118,7 @@ KdPrint(("Output\n"));
 You can download the driver example project from here:
 
 
+
 import {Sample} from "../../../src/components/homepage/GuidesAndSamples";
 
 <div className="w-full md:max-w-sm">
@@ -122,22 +129,44 @@ import {Sample} from "../../../src/components/homepage/GuidesAndSamples";
     </div>
 </div>
 
-## Start the driver
 
-for debugging activate test-signing on the test pc:
+## Starting the Driver
+
+To enable driver testing on your test machine, you’ll need to activate test-signing mode.
+This allows the installation and running of unsigned drivers:
 
 ```cmd
 bcdedit /set testsigning on
 ```
 
-use:  
-`sc create <drivername> type= kernel binpath= "<path to driver.sys>"`
+Next, create the driver service using the `sc` (Service Control) command:
 
-with `sc start <drivername>` u can run ur driver and `sc stop <drivername>`will stop it
+```cmd
+sc create <drivername> type= kernel binpath= "<path to driver.sys>"
+```
 
-and `sc delete <drivername>` will delete it note that you cant delete a running driver
+To start the driver, use the following command:
 
-[Read More](https://learn.microsoft.com/de-de/windows-server/administration/windows-commands/sc-create)
+```cmd
+sc start <drivername>
+```
+
+You can stop the driver with:
+
+```cmd
+sc stop <drivername>
+```
+
+If you need to remove the driver, use:
+
+```cmd
+sc delete <drivername>
+```
+
+**Note:** Ensure that the driver is stopped before attempting to delete it, as active drivers cannot be removed.
+
+
+[Detailed guide on using `sc create` for service creation](https://learn.microsoft.com/de-de/windows-server/administration/windows-commands/sc-create)
 
 To verify the functionality of your driver and capture debug output, you can
 use [DebugView](https://learn.microsoft.com/en-us/sysinternals/downloads/debugview) in administrator mode.  
