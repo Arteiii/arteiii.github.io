@@ -6,7 +6,15 @@ sidebar_position: 1
 
 # Logging
 
+Rust provides multiple logging crates that can be easily integrated into your applications for various logging levels,
+custom outputs, and more.
+
 ## Log Messages
+
+Log messages are categorized into different levels, such as `debug`, `info`, `warn`, `error`, etc.,
+each serving a unique purpose in monitoring your application's state.
+Rust's `log` crate provides macros to generate these messages,
+while libraries like `env_logger` help you control their output.
 
 ### Log a debug message to the console
 
@@ -37,14 +45,14 @@ log level is `error`, and any lower levels are dropped.
 
 Set the `RUST_LOG` environment variable to print the message:
 
-```
+```shell
 $ RUST_LOG=debug cargo run
 ```
 
 Cargo prints debugging information then the
 following line at the very end of the output:
 
-```
+```shell
 DEBUG:main: Executing query: DROP TABLE students
 ```
 
@@ -229,14 +237,14 @@ fn main() {
 Module declarations take comma separated entries formatted like
 `path::to::module=log_level`. Run the `test` application as follows:
 
-```bash
+```shell
 RUST_LOG="warn,test::foo=info,test::foo::bar=debug" ./test
 ```
 
 Sets the default [`log::Level`] to `warn`, module `foo` and module `foo::bar`
 to `info` and `debug`.
 
-```bash
+```shell
 WARN:test: [root] warn
 WARN:test::foo: [foo] warn
 INFO:test::foo: [foo] info
@@ -385,3 +393,116 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 [`log4rs::config::Config`]: https://docs.rs/log4rs/*/log4rs/config/struct.Config.html
 [`log4rs::encode::pattern`]: https://docs.rs/log4rs/*/log4rs/encode/pattern/index.html
 [`log::LevelFilter`]: https://docs.rs/log/*/log/enum.LevelFilter.html
+
+## Async Logging with `tokio-tracing`
+
+In asynchronous applications, especially those using [`tokio`](https://tokio.rs/),
+it's important to use logging tools that work seamlessly with async tasks.
+The [`tracing`](https://crates.io/crates/tracing) crate provides structured logging and diagnostics specifically for async Rust applications.
+
+### Set up Tokio and Tracing
+
+First, add the necessary dependencies:
+
+```toml
+[dependencies]
+tokio = { version = "1.40.0", features = ["full"] }
+tracing = "0.1.40"
+tracing-subscriber = "0.3.18"
+```
+
+The `tracing` crate provides structured, async-aware logging capabilities.
+`tracing-subscriber` is used to manage subscribers that handle log output, and `tokio` enables async runtimes.
+
+### Logging with Tracing in an Async Context
+
+To use `tracing` in an async `tokio` runtime,
+set up a tracing subscriber to handle log output and instrument async functions:
+
+```rust
+#[tokio::main]
+async fn main() {
+    // Set up a tracing subscriber that logs to stdout
+    tracing_subscriber::fmt::init();
+
+    // Call an async function that will generate log output
+    perform_task("Ben").await;
+}
+
+#[tracing::instrument]
+async fn perform_task(name: &str) {
+    tracing::info!("Performing an important async task");
+}
+```
+
+In this example:
+- The `#[instrument]` attribute automatically generates structured logs, capturing input arguments and other context.
+- `tracing_subscriber::fmt::init()` sets up a subscriber that logs to stdout.
+
+### Logging Context in Async Functions
+
+In async Rust, capturing context with spans is essential for logging in distributed, concurrent environments.
+For example:
+
+```rust
+#[tokio::main]
+async fn main() {
+    tracing_subscriber::fmt::init();
+    task1().await;
+}
+
+#[tracing::instrument]
+async fn task1() {
+    tracing::info!("Starting task1");
+    task2().await;
+}
+
+#[tracing::instrument]
+async fn task2() {
+    tracing::info!("Starting task2");
+}
+```
+
+Each function call logs its span,
+allowing tracing to display structured logs showing which async tasks executed and when.
+
+### Capturing Function Return Values
+
+You can also capture return values in async functions by setting ret to true.
+This is useful for debugging functions that return futures:
+
+
+```rust
+#[tokio::main]
+async fn main() {
+    tracing_subscriber::fmt::init();
+    let result = compute(5).await;
+    println!("Result: {}", result);
+}
+
+#[tracing::instrument(ret)]
+async fn compute(input: u32) -> u32 {
+    input * 2
+}
+```
+
+### Customizing Field Logging with `#[instrument]`
+
+By default, #[instrument] logs all function arguments,
+but you can customize which arguments or fields to include or exclude.
+Use the fields argument to control the log output.
+
+For example, you can explicitly log only specific fields:
+
+```rust
+#[tokio::main]
+async fn main() {
+    tracing_subscriber::fmt::init();
+    greet("Ben", 42).await;
+}
+
+#[tracing::instrument(fields(user = name), skip(name))]
+async fn greet(name: &str, age: u32) {
+    tracing::info!("Saying hello");
+}
+```

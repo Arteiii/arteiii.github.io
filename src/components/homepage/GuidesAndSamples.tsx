@@ -166,7 +166,6 @@ export function GuidesAndSamples() {
                     "mx-8 block flex-shrink-0 bg-gradient-to-b from-transparent via-secondary-700 to-transparent",
                     "hidden w-px md:block"
                 )}
-                aria-label="Divider"
             />
 
             <div className="w-full md:max-w-sm">
