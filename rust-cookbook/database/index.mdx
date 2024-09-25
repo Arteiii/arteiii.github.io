@@ -6,9 +6,11 @@ sidebar_position: 3
 
 # Database
 
-Rust provides an impressive ecosystem of database integration crates, 
-from full-fledged ORM libraries to lightweight SQL query builders. One of the most popular ORMs is **SeaORM**, 
-which comes with a rich set of features and *fantastic documentation* to help you get started [here](https://www.sea-ql.org/SeaORM/docs/). 
+Rust provides an impressive ecosystem of database integration crates,
+from full-fledged ORM libraries to lightweight SQL query builders.
+One of the most popular ORMs is **SeaORM**,
+which comes with a rich set of features and *fantastic documentation*
+to help you get started [here](https://www.sea-ql.org/SeaORM/docs/).
 Since the official documentation already does an excellent job, we'll focus more on **SQLx** in this section.
 
 We’ll also explore other crates that fit different needs, from performance to flexibility, depending on your project requirements.
@@ -22,3 +24,16 @@ We’ll also explore other crates that fit different needs, from performance to 
 | **SurrealDB** | An advanced distributed database, ideal for handling structured and unstructured data at scale. | [SurrealDB](https://github.com/surrealdb/surrealdb) |
 
 
+
+import { PiFileSqlThin } from "react-icons/pi";
+import {Card, CardSection} from "../../src/components/CardComponents";
+
+
+<CardSection id="database-index" title="Index">
+    <Card
+        title="SQLx"
+        icon={<PiFileSqlThin/>}
+        to="/rust-cookbook/database/sqlx/"
+        description="log levels, tracing, custom loggers, async support..."
+    />
+</CardSection>

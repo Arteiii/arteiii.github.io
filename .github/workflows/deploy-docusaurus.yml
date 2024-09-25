@@ -7,7 +7,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -15,21 +14,24 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Check out repo
         uses: actions/checkout@v2
-      # Node is required for npm
-      - name: Set up Node
-        uses: actions/setup-node@v2
+
+      # Set up Yarn instead of just Node.js (this uses Yarn's latest version)
+      - name: Set up Yarn
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-      # Install and build Docusaurus website
-      - name: Build Docusaurus website
+          cache: 'yarn' # Enable caching for yarn dependencies
+
+      # Install dependencies and build the Docusaurus website
+      - name: Install dependencies and build
         run: |
-          npm install --legacy-peer-deps
-          npm run build
+          yarn install --frozen-lockfile # Ensures you’re using the exact dependencies listed in yarn.lock
+          yarn build # Runs the Docusaurus build command
+
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         if: success()
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          target_branch: gh-pages
-          build_dir: ./build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build

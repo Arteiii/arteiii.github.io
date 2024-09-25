@@ -16,16 +16,22 @@ In addition to the refreshed content, you'll also find new material I’ve disco
 
 
 
-import {DeveloperBoardSearchRegular,} from "@fluentui/react-icons";
+import {DeveloperBoardSearchRegular, DatabaseRegular,} from "@fluentui/react-icons";
 
 import {Card, CardSection} from "../src/components/CardComponents";
 
 
 <CardSection id="index" title="Index">
     <Card
-        title="Debugging"
+        title="Logging"
         icon={<DeveloperBoardSearchRegular/>}
-        to="/rust-cookbook/debugging/"
-        description="Logging"
+        to="/rust-cookbook/logging/"
+        description="log levels, tracing, custom loggers, async support..."
+    />
+    <Card
+        title="Database"
+        icon={<DatabaseRegular/>}
+        to="/rust-cookbook/database/"
+        description="SQLx, SurrealDB"
     />
 </CardSection>
