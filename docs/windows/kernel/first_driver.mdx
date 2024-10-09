@@ -47,23 +47,23 @@ DriverEntry(_In_ PDRIVER_OBJECT DriverObject, _In_ PUNICODE_STRING RegistryPath)
 
 - `extern "C"` is a C++ language feature that specifies the function should be treated as if
 it were declared in the C programming language.
-Learn more about `extern "C"` and function declarations](https://learn.microsoft.com/en-us/cpp/cpp/extern-cpp#extern-c-and-extern-c-function-declarations).
+[Learn more about `extern "C"` and function declarations](https://learn.microsoft.com/en-us/cpp/cpp/extern-cpp#extern-c-and-extern-c-function-declarations).
 
 - `NTSTATUS` is a data type representing the status of an operation in Windows kernel programming.
 It is a `LONG` value where zero typically indicates success, and non-zero values indicate various error conditions.
-See more on `NTSTATUS` values](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/using-ntstatus-values).
+[See more on `NTSTATUS` values](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/using-ntstatus-values).
 
 - `DriverEntry` is the entry point for Windows kernel-mode drivers.
 The operating system calls this function after loading the driver
 to initialize its data structures and perform setup tasks.
-Read more about the `DriverEntry` function for KMDF drivers](https://learn.microsoft.com/en-us/windows-hardware/drivers/wdf/driverentry-for-kmdf-drivers).
+[Read more about the `DriverEntry` function for KMDF drivers](https://learn.microsoft.com/en-us/windows-hardware/drivers/wdf/driverentry-for-kmdf-drivers).
 
 - `PDRIVER_OBJECT` is a pointer to a structure that represents a driver in the Windows kernel.
 [Explore the `DRIVER_OBJECT` structure](https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/ns-wdm-_driver_object).
 
 - `PUNICODE_STRING` is a pointer to a structure representing a Unicode string in the Windows kernel,
 often used to reference a registry path relevant to the driver.
-Learn more about the `UNICODE_STRING` structure](https://learn.microsoft.com/en-us/windows/win32/api/ntdef/ns-ntdef-_unicode_string).
+[Learn more about the `UNICODE_STRING` structure](https://learn.microsoft.com/en-us/windows/win32/api/ntdef/ns-ntdef-_unicode_string).
 
 :::info The Source Annotation Language (SAL)
 annotations like `_In_` and `_Out_` are not strictly required for compilation
