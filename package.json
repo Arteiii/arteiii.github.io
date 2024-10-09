@@ -10,7 +10,7 @@
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
-    "update:docusaurus": "yarn i @docusaurus/core@latest @docusaurus/plugin-client-redirects@latest @docusaurus/preset-classic@latest @docusaurus/theme-live-codeblock@latest @docusaurus/module-type-aliases@latest @docusaurus/types@latest",
+    "upgrade:docusaurus": "yarn upgrade @docusaurus/core@latest @docusaurus/plugin-client-redirects@latest @docusaurus/preset-classic@latest @docusaurus/theme-live-codeblock@latest @docusaurus/module-type-aliases@latest @docusaurus/types@latest",
     "write-translations": "docusaurus write-translations"
   },
   "dependencies": {
