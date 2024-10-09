@@ -7,32 +7,19 @@ const katex = require("rehype-katex");
 
 const internetProfiles = {
     discord: {
-        label: "Discord",
-        href: "arteii",
-    },
-    linkedin: {
-        label: "LinkedIn",
-        href: "blank",
-    },
-    github: {
-        label: "GitHub",
-        href: "https://github.com/Arteiii",
-    },
-    keybase: {
-        label: "keybase",
-        href: "https://keybase.io/arteii",
-    },
-    email: {
-        label: "Email",
-        href: "mailto:ben.arteii@proton.me",
-    },
-    blog: {
-        label: "Blog",
-        to: "blog",
-    },
-    docs: {
-        label: "Documentation",
-        to: "docs",
+        label: "Discord", href: "arteii",
+    }, linkedin: {
+        label: "LinkedIn", href: "blank",
+    }, github: {
+        label: "GitHub", href: "https://github.com/Arteiii",
+    }, keybase: {
+        label: "keybase", href: "https://keybase.io/arteii",
+    }, email: {
+        label: "Email", href: "mailto:ben.arteii@proton.me",
+    }, blog: {
+        label: "Blog", to: "blog",
+    }, docs: {
+        label: "Documentation", to: "docs",
     },
 };
 
@@ -52,52 +39,27 @@ module.exports = {
         image: "img/Website-Social-Card.jpeg",
 
         // Declare some <meta> tags
-        metadata: [
-            {name: "robots", content: "index"},
-            {name: 'twitter:card', content: 'summary_large_image'},
-        ],
+        metadata: [{name: "robots", content: "index"}, {name: 'twitter:card', content: 'summary_large_image'},],
 
         prism: {
             theme: prismThemes.github,
             darkTheme: prismThemes.vsDark,
-            additionalLanguages: [
-                "ruby",
-                "json",
-                "rust",
-                "c",
-                "cpp",
-                "cmake",
-                "makefile",
-                "bash",
-                "toml",
-                "asm6502",
-            ],
-            magicComments: [
-                {
-                    className: "theme-code-block-highlighted-line",
-                    line: "highlight-next-line",
-                    block: {start: "highlight-start", end: "highlight-end"},
-                },
-                {
-                    className: "code-block-error-line",
-                    line: "highlight-next-line-error",
-                },
-            ],
+            additionalLanguages: ["ruby", "json", "rust", "c", "cpp", "cmake", "makefile", "bash", "toml", "asm6502",],
+            magicComments: [{
+                className: "theme-code-block-highlighted-line",
+                line: "highlight-next-line",
+                block: {start: "highlight-start", end: "highlight-end"},
+            }, {
+                className: "code-block-error-line", line: "highlight-next-line-error",
+            },],
         },
 
         tableOfContents: {
-            minHeadingLevel: 2,
-            maxHeadingLevel: 5,
-        },
-        colorMode: {
-            defaultMode: "dark",
-            disableSwitch: false,
-            respectPrefersColorScheme: true,
-        },
-        navbar: {
-            hideOnScroll: true,
-            title: "Arteii",
-            // logo: {
+            minHeadingLevel: 2, maxHeadingLevel: 5,
+        }, colorMode: {
+            defaultMode: "dark", disableSwitch: false, respectPrefersColorScheme: true,
+        }, navbar: {
+            hideOnScroll: true, title: "Arteii", // logo: {
             //   alt: 'Arteii',
             //   srcDark: 'img/logo_dark.svg',
             //   href: 'https://docusaurus.io/',
@@ -107,51 +69,27 @@ module.exports = {
             //   className: 'custom-navbar-logo-class',
             //   style: {border: 'solid red'},
             // },
-            items: [
-                {
-                    label: "Socials",
-                    type: "dropdown",
-                    className: "dyte-dropdown resources-dropdown",
-                    position: "left",
-                    items: [
-                        {
-                            type: "html",
-                            value: resourcesHTML,
-                            className: "dyte-dropdown",
-                        },
-                    ],
-                },
-                {to: "blog/", label: "Blog", position: "left"},
-                {
-                    to: "docs/",
-                    activeBasePath: "docs",
-                    label: "Docs",
-                    position: "left",
-                },
-                {to: "rust-cookbook/", label: "Rust Cookbook", position: "left"}
+            items: [{
+                label: "Socials",
+                type: "dropdown",
+                className: "dyte-dropdown resources-dropdown",
+                position: "left",
+                items: [{
+                    type: "html", value: resourcesHTML, className: "dyte-dropdown",
+                },],
+            }, {to: "blog/", label: "Blog", position: "left"}, {
+                to: "docs/", activeBasePath: "docs", label: "Docs", position: "left",
+            }, {to: "rust-cookbook/", activeBasePath: "rust-cookbook", label: "Rust Cookbook", position: "left"},
+                // {to: "security/", activeBasePath: "security", label: "Security", position: "left",},
             ],
-        },
-        footer: {
-            links: [
-                {
-                    title: "Connect",
-                    items: [
-                        // internetProfiles.linkedin,
-                        internetProfiles.github,
-                        internetProfiles.email,
-                        internetProfiles.keybase,
-                    ],
-                },
-                {
-                    title: "Discover",
-                    items: [
-                        internetProfiles.blog,
-                        internetProfiles.docs,
-                        // internetProfiles.resume,
-                    ],
-                },
-            ],
-            // I built this website for my own personal use, but you are free to use it so long as you credit me. You can do so by linking back to evantay.com :)
+        }, footer: {
+            links: [{
+                title: "Connect", items: [// internetProfiles.linkedin,
+                    internetProfiles.github, internetProfiles.email, internetProfiles.keybase,],
+            }, {
+                title: "Discover", items: [internetProfiles.blog, internetProfiles.docs, // internetProfiles.resume,
+                ],
+            },],
             copyright: `Arteii • <a href="https://github.com/arteiii/arteiii.github.io/commits/main">Updated ${new Date().toLocaleDateString()}</a>`,
         },
 
@@ -183,90 +121,73 @@ module.exports = {
         },
     },
 
-    presets: [
-        [
-            "@docusaurus/preset-classic",
-            {
-                docs: {
-                    sidebarPath: require.resolve("./sidebars.js"),
-                    disableVersioning: false,
-                    editCurrentVersion: false,
-                    remarkPlugins: [math],
-                    rehypePlugins: [katex],
-                    editUrl: "https://github.com/arteiii/arteiii.github.io/tree/main/",
-                },
-                blog: {
-                    blogSidebarTitle: "Blog",
-                    blogSidebarCount: "ALL",
-                    // remarkPlugins: [math],
-                    // rehypePlugins: [katex],
+    presets: [["@docusaurus/preset-classic", {
+        docs: {
+            sidebarPath: require.resolve("./sidebars.js"),
+            disableVersioning: false,
+            editCurrentVersion: false,
+            remarkPlugins: [math],
+            rehypePlugins: [katex],
+            editUrl: "https://github.com/arteiii/arteiii.github.io/tree/main/",
+        }, blog: {
+            blogSidebarTitle: "Blog",
+            blogSidebarCount: "ALL",
+            remarkPlugins: [math],
+            rehypePlugins: [katex],
 
-                    blogTitle: "blog!",
-                    blogDescription: "A Docusaurus powered blog!",
-                    postsPerPage: "ALL",
+            blogTitle: "blog!",
+            blogDescription: "A Docusaurus powered blog!",
+            postsPerPage: "ALL",
 
-                    showReadingTime: true,
-                    readingTime: ({content, frontMatter, defaultReadingTime}) =>
-                        defaultReadingTime({content, options: {wordsPerMinute: 300}}),
-                    // Please change this to your repo.
-                    editUrl: "https://github.com/arteiii/arteiii.github.io/tree/main/",
+            showReadingTime: true,
+            readingTime: ({content, frontMatter, defaultReadingTime}) => defaultReadingTime({
+                content,
+                options: {wordsPerMinute: 300}
+            }),
+            editUrl: "https://github.com/arteiii/arteiii.github.io/tree/main/",
 
-                    feedOptions: {
-                        type: "all",
-                        copyright: `${new Date().getFullYear()} Arteii`,
-                        createFeedItems: async (params) => {
-                            const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+            feedOptions: {
+                type: "all", copyright: `${new Date().getFullYear()} Arteii`, createFeedItems: async (params) => {
+                    const {blogPosts, defaultCreateFeedItems, ...rest} = params;
 
-                            // Ensure blogPosts is an array before filtering
-                            const validBlogPosts = Array.isArray(blogPosts) ? blogPosts : [];
+                    // Ensure blogPosts is an array before filtering
+                    const validBlogPosts = Array.isArray(blogPosts) ? blogPosts : [];
 
-                            return defaultCreateFeedItems({
-                                // keep only the 10 most recent blog posts in the feed
-                                blogPosts: validBlogPosts.filter((item, index) => index < 10),
-                                ...rest,
-                            });
-                        },
-                    },
-                },
-                theme: {
-                    customCss: require.resolve("./src/css/custom.css"),
-                },
-                gtag: {
-                    trackingID: "G-7JSR7YQ7YL",
-                    anonymizeIP: true,
+                    return defaultCreateFeedItems({
+                        // keep only the 10 most recent blog posts in the feed
+                        blogPosts: validBlogPosts.filter((item, index) => index < 10), ...rest,
+                    });
                 },
             },
-        ],
-    ],
-    plugins: [
-        [
-            '@docusaurus/plugin-content-docs',
-            {
-                id: 'rust-cookbook',
-                path: 'rust-cookbook',
-                routeBasePath: 'rust-cookbook',
-                sidebarPath: require.resolve('./sidebarsRustCookbook.js'),
-            },
-        ],
-    async function tailwindPlugin(context, options) {
+        }, theme: {
+            customCss: require.resolve("./src/css/custom.css"),
+        }, gtag: {
+            trackingID: "G-7JSR7YQ7YL", anonymizeIP: true,
+        },
+    },],],
+    plugins: [['@docusaurus/plugin-content-docs', {
+        id: 'rust-cookbook',
+        path: 'rust-cookbook',
+        routeBasePath: 'rust-cookbook',
+        sidebarPath: require.resolve('./sidebarsRustCookbook.js'),
+    },], ['@docusaurus/plugin-content-docs', {
+        id: 'security',
+        path: 'security',
+        routeBasePath: 'security',
+        sidebarPath: require.resolve('./sidebarsSecurity.js'),
+    },], async function tailwindPlugin(context, options) {
         return {
-            name: "docusaurus-tailwindcss",
-            configurePostCss(postcssOptions) {
+            name: "docusaurus-tailwindcss", configurePostCss(postcssOptions) {
                 postcssOptions.plugins.push(require("tailwindcss"));
                 postcssOptions.plugins.push(require("autoprefixer"));
                 return postcssOptions;
             },
         };
-    },
-],
-stylesheets: [
-    {
+    },],
+    stylesheets: [{
         href: "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
         type: "text/css",
-        integrity:
-            "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
+        integrity: "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
         crossorigin: "anonymous",
-    },
-],
-}
-;
+    },],
+};
