@@ -49,10 +49,10 @@ HANDLE hFileA = CreateFileA(
     "example.txt",
     GENERIC_READ,
     0,
-    NULL,
+    nullptr,
     OPEN_EXISTING,
     FILE_ATTRIBUTE_NORMAL,
-    NULL
+    nullptr
 );
 
 // Unicode version
@@ -60,10 +60,10 @@ HANDLE hFileW = CreateFileW(
     L"example.txt",
     GENERIC_READ,
     0,
-    NULL,
+    nullptr,
     OPEN_EXISTING,
     FILE_ATTRIBUTE_NORMAL,
-    NULL
+    nullptr
 );
 ```
 
@@ -93,10 +93,10 @@ HANDLE hFile = CreateFile(
     L"example.txt",
     GENERIC_READ,
     0,
-    NULL,
+    nullptr,
     OPEN_EXISTING,
     FILE_ATTRIBUTE_NORMAL,
-    NULL
+    nullptr
 );
 
 // Extended version
@@ -104,11 +104,11 @@ HANDLE hFileEx = CreateFileEx(
     L"example.txt",
     GENERIC_READ,
     0,
-    NULL,
+    nullptr,
     OPEN_EXISTING,
     FILE_ATTRIBUTE_NORMAL,
-    NULL,
-    NULL,
+    nullptr,
+    nullptr,
     FILE_ATTRIBUTE_NORMAL
 );
 ```
