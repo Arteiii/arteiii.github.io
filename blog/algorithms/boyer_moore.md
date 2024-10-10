@@ -28,7 +28,7 @@ The Boyer-Moore algorithm matches the pattern $$P$$ from right to left, starting
 mismatch occurs, the algorithm shifts the pattern over the text based on two preprocessed heuristics: the **Bad
 Character rule** and the **Good Suffix rule**.
 
-### 1. Bad Character Rule
+### Bad Character Rule
 
 The **Bad Character** rule works by identifying mismatches and using the information to shift the pattern efficiently.
 Given a mismatch between the text character $$T[i]$$ and the corresponding pattern character $$P[j]$$, we look for the
@@ -45,14 +45,14 @@ $$$
 
 where $$\text{rightmost}(T[i])$$ is the rightmost occurrence of $$T[i]$$ in $$P$$, or -1 if it does not appear.
 
-#### Example:
+**Example:**
 
 Consider the pattern $$P = \text{ABCA}$$ and text $$T = \text{CBABCA}$$. Suppose a mismatch occurs at
 position $$i = 2$$, where $$T[2] = \text{B}$$ and $$P[1] = \text{A}$$. Since $$\text{B}$$ exists in $$P$$ at position 1,
 we shift the pattern such that this occurrence aligns with $$T[2]$$.
 
 
-### 2. Good Suffix Rule
+### Good Suffix Rule
 
 The **Good Suffix** rule leverages suffixes in the pattern to skip unnecessary shifts. When a mismatch occurs after a
 suffix of the pattern has been matched, the algorithm shifts the pattern such that the next occurrence of this suffix
@@ -73,7 +73,7 @@ There are two cases for shifting based on good suffixes:
 - **Case 2**: The matched suffix does not appear in the pattern, but some prefix of the pattern matches a suffix of the
   text. In this case, we shift the pattern such that the prefix aligns with the suffix.
 
-#### Example:
+**Example:**
 
 For $$P = \text{ABCA}$$ and $$T = \text{CBABCA}$$, if a mismatch occurs after matching the suffix "BCA", the pattern is
 shifted to the next occurrence of "BCA" in $$P$$.
