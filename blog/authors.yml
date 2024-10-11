@@ -1,8 +1,11 @@
 arteii:
   name: Arteii
-  # title: Student
+  page: true
+  title: Student
   url: https://github.com/arteiii
   image_url: https://avatars.githubusercontent.com/u/48642527
+  socials:
+    github: arteiii
 
 evantay:
   name: Evan Tay

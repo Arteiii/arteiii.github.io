@@ -2,11 +2,12 @@
 id: string
 title: String
 sidebar_position: 1
+description: std::str, std::string::String
 ---
 
 # String
 
-> [`std::str`][str]  
+> [`std::str`][str]
 > [`std::string::String`][string]
 
 Strings in Rust are a fundamental aspect of the language, and mastering them is key to effective programming. Unlike

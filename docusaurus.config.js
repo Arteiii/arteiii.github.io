@@ -147,6 +147,7 @@ module.exports = {
             editUrl: "https://github.com/arteiii/arteiii.github.io/tree/main/",
 
             feedOptions: {
+                xslt: true,
                 type: "all", copyright: `${new Date().getFullYear()} Arteii`, createFeedItems: async (params) => {
                     const {blogPosts, defaultCreateFeedItems, ...rest} = params;
 
