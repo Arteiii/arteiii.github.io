@@ -56,7 +56,7 @@ The `bitfield` crate allows you to define structures where individual bits or gr
 This helps you save memory by storing multiple booleans or small integers in the same underlying storage, such as a
 `u8` (8 bits), `u16` (16 bits), or larger integer types.
 
-### Installing the `bitfield` Crate
+### Installing the&nbsp;`bitfield`&nbsp;Crate
 
 To use the `bitfield` crate, you first need to add it to your `Cargo.toml` file:
 
@@ -67,7 +67,7 @@ bitfield = "0.13.2"
 
 Once the crate is added, you can use it to create bit-packed structures.
 
-### Example: Defining a Bit Field with the `bitfield` Crate
+### Example: Defining a Bit Field with the&nbsp;`bitfield`&nbsp;Crate
 
 Let’s create a structure where we store multiple flags (booleans) and small integer values within a single byte (`u8`).
 
