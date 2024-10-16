@@ -34,23 +34,26 @@ and many other modern languages) make this choice:
   to pack multiple booleans into a smaller space, it would need extra bitwise operations to access individual values,
   which could degrade performance.
 
-- **Atomic Operations and Safety**: In multi-threaded programs, operations on `bool` values might need to be atomic (
-  non-interruptible by other threads). Atomic operations are typically only possible on byte or word-aligned values, so
+- **Atomic Operations and Safety**: In multithreaded programs, operations on `bool` values might need to be atomic
+  (non-interruptible by other threads).
+  Atomic operations are typically only possible on byte or word-aligned values, so
   storing `bool` as a byte allows for safe concurrent access.
 
 ## Reducing Memory Usage with Bit Packing
 
-When working with a large number of boolean values or flags, storing each `bool` as a full byte can indeed lead to
-memory inefficiency. For example, if you need to store 100 boolean flags, using Rust’s `bool` type would consume 100
-bytes of memory, even though 100 booleans could theoretically fit in just 13 bytes (100 bits).
+When working with a large number of boolean values or flags,
+storing each `bool` as a full byte can indeed lead to memory inefficiency. 
+For example, if you need to store 100 boolean flags, using Rust’s `bool` type would consume 100 bytes of memory,
+even though 100 booleans could theoretically fit in just 13 bytes (100 bits).
 
 To solve this, you can manually **pack multiple booleans into a single byte** or use crates designed for this purpose,
 such as the `bitfield` crate.
 
 ## Bit Fields in Rust Using the `bitfield` Crate
 
-While Rust does not natively support C-style bit fields, where you can define specific numbers of bits for different
-fields in a struct, you can achieve similar functionality using third-party crates like `bitfield`.
+While Rust does not natively support C-style bit fields,
+where you can define specific numbers of bits for different fields in a struct,
+you can achieve similar functionality using third-party crates like `bitfield`.
 
 The `bitfield` crate allows you to define structures where individual bits or groups of bits can be packed together.
 This helps you save memory by storing multiple booleans or small integers in the same underlying storage, such as a
@@ -110,13 +113,13 @@ fn main() {
     - `field3`: A 2-bit field at positions 2 and 3.
     - `field4`: A 4-bit field at positions 4 to 7.
 
-By using this structure, you can pack multiple boolean flags and small integer fields into a single byte, significantly
-reducing memory usage compared to using standalone `bool` values.
+By using this structure, you can pack multiple boolean flags and small integer fields into a single byte, 
+significantly reducing memory usage compared to using standalone `bool` values.
 
 ## Manual Bit Manipulation in Rust
 
-If you prefer not to use an external crate, you can achieve similar bit-packing behavior by manually manipulating bits
-using bitwise operations.
+If you prefer not to use an external crate, 
+you can achieve similar bit-packing behavior by manually manipulating bits using bitwise operations.
 
 ### Example: Packing Booleans into a Single Byte
 
