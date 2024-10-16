@@ -7,7 +7,8 @@ date: 2024-10-07T12:38
 # The Boyer-Moore Algorithm
 
 Pattern matching is a fundamental problem in computer science with applications in text processing, search engines, DNA
-sequencing, and more. The [**Boyer-Moore algorithm**][boyer–moore-wikipedia], introduced by [Robert S. Boyer][boyer]
+sequencing, and more. 
+The [**Boyer-Moore algorithm**][boyer–moore-wikipedia], introduced by [Robert S. Boyer][boyer]
 and [J Strother Moore][moore] in 1977,
 remains one of the most efficient algorithms for string matching in real-world applications.
 It takes advantage of information gleaned during the mismatching process to skip portions of the text,
@@ -109,7 +110,7 @@ larger of the two heuristics suggests.
 
 The Boyer-Moore algorithm is one of the most efficient string-matching algorithms for practical use due to its ability
 to skip portions of the text rather than performing a brute-force search.
-By employing both the [**Bad Character**](#1-bad-character-rule) and [**Good Suffix**](#2-good-suffix-rule) heuristics,
+By employing both the [**Bad Character**](#bad-character-rule) and [**Good Suffix**](#good-suffix-rule) heuristics,
 the algorithm achieves sublinear time complexity on average.
 Its efficiency is particularly notable in scenarios where patterns are long or mismatches occur frequently.
 
