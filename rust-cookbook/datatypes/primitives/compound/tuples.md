@@ -5,8 +5,6 @@ sidebar_position: 1
 description: (i32, bool)
 ---
 
-## Tuples in Rust: Compact, Versatile, and Type-Safe Groupings
-
 In Rust, a tuple is a collection of values of different types grouped together into a single compound type. It’s handy
 when you want to return multiple values from a function or group data that does not necessarily belong together in a
 named structure like a struct.

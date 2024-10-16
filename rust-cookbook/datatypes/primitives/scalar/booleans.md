@@ -5,8 +5,6 @@ sidebar_position: 3
 description: bool
 ---
 
-## The Basics
-
 A **boolean** in Rust is represented by the `bool` type and can only have two possible values: `true` or `false`. At a
 conceptual level, a boolean only needs 1 bit of memory, since it can represent two states (1 or 0, true or false).
 However, modern CPUs operate more efficiently when data is aligned to byte boundaries, so Rust chooses to store each
