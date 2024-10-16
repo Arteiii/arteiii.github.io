@@ -7,9 +7,10 @@ date: 2024-10-07T12:38
 # The Boyer-Moore Algorithm
 
 Pattern matching is a fundamental problem in computer science with applications in text processing, search engines, DNA
-sequencing, and more. The [**Boyer-Moore algorithm**][boyer–moore-wikipedia], introduced by [Robert S. Boyer][boyer] and [J Strother Moore][moore] in 1977, 
-remains one of the most efficient algorithms for string matching in real-world applications. 
-It takes advantage of information gleaned during the mismatching process to skip portions of the text, 
+sequencing, and more. The [**Boyer-Moore algorithm**][boyer–moore-wikipedia], introduced by [Robert S. Boyer][boyer]
+and [J Strother Moore][moore] in 1977,
+remains one of the most efficient algorithms for string matching in real-world applications.
+It takes advantage of information gleaned during the mismatching process to skip portions of the text,
 often achieving sublinear time complexity on average.
 
 <!-- truncate -->
@@ -20,7 +21,6 @@ Given a text string $$T$$ of length $$n$$ and a pattern string $$P$$ of length $
 find all occurrences of $$P$$ as a substring of $$T$$. The brute-force approach requires checking each possible
 alignment of $$P$$ with $$T$$, which results in a time complexity of $$O(n \cdot m)$$. The Boyer-Moore algorithm
 improves upon this by skipping unnecessary comparisons.
-
 
 ## The Boyer-Moore Algorithm
 
@@ -51,7 +51,6 @@ Consider the pattern $$P = \text{ABCA}$$ and text $$T = \text{CBABCA}$$. Suppose
 position $$i = 2$$, where $$T[2] = \text{B}$$ and $$P[1] = \text{A}$$. Since $$\text{B}$$ exists in $$P$$ at position 1,
 we shift the pattern such that this occurrence aligns with $$T[2]$$.
 
-
 ### Good Suffix Rule
 
 The **Good Suffix** rule leverages suffixes in the pattern to skip unnecessary shifts. When a mismatch occurs after a
@@ -78,7 +77,6 @@ There are two cases for shifting based on good suffixes:
 For $$P = \text{ABCA}$$ and $$T = \text{CBABCA}$$, if a mismatch occurs after matching the suffix "BCA", the pattern is
 shifted to the next occurrence of "BCA" in $$P$$.
 
-
 ## Proof of Efficiency
 
 The Boyer-Moore algorithm operates in sublinear time on average due to the efficiency of its heuristics. Let $$m$$ be
@@ -89,11 +87,12 @@ alphabet size is large.
 This sublinear performance arises because the pattern shifts more than one character in many cases, especially when
 there are frequent mismatches or when the pattern is long relative to the text.
 
-
 ## Performance Comparison Between Bad Character and Good Suffix Heuristics
 
-The [**Bad Character**](#1-bad-character-rule) rule tends to perform well when the alphabet is large and when mismatches are common because it
-leverages the presence of mismatched characters to skip unnecessary comparisons. The [**Good Suffix**](#2-good-suffix-rule) rule is more
+The [**Bad Character**](#bad-character-rule) rule tends
+to perform well when the alphabet is large and when mismatches are common because it
+leverages the presence of mismatched characters to skip unnecessary comparisons.
+The [**Good Suffix**](#good-suffix-rule) rule is more
 effective when the pattern has repeated structures or when mismatches occur near the end of the pattern, allowing it to
 skip larger sections of the text.
 
@@ -106,15 +105,13 @@ used in isolation.
 In most cases, the Boyer-Moore algorithm uses both heuristics together, allowing the pattern to shift as far as the
 larger of the two heuristics suggests.
 
-
 ## Conclusion
 
 The Boyer-Moore algorithm is one of the most efficient string-matching algorithms for practical use due to its ability
-to skip portions of the text rather than performing a brute-force search. 
-By employing both the [**Bad Character**](#1-bad-character-rule) and [**Good Suffix**](#2-good-suffix-rule) heuristics, 
-the algorithm achieves sublinear time complexity on average. 
+to skip portions of the text rather than performing a brute-force search.
+By employing both the [**Bad Character**](#1-bad-character-rule) and [**Good Suffix**](#2-good-suffix-rule) heuristics,
+the algorithm achieves sublinear time complexity on average.
 Its efficiency is particularly notable in scenarios where patterns are long or mismatches occur frequently.
-
 
 ## References
 
@@ -122,7 +119,8 @@ Its efficiency is particularly notable in scenarios where patterns are long or m
 - J Strother Moore - [Wikipedia][moore]
 - Boyer–Moore string-search algorithm - [Wikipedia][boyer–moore-wikipedia]
 - Boyer-Moore Algorithm - [GeeksforGeeks][boyer–moore-geeks-for-geeks]
-- A. V. Aho, and M. J. Corasick, "Efficient String Matching: An Aid to Bibliographic Search," *Communications of the ACM*, 1975.
+- A. V. Aho, and M. J. Corasick, "Efficient String Matching: An Aid to Bibliographic Search," *Communications of the
+  ACM*, 1975.
 - T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein, *Introduction to Algorithms*, MIT Press, 2009.
 
 
