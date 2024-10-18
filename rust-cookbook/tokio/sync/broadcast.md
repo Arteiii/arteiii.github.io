@@ -2,7 +2,7 @@
 id: broadcast
 title: broadcast
 sidebar_position: 1
-description: `broadcast`
+description: broadcast
 ---
 
 # Broadcast Data Type in Tokio
