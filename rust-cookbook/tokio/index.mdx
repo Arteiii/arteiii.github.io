@@ -1,0 +1,28 @@
+---
+id: tokio
+title: Tokio
+sidebar_position: 3
+---
+
+# Rust Cookbook
+
+
+import {DeveloperBoardSearchRegular, DatabaseRegular,} from "@fluentui/react-icons";
+
+import {Card, CardSection} from "../src/components/CardComponents";
+
+
+<CardSection id="index" title="Index">
+    <Card
+        title="Logging"
+        icon={<DeveloperBoardSearchRegular/>}
+        to="/rust-cookbook/logging/"
+        description="log levels, tracing, custom loggers, async support..."
+    />
+    <Card
+        title="Database"
+        icon={<DatabaseRegular/>}
+        to="/rust-cookbook/database/"
+        description="SQLx, SurrealDB"
+    />
+</CardSection>
