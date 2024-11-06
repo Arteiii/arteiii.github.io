@@ -1,6 +1,6 @@
 ---
 id: broadcast
-title: broadcast
+title: Broadcast
 sidebar_position: 1
 description: broadcast
 ---
