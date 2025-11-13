@@ -7,7 +7,7 @@
     <link rel="alternate" href="https://arteiii.github.io/blog/"/>
     <subtitle>Arteii Blog</subtitle>
     <icon>https://arteiii.github.io/img/favicon.ico</icon>
-    <rights>2024 Arteii</rights>
+    <rights>2025 Arteii</rights>
     <entry>
         <title type="html"><![CDATA[The Boyer-Moore Algorithm]]></title>
         <id>https://arteiii.github.io/blog/boyer-moore/</id>
@@ -101,7 +101,7 @@ ACM</em>, 1975.</li>
 <li>T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein, <em>Introduction to Algorithms</em>, MIT Press, 2009.</li>
 </ul>]]></content>
         <author>
-            <name>Arteii</name>
+            <name>Arteii / Ben</name>
             <uri>https://github.com/arteiii</uri>
         </author>
     </entry>
@@ -178,7 +178,7 @@ they are first redirected to the pages app and then to our HelloWorld function.<
 <p>and last:</p>
 <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#9CDCFE;--prism-background-color:#1E1E1E"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#9CDCFE;background-color:#1E1E1E"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">python manage.py runserver</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content>
         <author>
-            <name>Arteii</name>
+            <name>Arteii / Ben</name>
             <uri>https://github.com/arteiii</uri>
         </author>
     </entry>
@@ -310,7 +310,7 @@ for docusaurus or different tools / websites</p>
             <uri>https://github.com/DigiPie</uri>
         </author>
         <author>
-            <name>Arteii</name>
+            <name>Arteii / Ben</name>
             <uri>https://github.com/arteiii</uri>
         </author>
     </entry>
