@@ -8,11 +8,11 @@ updates:
       # smaller project so this is fine
       - dependency-type: "all"
         update-types:
-          - "minor"
-          - "patch"
+          - "version-update:semver-minor"
+          - "version-update:semver-patch"
       - dependency-type: "all"
         update-types:
-          - "major"
+         - "version-update:semver-major"
         allow:
           - dependency-type: "all"
 
