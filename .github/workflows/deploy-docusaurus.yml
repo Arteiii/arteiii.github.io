@@ -23,13 +23,13 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 18
-          cache: 'yarn' # Enable caching for yarn dependencies
+          cache: "yarn" # Enable caching for yarn dependencies
 
       # Install dependencies and build the Docusaurus website
       - name: Install dependencies and build
         run: |
-          yarn install --frozen-lockfile # Ensures you’re using the exact dependencies listed in yarn.lock
-          yarn build # Runs the Docusaurus build command
+          yarn install --frozen-lockfile
+          yarn build
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
