@@ -4,16 +4,6 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    groups:
-      minor-and-patch:
-        applies-to: security-updates
-        patterns:
-          - "@angular*"
-        update-types:
-          - "patch"
-          - "minor"
-        group-by: dependency-name
-
 
   - package-ecosystem: "github-actions"
     directory: "/"
