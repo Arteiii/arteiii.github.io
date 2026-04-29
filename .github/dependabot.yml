@@ -1,6 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: "yarn"
+  - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
@@ -10,3 +10,13 @@ updates:
         update-types:
           - "minor"
           - "patch"
+      - dependency-type: "all"
+        update-types:
+          - "major"
+        allow:
+          - dependency-type: "all"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
