@@ -13,8 +13,6 @@ updates:
       - dependency-type: "all"
         update-types:
          - "version-update:semver-major"
-        allow:
-          - dependency-type: "all"
 
   - package-ecosystem: "github-actions"
     directory: "/"
