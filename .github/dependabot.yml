@@ -5,14 +5,15 @@ updates:
     schedule:
       interval: "daily"
     groups:
-      # smaller project so this is fine
-      - dependency-type: "all"
+      minor-and-patch:
+        applies-to: security-updates
+        patterns:
+          - "@angular*"
         update-types:
-          - "version-update:semver-minor"
-          - "version-update:semver-patch"
-      - dependency-type: "all"
-        update-types:
-         - "version-update:semver-major"
+          - "patch"
+          - "minor"
+        group-by: dependency-name
+
 
   - package-ecosystem: "github-actions"
     directory: "/"
