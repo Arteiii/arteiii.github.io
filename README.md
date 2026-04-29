@@ -16,7 +16,7 @@ Connect with me:
 
 - GitHub: [Arteiii](https://github.com/Arteiii)
 - Discord: `arteii`
-- Email: <ben.arteii@proton.me>
+- Email: <arteii@sparx.foundation>
 
 ## Getting Started
 
