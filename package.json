@@ -20,11 +20,11 @@
     "@docusaurus/preset-classic": "^3.5.2",
     "@docusaurus/theme-live-codeblock": "^3.5.2",
     "@fluentui/react-icons": "^2.0.227",
-    "@mdx-js/react": "^3.0.0",
+    "@mdx-js/react": "^3.1.1",
     "@svgr/webpack": "^8.1.0",
     "autoprefixer": "^10.4.17",
     "clsx": "^2.0.0",
-    "postcss": "^8.4.35",
+    "postcss": "^8.5.12",
     "prism-react-renderer": "^2.3.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -33,7 +33,7 @@
     "react-text-transition": "^3.1.0",
     "rehype-katex": "^7.0.0",
     "remark-math": "^6.0.0",
-    "svgo": "^3.3.3",
+    "svgo": "^4.0.1",
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
