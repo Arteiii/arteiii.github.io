@@ -20,7 +20,7 @@ jobs:
 
       # Set up Yarn instead of just Node.js (this uses Yarn's latest version)
       - name: Set up Yarn
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: 18
           cache: 'yarn' # Enable caching for yarn dependencies
