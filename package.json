@@ -14,11 +14,11 @@
     "write-translations": "docusaurus write-translations"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.10.0",
-    "@docusaurus/plugin-client-redirects": "^3.10.0",
+    "@docusaurus/core": "^3.10.1",
+    "@docusaurus/plugin-client-redirects": "^3.10.1",
     "@docusaurus/plugin-content-blog": "^3.3.2",
-    "@docusaurus/preset-classic": "^3.10.0",
-    "@docusaurus/theme-live-codeblock": "^3.10.0",
+    "@docusaurus/preset-classic": "^3.10.1",
+    "@docusaurus/theme-live-codeblock": "^3.10.1",
     "@fluentui/react-icons": "^2.0.227",
     "@mdx-js/react": "^3.1.1",
     "@svgr/webpack": "^8.1.0",
@@ -40,8 +40,8 @@
     "webpackbar": "^7.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.10.0",
-    "@docusaurus/types": "^3.10.0"
+    "@docusaurus/module-type-aliases": "^3.10.1",
+    "@docusaurus/types": "^3.10.1"
   },
   "browserslist": {
     "production": [
