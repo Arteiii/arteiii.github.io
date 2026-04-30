@@ -24,7 +24,7 @@ const internetProfiles = {
   },
   email: {
     label: "Email",
-    href: "mailto:ben.arteii@proton.me",
+    href: "mailto:bbraun@sparx.foundation",
   },
   blog: {
     label: "Blog",
@@ -170,7 +170,7 @@ module.exports = {
       // The application ID provided by Algolia
       appId: "D3ST694UAZ",
 
-      // Public API key: it is safe to commit it
+      // Public API key: it is safe to commit
       apiKey: "d358a9d8d689d82a8e64b1dcf4f99b33",
 
       indexName: "arteiiiio",
