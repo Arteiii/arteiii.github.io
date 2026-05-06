@@ -20,7 +20,7 @@ Connect with me:
 
 ## Getting Started
 
-To explore the content on this website, simply visit [https://arteiii.github.io](https://arteiii.github.io).  
+To explore the content on this website, simply visit [https://arteii.net](https://arteii.net).  
 You can navigate through the different sections and find articles on various topics.  
 If you have specific questions or need assistance, feel free to reach out.
 

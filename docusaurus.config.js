@@ -39,7 +39,7 @@ const internetProfiles = {
 module.exports = {
   title: "Arteii",
   tagline: "i do stuff",
-  url: "https://arteiii.github.io/",
+  url: "https://arteii.net/",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenAnchors: "throw",
