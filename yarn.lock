@@ -2269,10 +2269,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.9.2.tgz#ff9221b9f58b4dfe61e619a7788734bd63f6898b"
   integrity sha512-MyqliTZGuOm3+5ZRSaaBGP3USLw6+EGykkwZns2EPC5g8jJ4z9OrdZY9apkl3+UP9+sdz76YYkwCKP5gh8iY3g==
 
-"@fluentui/react-icons@^2.0.227":
-  version "2.0.325"
-  resolved "https://registry.yarnpkg.com/@fluentui/react-icons/-/react-icons-2.0.325.tgz#ab46787c3a044466f77b3ad50a5f6641f0799c9b"
-  integrity sha512-dbmpGMwyCFfkFdMSTEFnbNMXKDomPpqbzXVKRKM0EEQrcwOoQvm08d+SV+WWH11kni26SrgEtB9ycldD+fr92w==
+"@fluentui/react-icons@^2.0.326":
+  version "2.0.326"
+  resolved "https://registry.yarnpkg.com/@fluentui/react-icons/-/react-icons-2.0.326.tgz#c9b0019fda1b4d8af4d4164ed69ed1ebc38194ea"
+  integrity sha512-iSN6YggrrQyZ46Jxk998Umm9jehWs6mrqCsrAvr7+uZWY6IwfYcoz94NCJ2SDiMO8Jompl4Y4Yu73SwljuUULQ==
   dependencies:
     "@griffel/react" "^1.6.1"
     tslib "^2.1.0"
