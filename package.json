@@ -34,7 +34,7 @@
     "rehype-katex": "^7.0.0",
     "remark-math": "^6.0.0",
     "svgo": "^4.0.1",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^4.3.0"
   },
   "resolutions": {
     "webpackbar": "^7.0.0"
