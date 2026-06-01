@@ -24,6 +24,10 @@ To explore the content on this website, simply visit [https://arteii.net](https:
 You can navigate through the different sections and find articles on various topics.  
 If you have specific questions or need assistance, feel free to reach out.
 
+## Acknowledgements
+
+The base structure for this project was taken from [evantay.com](https://evantay.com/).
+
 ## Feedback
 
 If you have any feedback, suggestions, or questions about the content, feel free to open an issue or reach out to me directly.
