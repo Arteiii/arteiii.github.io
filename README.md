@@ -80,5 +80,5 @@ If you have any feedback, suggestions, or questions about the content, feel free
 
 ## License
 
-This project is licensed under the **FOUL** (Free Open User License).
+This project is licensed under the **FOUL** (Fair Open-Use License).
 
