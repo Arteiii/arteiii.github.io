@@ -12,7 +12,7 @@ const internetProfiles = {
   },
   linkedin: {
     label: "LinkedIn",
-    href: "blank",
+    href: "https://www.linkedin.com/in/ben-pilger/",
   },
   github: {
     label: "GitHub",
@@ -24,7 +24,7 @@ const internetProfiles = {
   },
   email: {
     label: "Email",
-    href: "mailto:bbraun@sparx.foundation",
+    href: "mailto:bpilger@sparx.foundation",
   },
   blog: {
     label: "Blog",
