@@ -1,5 +1,9 @@
 name: Links
 
+permissions:
+  contents: read
+  actions: write
+
 on:
   repository_dispatch:
   workflow_dispatch:
